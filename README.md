@@ -2,11 +2,11 @@
 Ai Drawing App
 
 Team members:
-• Leonardo Nan
-• Yuanhao (Jeffery) Chai
-• Anthony (Erdong) Chen
-• Jennie Lu
-• Xinrui (katherine) Ge
+  • Leonardo Nan
+  • Yuanhao (Jeffery) Chai
+  • Anthony (Erdong) Chen
+  • Jennie Lu
+  • Xinrui (katherine) Ge
 
 Possible Functionality
 1. Generate pictures and drawings based on user descriptions.
