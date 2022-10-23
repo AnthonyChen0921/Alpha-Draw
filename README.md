@@ -48,7 +48,6 @@ https://replicate.com/
 
 
 # Preview
-<br/>
 <img src="/preview1.png" alt="Alt text" title="Optional title"  height="200" width="400">
 <img src="/preview2.png" alt="Alt text" title="Optional title"  height="200" width="400">
 <br/>
