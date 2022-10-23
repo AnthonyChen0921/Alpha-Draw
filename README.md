@@ -53,7 +53,6 @@ https://replicate.com/
 <img src="/preview2.png" alt="Alt text" title="Optional title"  height="200" width="400">
 <br/>
 <img src="/preview3.png" alt="Alt text" title="Optional title"  height="200" width="400">
-<br/>
 <img src="/preview4.png" alt="Alt text" title="Optional title"  height="200" width="400">
 <br/>
 <img src="/preview5.png" alt="Alt text" title="Optional title"  height="200" width="400">
