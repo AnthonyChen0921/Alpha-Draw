@@ -30,7 +30,7 @@ Product Analysis:
 
 >After playing around with the current AI Arts APP, I found many functions still missing. Our essential role is to let the user draw a scratch image using their fingers or apple pencil in our built-in drawing function. Then the user could push their "artworks" to the cloud and let the backend server do the AI drawing, filling in the missing part of the image and improving. Then the database will return the generated image to the user. The user could then save the image to their phone or share it on social media.
 
-# APIs
+
 # Replicate API:
 https://replicate.com/
 > We are using replicate API to serve as the actually server for running the AI text to image, image to image model.
