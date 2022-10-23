@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class ViewController: UIViewController {
     var id: String?
     var image: UIImage?
     var output = [String]()
+    var db: Firestore = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        db = Firestore.firestore()
+
     }
 
     @IBAction func buttonClicked(_ sender: Any) {
@@ -50,6 +56,23 @@ class ViewController: UIViewController {
         imageView.center = self.view.center
         self.view.addSubview(imageView)
         
+        // if output.count !=0, upload image to firebase
+        if output.count != 0 {
+            uploadImageToFirebase(url: output[0])
+        }
+
+        func uploadImageToFirebase(url: String) {
+            var ref: DocumentReference? = nil
+            ref = db.collection("images").addDocument(data: [
+                "image": url
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+        }
 
     }
 
