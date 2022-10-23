@@ -10,12 +10,10 @@
 import Foundation
 
 
-
-
 /**
  *  @brief: This function is used to generate a Pokemon from a text description
  *  @param: completion: The completion handler
- *  @param: bodyRequest: The body request of the API, written in Swift Struct, see Pokemon.swift for more details
+ *  @param: bodyRequest: The body request of the API, written in Swift Struct, see PokemonData.swift for more details
  *  @return: Void
  */
 func fetchPokemonInitialRequest(completion: @escaping (PokemonData) -> Void, bodyRequest: PokemonBodyReuqest) {
@@ -40,7 +38,12 @@ func fetchPokemonInitialRequest(completion: @escaping (PokemonData) -> Void, bod
     }.resume()
 }
 
-
+/**
+ *  @brief: This function is used to request an update of the Pokemon image
+ *  @param: completion: The completion handler
+ *  @param: predictionId: The prediction id of the API, will be returned by the initial request (InitalRequest also contains a get request url)
+ *  @return: Void
+ */
 func fetchPokemonByPredictionId(completion: @escaping (PokemonData) -> Void, predictionId: String) {
     let url = URL(string: "https://api.replicate.com/v1/predictions/\(predictionId)")!
     var request = URLRequest(url: url)
@@ -68,12 +71,12 @@ func fetchPokemonByPredictionId(completion: @escaping (PokemonData) -> Void, pre
  */
 func convertBodyRequestToStringArray(bodyRequest: PokemonBodyReuqest) -> [String : Any]{
     let body = [
-        "version": bodyRequest.version,
+        "version": bodyRequest.version!,
         "input": [
-            "prompt": bodyRequest.input.prompt,
-            "num_inference_steps": bodyRequest.input.num_inference_steps,
-            "guidance_scale": bodyRequest.input.guidance_sclae,
-            "num_outputs": bodyRequest.input.num_outputs
+            "prompt": bodyRequest.input?.prompt!,
+            "num_inference_steps": bodyRequest.input?.num_inference_steps!,
+            "guidance_scale": bodyRequest.input?.guidance_sclae!,
+            "num_outputs": bodyRequest.input?.num_outputs!
         ]
     ] as [String : Any]
     return body
