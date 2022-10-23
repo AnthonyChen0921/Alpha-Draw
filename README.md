@@ -1,6 +1,9 @@
 # Alpha-Draw
 Ai Drawing App
 
+# Replicate API:
+https://replicate.com/
+
 Team members:
   • Leonardo Nan
   • Yuanhao (Jeffery) Chai
