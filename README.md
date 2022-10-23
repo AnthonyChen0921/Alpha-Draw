@@ -34,5 +34,5 @@ Product Analysis:
 
 
 **Preview**
-<img src="/preview1.png" alt="Alt text" title="Optional title"  height="800" width="400">
+<img src="/preview1.png" alt="Alt text" title="Optional title"  height="400" width="800">
 
