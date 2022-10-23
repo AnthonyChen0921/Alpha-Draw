@@ -47,7 +47,7 @@ https://replicate.com/
 > We are not making charity, but an APP that has its own environment that could live. We need to authenticate every user who use our app, the API is not free since running models takes a lot of GPU resources. Ideally, the we hold users information in Firebase including emails, payment, money, uploaded/saved image, or history.
 
 
-**Preview**
+# Preview
 <br/>
 <img src="/preview1.png" alt="Alt text" title="Optional title"  height="200" width="400">
 <img src="/preview2.png" alt="Alt text" title="Optional title"  height="200" width="400">
