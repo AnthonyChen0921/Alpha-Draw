@@ -1,5 +1,5 @@
 # Alpha-Draw
-Ai Drawing App
+Ai Drawing IOS App
 
 
 Team members:
