@@ -24,7 +24,7 @@ Product Analysis:
 3. Competitor Analysis
   > Analyze the competitors of the product. What are their features? What particular part of our product could attract users?
 
-**Breif for Demand analysis:**
+**Brief for Demand analysis:**
 
 >While most of the ai drawing model was written in python, and the generating process heavily relies on GPU, making it impossible to run on the mobile phone. Our APP Alpha Draw's goal is to resolve the limitation of the device used to run the AI model. We want to make the AI drawing model available to everyone and enable it to run anywhere, anytime. 
 
