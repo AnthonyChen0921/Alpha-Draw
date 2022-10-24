@@ -41,14 +41,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mbg-oB-QKE" firstAttribute="top" secondItem="BYJ-9A-fsi" secondAttribute="bottom" constant="8" symbolic="YES" id="8WC-Uh-soM"/>
-                            <constraint firstItem="YmE-fc-1A9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="HQq-TT-rHR"/>
-                            <constraint firstItem="BYJ-9A-fsi" firstAttribute="top" secondItem="YmE-fc-1A9" secondAttribute="bottom" constant="8" symbolic="YES" id="IE7-kT-MgE"/>
-                            <constraint firstItem="YmE-fc-1A9" firstAttribute="leading" secondItem="BYJ-9A-fsi" secondAttribute="leading" id="IHy-wg-D0e"/>
-                            <constraint firstItem="Mbg-oB-QKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="J2a-jP-iRA"/>
-                            <constraint firstItem="YmE-fc-1A9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="MlD-UX-9Xg"/>
-                            <constraint firstItem="YmE-fc-1A9" firstAttribute="trailing" secondItem="BYJ-9A-fsi" secondAttribute="trailing" id="wyx-L7-ou6"/>
-                            <constraint firstItem="YmE-fc-1A9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zIg-wG-mMq"/>
+                            <constraint firstItem="YmE-fc-1A9" firstAttribute="trailing" secondItem="BYJ-9A-fsi" secondAttribute="trailing" id="3D4-vK-K9r"/>
+                            <constraint firstItem="Mbg-oB-QKE" firstAttribute="top" secondItem="BYJ-9A-fsi" secondAttribute="bottom" constant="8" symbolic="YES" id="42p-Zt-Nm6"/>
+                            <constraint firstItem="YmE-fc-1A9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="Hfh-U6-TrK"/>
+                            <constraint firstItem="YmE-fc-1A9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RNn-4e-Sf3"/>
+                            <constraint firstItem="BYJ-9A-fsi" firstAttribute="top" secondItem="YmE-fc-1A9" secondAttribute="bottom" constant="8" symbolic="YES" id="UIO-0f-uKL"/>
+                            <constraint firstItem="Mbg-oB-QKE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZLm-ni-bz2"/>
+                            <constraint firstItem="YmE-fc-1A9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="hQQ-Ie-BqA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mbg-oB-QKE" secondAttribute="trailing" constant="169" id="kuV-Sa-xsg"/>
+                            <constraint firstItem="YmE-fc-1A9" firstAttribute="leading" secondItem="BYJ-9A-fsi" secondAttribute="leading" id="nLU-h1-w8h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k9h-l7-UCE"/>

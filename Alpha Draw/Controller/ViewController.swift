@@ -58,23 +58,15 @@ class ViewController: UIViewController {
         
         // if output.count !=0, upload image to firebase
         if output.count != 0 {
-            firebase.uploadImage(image: image!, id: id!, completion: { url in
+            firebase.uploadImageToStorage(image: image!, id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "NightmareImage",completion: { url in
                 print(url)
             })
+            firebase.uploadImageUrl(id: id!, url: output[0], imageType: "NightmareImage", userid: "agFDGedfNFi3nDIADNw3jfD")
+            print(firebase.getImageUrlById(id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "NightmareImage"))
+            
         }
 
-//        func uploadImageToFirebase(url: String) {
-//            var ref: DocumentReference? = nil
-//            ref = db.collection("images").addDocument(data: [
-//                "image": url
-//            ]) { err in
-//                if let err = err {
-//                    print("Error adding document: \(err)")
-//                } else {
-//                    print("Document added with ID: \(ref!.documentID)")
-//                }
-//            }
-//        }
+       
 
     }
 

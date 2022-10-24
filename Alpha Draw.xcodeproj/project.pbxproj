@@ -23,6 +23,7 @@
 		6B62DB662906043300839DE2 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB652906043300839DE2 /* FirebaseRemoteConfigSwift */; };
 		6B62DB682906043300839DE2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB672906043300839DE2 /* FirebaseStorage */; };
 		6B62DB6A2906043300839DE2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB692906043300839DE2 /* FirebaseStorageCombine-Community */; };
+		6B62DB6C290640AC00839DE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB6B290640AC00839DE2 /* User.swift */; };
 		6B7B1A912902FADA00F36C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A902902FADA00F36C6F /* AppDelegate.swift */; };
 		6B7B1A932902FADA00F36C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A922902FADA00F36C6F /* SceneDelegate.swift */; };
 		6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A942902FADA00F36C6F /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B62DB6B290640AC00839DE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7B1A902902FADA00F36C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7B1A922902FADA00F36C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				6B7B1AAC2902FF8A00F36C6F /* Data.swift */,
+				6B62DB6B290640AC00839DE2 /* User.swift */,
 				6B7B1ABA2903223000F36C6F /* PokemonData.swift */,
 				6B7B1AC12903518900F36C6F /* NightmareData.swift */,
 				6BDE5EC32903630500DC5200 /* PixrayData.swift */,
@@ -303,6 +306,7 @@
 				6B7B1AB72903013900F36C6F /* Img2Img-tencentarc.swift in Sources */,
 				6B7B1AB32903004900F36C6F /* T2Text-prompt-parrot.swift in Sources */,
 				6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */,
+				6B62DB6C290640AC00839DE2 /* User.swift in Sources */,
 				6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */,
 				6B7B1ABD290341F300F36C6F /* Function.swift in Sources */,
 				6B7B1AB5290300A800F36C6F /* T2Img-Pixray.swift in Sources */,
