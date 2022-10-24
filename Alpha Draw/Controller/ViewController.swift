@@ -14,12 +14,12 @@ class ViewController: UIViewController {
     var id: String?
     var image: UIImage?
     var output = [String]()
-    var db: Firestore = Firestore.firestore()
+    let firebase = Firebase()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        db = Firestore.firestore()
+        
 
     }
 
@@ -58,21 +58,23 @@ class ViewController: UIViewController {
         
         // if output.count !=0, upload image to firebase
         if output.count != 0 {
-            uploadImageToFirebase(url: output[0])
+            firebase.uploadImage(image: image!, id: id!, completion: { url in
+                print(url)
+            })
         }
 
-        func uploadImageToFirebase(url: String) {
-            var ref: DocumentReference? = nil
-            ref = db.collection("images").addDocument(data: [
-                "image": url
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
-                }
-            }
-        }
+//        func uploadImageToFirebase(url: String) {
+//            var ref: DocumentReference? = nil
+//            ref = db.collection("images").addDocument(data: [
+//                "image": url
+//            ]) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
+//        }
 
     }
 
