@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         addStyleToInputField(inputField: nameInputField)
+        addStyleToInputField(inputField: emailInputField)
+        addStyleToInputField(inputField: passwordInputField)
+        addStyleToInputField(inputField: confirmPasswordInputField)
     }
     @IBAction func registerButtonClicked(_ sender: Any) {
         // check if all input fields are filled
@@ -92,14 +95,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         //set the height of the input field to be 50
         inputField.frame.size.height = 50
         inputField.layer.cornerRadius = 25
-        // setup a gloomy color for the input field shadow
-        inputField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        inputField.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        inputField.layer.shadowOpacity = 1.0
-        inputField.layer.shadowRadius = 0.0
-        inputField.layer.masksToBounds = false
-        
-        
+        // setup a white gloomy shadow for the input field
+        inputField.layer.shadowColor = UIColor.white.cgColor
+        inputField.layer.shadowOffset = CGSize(width: 0, height: 0)
+        inputField.layer.shadowRadius = 10
+        inputField.layer.shadowOpacity = 0.5
     }
     
 

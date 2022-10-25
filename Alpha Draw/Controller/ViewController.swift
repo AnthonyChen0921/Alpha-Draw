@@ -26,6 +26,11 @@ class ViewController: UIViewController {
         // save user to firebase
         firebase.addUser(user: user)
         print("uploaded user")
+
+        // disable back button
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
+        
     }
 
     @IBAction func buttonClicked(_ sender: Any) {

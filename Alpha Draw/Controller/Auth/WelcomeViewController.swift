@@ -16,15 +16,21 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var regButton: UIButton!
     @IBOutlet weak var logButton: UIButton!
     @IBOutlet weak var welcomeText: UILabel!
+    @IBOutlet weak var detailText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         // set button font style to Times Bold 18.0
         addAnimatation()
+        addAnimatedDetailToWelcomeText()
         setRegButtonColor()
         setLogButtonColor()
         
+
+        // schedule deleteAndAddDetailText() to be called every 24 seconds, but first call after 12 seconds
+        Timer.scheduledTimer(timeInterval: 24, target: self, selector: #selector(deleteAndAddDetailText), userInfo: nil, repeats: true)
+
         // call addGlowEffectToTitle() per 4 seconds
         Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(addGlowEffectToTitle), userInfo: nil, repeats: true)
 
@@ -41,6 +47,12 @@ class WelcomeViewController: UIViewController {
         // add button action on hover out
         regButton.addTarget(self, action: #selector(regButtonHoverOut), for: .touchDragExit)
         logButton.addTarget(self, action: #selector(logButtonHoverOut), for: .touchDragExit)
+
+        // call deleteAndAddDetailText after 12 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 12.0) {
+            self.animateToDeleteDetailText()
+        }
+        animateBar.alpha = 0.01
     }
 
     // view did appear
@@ -48,8 +60,10 @@ class WelcomeViewController: UIViewController {
         // addAnimatation()
         regBottomLine.alpha = 0
         logBottomLine.alpha = 0
-        animateBar.alpha = 0
+        animateBar.alpha = 0.01
     }
+
+    
 
 
 
@@ -118,29 +132,24 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc func addLinearlyFlashEffectToAnimateBar(){
-        // make animateBar appear with alpha 1, then move to the right of the screen make it disappear with alpha 0, reset its position to the left of the screen
-       
         UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseInOut, animations: {
             self.animateBar.alpha = 1
         }, completion: nil)
         // after 1.5 seconds, move animateBar to the right of the screen
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.animateBar.frame.origin.x = self.view.frame.width - self.animateBar.frame.width - 29
-            }, completion: nil)
-        }
+        UIView.animate(withDuration: 1.5, delay: 2.0, options: .curveEaseInOut, animations: {
+            self.animateBar.frame.origin.x = self.view.frame.width - self.animateBar.frame.width - 29
+        }, completion: nil)
+        
         // after 4 seconds, move animateBar to the left of the screen
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.animateBar.frame.origin.x = 29
-            }, completion: nil)
-        }
+        UIView.animate(withDuration: 1.5, delay: 4.0, options: .curveEaseInOut, animations: {
+            self.animateBar.frame.origin.x = 29
+        }, completion: nil)
         // after 5 seconds, make animateBar disappear with alpha 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-            UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.animateBar.alpha = 0
-            }, completion: nil)
-        }
+        UIView.animate(withDuration: 1.5, delay: 6.0, options: .curveEaseInOut, animations: {
+            self.animateBar.alpha = 0
+        }, completion: nil)
+        
+        
     }
 
     func addAnimatation(){
@@ -154,7 +163,42 @@ class WelcomeViewController: UIViewController {
             }
             charIndex += 1
         }
+    }
+    @objc func addAnimatedDetailToWelcomeText() {
+        // add another labeltext to display: "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        detailText.text = ""
+        var charIndex = 0.0
+        let titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        // set the color to silver
+        detailText.textColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) { (timer) in
+                self.detailText.text?.append(letter)
+            }
+            charIndex += 1
+        }
+        
+    }
 
+    @objc func animateToDeleteDetailText() {
+        // delete the detail text one by one
+        var charIndex = 0.0
+        let titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        for _ in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) { (timer) in
+                self.detailText.text?.removeLast()
+            }
+            charIndex += 1
+        }
+
+    }
+
+    @objc func deleteAndAddDetailText(){
+        // delete the detail text and add another one
+        addAnimatedDetailToWelcomeText()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+            self.animateToDeleteDetailText()
+        }
     }
 
     @objc func animateBackGroundImage(){
