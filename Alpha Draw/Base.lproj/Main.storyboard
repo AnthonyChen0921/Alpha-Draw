@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t4X-f8-qbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7nd-uA-oR4">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878" y="1192"/>
+            <point key="canvasLocation" x="3806.1538461538462" y="1191.4691943127962"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="noC-dC-CTf">
@@ -75,7 +75,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xah-pB-MbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389" y="1192"/>
+            <point key="canvasLocation" x="2316.9230769230767" y="1191.4691943127962"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="fbU-8P-95T">
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-Wr-xfG">
-                                <rect key="frame" x="16" y="758" width="163" height="52"/>
+                                <rect key="frame" x="16" y="770" width="163" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvy-BE-cMa">
-                                <rect key="frame" x="211" y="758" width="163" height="52"/>
+                                <rect key="frame" x="211" y="770" width="163" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-L4-U3M">
-                                <rect key="frame" x="114" y="248" width="163" height="191"/>
+                                <rect key="frame" x="114" y="292" width="163" height="147"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Welcome">
                                         <attributes>
@@ -159,12 +159,13 @@
                             <constraint firstItem="11g-L4-U3M" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="204" id="dbK-ST-4A9"/>
                             <constraint firstItem="xvN-O4-chI" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" id="kgF-ia-uGe"/>
                             <constraint firstAttribute="bottom" secondItem="xvN-O4-chI" secondAttribute="bottom" id="osx-ix-loY"/>
-                            <constraint firstItem="JAK-Wr-xfG" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="714" id="pum-a3-mHK"/>
+                            <constraint firstItem="JAK-Wr-xfG" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="682" id="pum-a3-mHK"/>
                             <constraint firstItem="Qv7-K8-xWm" firstAttribute="trailing" secondItem="11g-L4-U3M" secondAttribute="trailing" constant="113" id="r7E-Xd-b4Q"/>
-                            <constraint firstItem="lvy-BE-cMa" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="714" id="tG4-8k-vMm"/>
+                            <constraint firstItem="lvy-BE-cMa" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="682" id="tG4-8k-vMm"/>
                             <constraint firstItem="lvy-BE-cMa" firstAttribute="width" secondItem="JAK-Wr-xfG" secondAttribute="width" id="zuY-SU-tsr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kBl-lw-eOT"/>
                     <connections>
                         <outlet property="logButton" destination="lvy-BE-cMa" id="Oiq-MS-rJA"/>
                         <outlet property="regButton" destination="JAK-Wr-xfG" id="71a-8m-FCT"/>
@@ -173,45 +174,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nc-SL-IWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804.61538461538464" y="1192.1800947867298"/>
+            <point key="canvasLocation" x="124.61538461538461" y="1192.1800947867298"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="4EV-Et-m09">
             <objects>
                 <viewController id="3Si-qK-m6b" customClass="RegisterViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3W-rh-wGj">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="enq-uz-zDg"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2aH-5c-Dfe"/>
+                    <navigationItem key="navigationItem" id="2aH-5c-Dfe">
+                        <barButtonItem key="backBarButtonItem" title="Welcome" id="3EQ-5d-wdP"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="mC3-Zb-l9x" kind="custom" identifier="RegisterToAPP" customClass="SimpleSegue" customModule="Alpha_Draw" customModuleProvider="target" id="r9T-q3-SVE"/>
+                        <segue destination="mC3-Zb-l9x" kind="show" identifier="registerToHome" id="RfZ-Te-itc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLg-Hg-Ys8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="816"/>
+            <point key="canvasLocation" x="1193.8461538461538" y="815.40284360189571"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="inh-gc-oCX">
             <objects>
                 <viewController id="Lak-YS-JgL" customClass="LoginViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjh-CL-iBA">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YeF-e1-2ex"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d1p-Tw-9CP"/>
+                    <navigationItem key="navigationItem" id="d1p-Tw-9CP">
+                        <barButtonItem key="backBarButtonItem" title="Welcome" id="Is6-Tw-gWs"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="mC3-Zb-l9x" kind="custom" identifier="LoginToAPP" customClass="SimpleSegue" customModule="Alpha_Draw" customModuleProvider="target" id="Pp9-vs-nFN"/>
+                        <segue destination="mC3-Zb-l9x" kind="show" identifier="loginToHome" id="tT2-O9-jkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrs-cp-Kyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="1672"/>
+            <point key="canvasLocation" x="1193.8461538461538" y="1671.3270142180095"/>
         </scene>
         <!--Item-->
         <scene sceneID="9hr-ib-JIJ">
@@ -230,11 +235,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pP-Xw-Mcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2132" y="1192"/>
+            <point key="canvasLocation" x="3060" y="1191.4691943127962"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qVy-dH-zkN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nd-uA-oR4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2lr-hK-88O">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t4X-f8-qbn" kind="relationship" relationship="rootViewController" id="oEV-kh-r3z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPG-Ed-Omv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804.61538461538464" y="1192.1800947867298"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pp9-vs-nFN"/>
+        <segue reference="tT2-O9-jkK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WelcomeBackground" width="512" height="768"/>
@@ -243,6 +267,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
