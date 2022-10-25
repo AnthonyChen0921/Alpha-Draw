@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     var id: String?
     var image: UIImage?
     var output = [String]()
+    var token: String = "c3a4bed5dc02edbba4d02d9f4b4f91e1011f9b5b"
     let firebase = Firebase()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-
+        // declare a user
+        let user = User(id: "10086", name: "Anthony", email: "test@email.com", password: "123456", balance: 1000)
+        // save user to firebase
+        firebase.addUser(user: user)
+        print("uploaded user")
     }
 
     @IBAction func buttonClicked(_ sender: Any) {
@@ -30,7 +35,7 @@ class ViewController: UIViewController {
         fetchPokemonInitialRequest(completion: { pokemon in
             print(pokemon)
             self.id = pokemon.id
-        }, bodyRequest: bodyRequest)
+        }, bodyRequest: bodyRequest, token: token)
     }
     
     @IBAction func refreshButtonClicked(_ sender: Any) {
@@ -42,7 +47,7 @@ class ViewController: UIViewController {
             if let output = pokemon.output {
                 self.output = output
             }
-        }, predictionId: self.id!)
+        }, predictionId: self.id!, token: token)
         // if output is nill
 
         // get the image from the url
@@ -58,11 +63,11 @@ class ViewController: UIViewController {
         
         // if output.count !=0, upload image to firebase
         if output.count != 0 {
-            firebase.uploadImageToStorage(image: image!, id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "NightmareImage",completion: { url in
+            firebase.uploadImageToStorage(image: image!, id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "PokemonImage",completion: { url in
                 print(url)
             })
-            firebase.uploadImageUrl(id: id!, url: output[0], imageType: "NightmareImage", userid: "agFDGedfNFi3nDIADNw3jfD")
-            print(firebase.getImageUrlById(id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "NightmareImage"))
+            firebase.uploadImageUrl(id: id!, url: output[0], imageType: "PokemonImage", userid: "agFDGedfNFi3nDIADNw3jfD")
+            print(firebase.getImageUrlById(id: id!, userid: "agFDGedfNFi3nDIADNw3jfD", imageType: "PokemonImage"))
             
         }
 

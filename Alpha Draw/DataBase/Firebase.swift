@@ -21,7 +21,7 @@ class Firebase {
     var size: Int64?
 
     
-    
+    // MARK: - Image Functions
     /**
         *  @brief: Upload image to firebase storage
         *  @param: image: UIImage
@@ -120,6 +120,43 @@ class Firebase {
             }
         }
         return url
+    }
+
+
+    /**
+        *  @brief: Get All Image Urls by Types under a user, return a dictionary of image urls
+        *  @param: id: String
+        *  @param: url: String
+        *  @param: userId: String? = "Admin"
+        *  @return: void
+        */
+    func getAllImageUrlsByTypes(userid: String? = "Admin", imageType: String? = "Image") -> [String] {
+        var urls: [String] = []
+        let docRef = db.collection(userid!).document("Image").collection(imageType!)
+        docRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                    urls.append(document.get("url") as! String)
+                }
+            }
+        }
+        return urls
+    }
+
+    // MARK: - User Functions
+    /**
+        *  @brief: Add user to firebase firestore
+        *  @param: user: User
+        *  @return: void
+        */
+    func addUser(user: User) {
+        do {
+            let _ = try db.collection("Users").addDocument(from: user)
+        } catch {
+            print(error)
+        }
     }
 
     
