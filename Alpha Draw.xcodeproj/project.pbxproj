@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B62DB4C2906043300839DE2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4B2906043300839DE2 /* FirebaseAnalytics */; };
 		6B62DB4E2906043300839DE2 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4D2906043300839DE2 /* FirebaseAnalyticsSwift */; };
 		6B62DB502906043300839DE2 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4F2906043300839DE2 /* FirebaseAppCheck */; };
@@ -25,6 +26,10 @@
 		6B62DB6A2906043300839DE2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB692906043300839DE2 /* FirebaseStorageCombine-Community */; };
 		6B62DB6C290640AC00839DE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB6B290640AC00839DE2 /* User.swift */; };
 		6B62DB6E2907894A00839DE2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB6D2907894A00839DE2 /* Image.swift */; };
+		6B62DB712907902E00839DE2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB702907902E00839DE2 /* WelcomeViewController.swift */; };
+		6B62DB732907903F00839DE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB722907903F00839DE2 /* LoginViewController.swift */; };
+		6B62DB752907904E00839DE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62DB742907904E00839DE2 /* RegisterViewController.swift */; };
+		6B62DB7929079F8700839DE2 /* WelcomeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B62DB7829079F8700839DE2 /* WelcomeBackground.png */; };
 		6B7B1A912902FADA00F36C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A902902FADA00F36C6F /* AppDelegate.swift */; };
 		6B7B1A932902FADA00F36C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A922902FADA00F36C6F /* SceneDelegate.swift */; };
 		6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B1A942902FADA00F36C6F /* ViewController.swift */; };
@@ -48,8 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B62DB6B290640AC00839DE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B62DB6D2907894A00839DE2 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		6B62DB702907902E00839DE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6B62DB722907903F00839DE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6B62DB742907904E00839DE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6B62DB7829079F8700839DE2 /* WelcomeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeBackground.png; sourceTree = "<group>"; };
 		6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7B1A902902FADA00F36C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7B1A922902FADA00F36C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B62DB6F2907900400839DE2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6B62DB702907902E00839DE2 /* WelcomeViewController.swift */,
+				6B62DB722907903F00839DE2 /* LoginViewController.swift */,
+				6B62DB742907904E00839DE2 /* RegisterViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6B62DB7A2907A0AE00839DE2 /* Custom Segues */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */,
+			);
+			path = "Custom Segues";
+			sourceTree = "<group>";
+		};
 		6B7B1A842902FADA00F36C6F = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +148,7 @@
 		6B7B1A8F2902FADA00F36C6F /* Alpha Draw */ = {
 			isa = PBXGroup;
 			children = (
+				6B62DB7A2907A0AE00839DE2 /* Custom Segues */,
 				6BDE5EC52904F5E800DC5200 /* DataBase */,
 				6B7B1ABE290347AD00F36C6F /* Image */,
 				6B7B1AA72902FDB500F36C6F /* Model */,
@@ -147,6 +176,7 @@
 		6B7B1AA52902FD9700F36C6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B62DB6F2907900400839DE2 /* Auth */,
 				6B7B1A942902FADA00F36C6F /* ViewController.swift */,
 				6B7B1ABC290341F300F36C6F /* Function.swift */,
 			);
@@ -198,6 +228,7 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
 			);
 			path = Image;
@@ -290,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B62DB7929079F8700839DE2 /* WelcomeBackground.png in Resources */,
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
 				6B7B1A9A2902FADC00F36C6F /* Assets.xcassets in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
@@ -309,15 +341,19 @@
 				6B7B1AB72903013900F36C6F /* Img2Img-tencentarc.swift in Sources */,
 				6B7B1AB32903004900F36C6F /* T2Text-prompt-parrot.swift in Sources */,
 				6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */,
+				6B62DB732907903F00839DE2 /* LoginViewController.swift in Sources */,
 				6B62DB6C290640AC00839DE2 /* User.swift in Sources */,
 				6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */,
 				6B7B1ABD290341F300F36C6F /* Function.swift in Sources */,
 				6B7B1AB5290300A800F36C6F /* T2Img-Pixray.swift in Sources */,
 				6B7B1AAF2902FFC800F36C6F /* T2Img-nightmare-ai.swift in Sources */,
+				6B62DB712907902E00839DE2 /* WelcomeViewController.swift in Sources */,
+				6B62DB752907904E00839DE2 /* RegisterViewController.swift in Sources */,
 				6B7B1A912902FADA00F36C6F /* AppDelegate.swift in Sources */,
 				6B7B1ABB2903223000F36C6F /* PokemonData.swift in Sources */,
 				6B62DB6E2907894A00839DE2 /* Image.swift in Sources */,
 				6B7B1AB9290301B300F36C6F /* Img2Img-swinir.swift in Sources */,
+				6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */,
 				6B7B1AB12902FFDC00F36C6F /* T2Img-Pokemon.swift in Sources */,
 				6B7B1AC22903518900F36C6F /* NightmareData.swift in Sources */,
 				6B7B1A932902FADA00F36C6F /* SceneDelegate.swift in Sources */,
