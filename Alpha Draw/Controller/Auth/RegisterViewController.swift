@@ -6,13 +6,100 @@
 //
 
 import UIKit
+import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var confirmPasswordInputField: UITextField!
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var emailInputField: UITextField!
+    @IBOutlet weak var passwordInputField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        addStyleToInputField(inputField: nameInputField)
+    }
+    @IBAction func registerButtonClicked(_ sender: Any) {
+        // check if all input fields are filled
+        if nameInputField.text == "" || emailInputField.text == "" || passwordInputField.text == "" || confirmPasswordInputField.text == "" {
+            // show alert
+            let alert = UIAlertController(title: "Error", message: "Please fill in all input fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.overrideUserInterfaceStyle = .dark
+            self.present(alert, animated: true)
+        } else {
+            // check if password and confirm password are the same
+            if passwordInputField.text != confirmPasswordInputField.text {
+                // show alert
+                let alert = UIAlertController(title: "Error", message: "Password and Confirm Password are not the same", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.overrideUserInterfaceStyle = .dark
+                self.present(alert, animated: true)
+            } else {
+                // register user
+                Auth.auth().createUser(withEmail: emailInputField.text!, password: passwordInputField.text!) { authResult, error in
+                    if error != nil {
+                        // show alert
+                        let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        alert.overrideUserInterfaceStyle = .dark
+                        self.present(alert, animated: true)
+                    } else {
+                        // add user to database
+                        let db = Firestore.firestore()
+                        db.collection("users").addDocument(data: ["name": self.nameInputField.text!, "email": self.emailInputField.text!, "password": self.passwordInputField.text!]) { (error) in
+                            if error != nil {
+                                // show alert
+                                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Login Now!", style: .default, handler: nil))
+                                alert.overrideUserInterfaceStyle = .dark
+                                self.present(alert, animated: true)
+                            }
+                        }
+                        // show alert
+                        let alert = UIAlertController(title: "Success", message: "You have successfully registered", preferredStyle: .alert)
+                        // when click on OK button, go to login page
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                            self.performSegue(withIdentifier: "goToLogin", sender: self)
+                        }))
+                        alert.overrideUserInterfaceStyle = .dark
+                        self.present(alert, animated: true)
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    // when click other place on screen, dismiss keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    // when click return on keyboard, dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+
+
+
+    
+    func addStyleToInputField(inputField: UITextField) {
+        //set the height of the input field to be 50
+        inputField.frame.size.height = 50
+        inputField.layer.cornerRadius = 25
+        // setup a gloomy color for the input field shadow
+        inputField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        inputField.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        inputField.layer.shadowOpacity = 1.0
+        inputField.layer.shadowRadius = 0.0
+        inputField.layer.masksToBounds = false
+        
+        
     }
     
 

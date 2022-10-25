@@ -90,19 +90,12 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-Wr-xfG">
                                 <rect key="frame" x="16" y="770" width="163" height="40"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Register">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="18" name="Times-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="Register">
+                                    <fontDescription key="titleFontDescription" name="Times-Bold" family="Times" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.33725491169999999" green="0.34509804840000002" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerButtonClicked:" destination="t4X-f8-qbn" eventType="touchUpInside" id="IQF-gp-L24"/>
@@ -111,19 +104,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvy-BE-cMa">
                                 <rect key="frame" x="211" y="770" width="163" height="40"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Login">
-                                            <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="18" name="Times-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <fontDescription key="titleFontDescription" name="Times-Bold" family="Times" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.90588235859999999" green="0.19607841970000001" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="t4X-f8-qbn" eventType="touchUpInside" id="luu-lX-IVu"/>
@@ -131,11 +117,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-L4-U3M">
-                                <rect key="frame" x="114" y="292" width="163" height="147"/>
+                                <rect key="frame" x="114" y="216" width="163" height="147"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Welcome">
                                         <attributes>
-                                            <color key="NSColor" red="0.7766772349722717" green="0.78436710858585856" blue="0.78436710858585856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="36" name="Times-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -143,31 +129,59 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-7t-wjP">
+                                <rect key="frame" x="29" y="807" width="137" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOg-bg-Hbh">
+                                <rect key="frame" x="224" y="807" width="137" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-ve-u8S">
+                                <rect key="frame" x="29" y="807" width="150" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qv7-K8-xWm"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="lvy-BE-cMa" secondAttribute="bottom" id="0Qc-no-PQO"/>
-                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="11g-L4-U3M" secondAttribute="bottom" constant="371" id="3ef-La-bgp"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="11g-L4-U3M" secondAttribute="bottom" constant="447" id="3ef-La-bgp"/>
+                            <constraint firstItem="SOg-bg-Hbh" firstAttribute="width" secondItem="YwV-7t-wjP" secondAttribute="width" id="5zO-Uc-3NS"/>
+                            <constraint firstItem="SOg-bg-Hbh" firstAttribute="leading" secondItem="YwV-7t-wjP" secondAttribute="trailing" constant="58" id="ElZ-Ef-Yhi"/>
                             <constraint firstItem="JAK-Wr-xfG" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" constant="16" id="GNR-V9-cvC"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="jgM-ve-u8S" secondAttribute="bottom" id="GoL-Zs-vE3"/>
                             <constraint firstItem="lvy-BE-cMa" firstAttribute="leading" secondItem="JAK-Wr-xfG" secondAttribute="trailing" constant="32" id="KAc-ZT-t8O"/>
                             <constraint firstItem="xvN-O4-chI" firstAttribute="top" secondItem="Ifn-vW-Eqe" secondAttribute="top" id="PRa-8S-UsU"/>
                             <constraint firstItem="11g-L4-U3M" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" constant="114" id="Sux-h9-tII"/>
                             <constraint firstItem="xvN-O4-chI" firstAttribute="trailing" secondItem="Qv7-K8-xWm" secondAttribute="trailing" id="TW0-55-K5X"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="SOg-bg-Hbh" secondAttribute="bottom" id="Up5-Ot-RTo"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="trailing" secondItem="SOg-bg-Hbh" secondAttribute="trailing" constant="29" id="Vjv-cl-VU4"/>
+                            <constraint firstItem="SOg-bg-Hbh" firstAttribute="top" secondItem="lvy-BE-cMa" secondAttribute="bottom" constant="-3" id="XdD-mE-02p"/>
                             <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="JAK-Wr-xfG" secondAttribute="bottom" id="Xgu-Yv-sAd"/>
+                            <constraint firstItem="YwV-7t-wjP" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" constant="29" id="bjm-nd-Ua2"/>
                             <constraint firstItem="Qv7-K8-xWm" firstAttribute="trailing" secondItem="lvy-BE-cMa" secondAttribute="trailing" constant="16" id="dGA-1a-PaJ"/>
-                            <constraint firstItem="11g-L4-U3M" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="204" id="dbK-ST-4A9"/>
+                            <constraint firstItem="jgM-ve-u8S" firstAttribute="top" secondItem="JAK-Wr-xfG" secondAttribute="bottom" constant="-3" id="dUc-QA-sn6"/>
+                            <constraint firstItem="11g-L4-U3M" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="128" id="dbK-ST-4A9"/>
+                            <constraint firstItem="YwV-7t-wjP" firstAttribute="top" secondItem="JAK-Wr-xfG" secondAttribute="bottom" constant="-3" id="fdZ-sC-CVA"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="trailing" secondItem="jgM-ve-u8S" secondAttribute="trailing" constant="211" id="htg-80-64H"/>
                             <constraint firstItem="xvN-O4-chI" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" id="kgF-ia-uGe"/>
+                            <constraint firstItem="Qv7-K8-xWm" firstAttribute="bottom" secondItem="YwV-7t-wjP" secondAttribute="bottom" id="lO8-Mq-NEh"/>
                             <constraint firstAttribute="bottom" secondItem="xvN-O4-chI" secondAttribute="bottom" id="osx-ix-loY"/>
                             <constraint firstItem="JAK-Wr-xfG" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="682" id="pum-a3-mHK"/>
                             <constraint firstItem="Qv7-K8-xWm" firstAttribute="trailing" secondItem="11g-L4-U3M" secondAttribute="trailing" constant="113" id="r7E-Xd-b4Q"/>
                             <constraint firstItem="lvy-BE-cMa" firstAttribute="top" secondItem="Qv7-K8-xWm" secondAttribute="top" constant="682" id="tG4-8k-vMm"/>
+                            <constraint firstItem="jgM-ve-u8S" firstAttribute="leading" secondItem="Qv7-K8-xWm" secondAttribute="leading" constant="29" id="xlO-g9-10I"/>
                             <constraint firstItem="lvy-BE-cMa" firstAttribute="width" secondItem="JAK-Wr-xfG" secondAttribute="width" id="zuY-SU-tsr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kBl-lw-eOT"/>
                     <connections>
+                        <outlet property="animateBar" destination="jgM-ve-u8S" id="oeW-Fi-ili"/>
+                        <outlet property="backgroundImage" destination="xvN-O4-chI" id="Uec-Sd-uPk"/>
+                        <outlet property="logBottomLine" destination="SOg-bg-Hbh" id="ANo-Tm-9gb"/>
                         <outlet property="logButton" destination="lvy-BE-cMa" id="Oiq-MS-rJA"/>
+                        <outlet property="regBottomLine" destination="YwV-7t-wjP" id="Dgx-Qa-5Up"/>
                         <outlet property="regButton" destination="JAK-Wr-xfG" id="71a-8m-FCT"/>
                         <outlet property="welcomeText" destination="11g-L4-U3M" id="bG6-vE-E8h"/>
                     </connections>
@@ -183,14 +197,76 @@
                     <view key="view" contentMode="scaleToFill" id="G3W-rh-wGj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBe-3C-Zsl">
+                                <rect key="frame" x="114" y="455" width="163" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register">
+                                    <fontDescription key="titleFontDescription" name="Times-Bold" family="Times" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonClicked:" destination="t4X-f8-qbn" eventType="touchUpInside" id="LyR-Z7-7IS"/>
+                                    <action selector="registerButtonClicked:" destination="3Si-qK-m6b" eventType="touchUpInside" id="dJj-Zv-Rhf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZn-Ky-e7H">
+                                <rect key="frame" x="78" y="218" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Si-qK-m6b" id="4F2-5L-VKJ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-Ku-LnC">
+                                <rect key="frame" x="78" y="144" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Si-qK-m6b" id="Ee7-12-2Hd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9B8-K5-ETa">
+                                <rect key="frame" x="78" y="297" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Si-qK-m6b" id="qzx-ZD-i3v"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-fA-dM6">
+                                <rect key="frame" x="78" y="373" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Si-qK-m6b" id="FpS-O9-Rrr"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="enq-uz-zDg"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="2aH-5c-Dfe">
                         <barButtonItem key="backBarButtonItem" title="Welcome" id="3EQ-5d-wdP"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmPasswordInputField" destination="Eyb-fA-dM6" id="CoW-wA-5l1"/>
+                        <outlet property="emailInputField" destination="VZn-Ky-e7H" id="oS8-zL-kh5"/>
+                        <outlet property="nameInputField" destination="gj2-Ku-LnC" id="wA2-32-WpU"/>
+                        <outlet property="passwordInputField" destination="9B8-K5-ETa" id="ICC-br-AHz"/>
                         <segue destination="mC3-Zb-l9x" kind="show" identifier="registerToHome" id="RfZ-Te-itc"/>
+                        <segue destination="Lak-YS-JgL" kind="show" identifier="goToLogin" id="Nvn-4W-l4t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLg-Hg-Ys8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,7 +281,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YeF-e1-2ex"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="d1p-Tw-9CP">
                         <barButtonItem key="backBarButtonItem" title="Welcome" id="Is6-Tw-gWs"/>
@@ -258,21 +334,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tT2-O9-jkK"/>
+        <segue reference="Nvn-4W-l4t"/>
+        <segue reference="RfZ-Te-itc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WelcomeBackground" width="512" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
