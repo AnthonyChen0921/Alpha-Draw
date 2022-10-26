@@ -76,7 +76,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         currentTime = formatter.string(from: date)
         let user = User(id: id, name: nameInputField.text!, email: emailInputField.text!, balance: 10, pfp: "https://firebasestorage.googleapis.com/v0/b/alpha-draw-e79cd.appspot.com/o/Admin%2Fpfp.png?alt=media&token=9362659c-0235-4de9-8d78-7dc1f66792f0", date_created: currentTime)
         let db = Firestore.firestore()
-        db.collection("users").addDocument(data: user.toDict()) { error in
+        // add user to database, set users document id to user id
+        db.collection("users").document(id).setData(user.toDict()) { error in
             if error != nil {
                 // show alert
                 let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

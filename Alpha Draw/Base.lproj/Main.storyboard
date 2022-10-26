@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Um0-vN-fIw">
+            <objects>
+                <viewController id="W95-PA-eqN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ub-ma-kMI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MUC-ei-Og4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="QKT-5E-ERS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCq-cf-rTo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="-178"/>
+        </scene>
         <!--HomeViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -52,12 +68,12 @@
                             <constraint firstItem="YmE-fc-1A9" firstAttribute="leading" secondItem="BYJ-9A-fsi" secondAttribute="leading" id="nLU-h1-w8h"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="scribble.variable" catalog="system" id="vjF-L8-ITq"/>
+                    <tabBarItem key="tabBarItem" title="" image="scribble.variable" catalog="system" id="vjF-L8-ITq"/>
                     <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="316"/>
+            <point key="canvasLocation" x="3242" y="1192"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="noC-dC-CTf">
@@ -76,17 +92,18 @@
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="z4n-3P-W94"/>
-                        <segue destination="slm-uW-sP2" kind="relationship" relationship="viewControllers" id="iTB-bh-tAK"/>
-                        <segue destination="Yeq-HC-FOS" kind="relationship" relationship="viewControllers" id="oyn-t3-0qV"/>
-                        <segue destination="Xnh-f3-oZh" kind="relationship" relationship="viewControllers" id="0Kr-2d-Vg3"/>
+                        <segue destination="W95-PA-eqN" kind="relationship" relationship="viewControllers" id="QIA-DR-2Cr"/>
+                        <segue destination="slm-uW-sP2" kind="relationship" relationship="viewControllers" id="Eih-6J-Rc4"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5ac-Tp-N9P"/>
+                        <segue destination="Yeq-HC-FOS" kind="relationship" relationship="viewControllers" id="bTH-kC-3E6"/>
+                        <segue destination="Xnh-f3-oZh" kind="relationship" relationship="viewControllers" id="ZRG-HM-93E"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xah-pB-MbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2316.9230769230767" y="1191.4691943127962"/>
         </scene>
-        <!--Gallery-->
+        <!--Gallery View Controller-->
         <scene sceneID="wYS-yZ-eAL">
             <objects>
                 <viewController id="Yeq-HC-FOS" customClass="GalleryViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,13 +113,13 @@
                         <viewLayoutGuide key="safeArea" id="hY4-cC-7ZF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" image="doc.text.image" catalog="system" id="Ibd-0k-MmD"/>
+                    <tabBarItem key="tabBarItem" title="" image="doc.text.image" catalog="system" id="Ibd-0k-MmD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtf-b8-Yz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="1628"/>
+            <point key="canvasLocation" x="2317" y="1973"/>
         </scene>
-        <!--Restore-->
+        <!--Restore View Controller-->
         <scene sceneID="z4E-du-qLR">
             <objects>
                 <viewController id="slm-uW-sP2" customClass="RestoreViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,11 +129,11 @@
                         <viewLayoutGuide key="safeArea" id="G7f-EQ-hHw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Restore" image="repeat" catalog="system" id="Xbn-IG-bTG"/>
+                    <tabBarItem key="tabBarItem" title="" image="repeat" catalog="system" id="Xbn-IG-bTG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7S-Up-lyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="976"/>
+            <point key="canvasLocation" x="3242" y="505"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="fbU-8P-95T">
@@ -425,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="1193.8461538461538" y="1671.3270142180095"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="ZfS-3r-JlT">
             <objects>
                 <viewController id="Xnh-f3-oZh" customClass="ProfileViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
@@ -453,14 +470,14 @@
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="x2X-VE-iUa"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="x2X-VE-iUa"/>
                     <connections>
                         <outlet property="username" destination="rsc-co-05g" id="Cm7-FH-FVA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY4-ad-hpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2317" y="1959"/>
+            <point key="canvasLocation" x="3242" y="1973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qVy-dH-zkN">
@@ -488,6 +505,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.text.image" catalog="system" width="115" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>

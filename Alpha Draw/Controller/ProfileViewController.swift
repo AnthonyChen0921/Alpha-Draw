@@ -15,26 +15,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // get user data
-        let db = Firestore.firestore()
-        db.collection("users").whereField("email", isEqualTo: Auth.auth().currentUser?.email! as Any).getDocuments { (snapshot, error) in
-            if error != nil {
-                // show alert
-                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                alert.overrideUserInterfaceStyle = .dark
-                self.present(alert, animated: true)
-            } else {
-                if snapshot?.isEmpty != true && snapshot != nil {
-                    for document in snapshot!.documents {
-                        if let name = document.get("name") as? String {
-                            self.username.text = name
-                        }
-                    }
-                }
-            }
-        }
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getName()
+    }
+
+
     @IBAction func logoutButtonClicked(_ sender: Any) {
         // logout user
         do {
@@ -46,8 +34,6 @@ class ProfileViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let welcomeViewController = storyboard.instantiateViewController(identifier: "WelcomeViewController")
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(welcomeViewController)
-
-
         } catch {
             // show alert
             let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -55,6 +41,32 @@ class ProfileViewController: UIViewController {
             alert.overrideUserInterfaceStyle = .dark
             self.present(alert, animated: true)
         }
+    }
+
+    func getName() -> String {
+        // get user data by user_id from UserDefaults
+        let user_id = UserDefaults.standard.string(forKey: "user_id")
+        print(user_id!)
+
+        // get user data from firebase
+        let db = Firestore.firestore()
+        var name = ""
+        db.collection("users").document(user_id!).getDocument { (document, error) in
+            if error != nil {
+                // show alert
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.overrideUserInterfaceStyle = .dark
+                self.present(alert, animated: true)
+            } else {
+                if document != nil && document!.exists {
+                    // get name from user data
+                    name = document!.get("name") as! String
+                    self.username.text = name
+                }
+            }
+        }
+        return name
     }
     
 
