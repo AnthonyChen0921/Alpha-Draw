@@ -10,6 +10,12 @@
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
+		6B5785372909C19400F1713D /* plus.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785352909C19400F1713D /* plus.jpeg */; };
+		6B5785382909C19400F1713D /* plus2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785362909C19400F1713D /* plus2.jpeg */; };
+		6B57853A2909C33300F1713D /* plus3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785392909C33300F1713D /* plus3.jpeg */; };
+		6B57853C2909CC6900F1713D /* cloud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853B2909CC6900F1713D /* cloud.jpeg */; };
+		6B57853F2909D1EE00F1713D /* lightbulb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853D2909D1EE00F1713D /* lightbulb.jpeg */; };
+		6B5785402909D1EE00F1713D /* lightbulb2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */; };
 		6B62DB4C2906043300839DE2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4B2906043300839DE2 /* FirebaseAnalytics */; };
 		6B62DB4E2906043300839DE2 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4D2906043300839DE2 /* FirebaseAnalyticsSwift */; };
 		6B62DB502906043300839DE2 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4F2906043300839DE2 /* FirebaseAppCheck */; };
@@ -63,6 +69,12 @@
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		6B5785352909C19400F1713D /* plus.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus.jpeg; sourceTree = "<group>"; };
+		6B5785362909C19400F1713D /* plus2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus2.jpeg; sourceTree = "<group>"; };
+		6B5785392909C33300F1713D /* plus3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus3.jpeg; sourceTree = "<group>"; };
+		6B57853B2909CC6900F1713D /* cloud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloud.jpeg; sourceTree = "<group>"; };
+		6B57853D2909D1EE00F1713D /* lightbulb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb.jpeg; sourceTree = "<group>"; };
+		6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb2.jpeg; sourceTree = "<group>"; };
 		6B62DB6B290640AC00839DE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B62DB6D2907894A00839DE2 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6B62DB702907902E00839DE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +255,12 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6B57853D2909D1EE00F1713D /* lightbulb.jpeg */,
+				6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */,
+				6B57853B2909CC6900F1713D /* cloud.jpeg */,
+				6B5785352909C19400F1713D /* plus.jpeg */,
+				6B5785362909C19400F1713D /* plus2.jpeg */,
+				6B5785392909C33300F1713D /* plus3.jpeg */,
 				6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */,
 				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
 				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
@@ -350,13 +368,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5785382909C19400F1713D /* plus2.jpeg in Resources */,
+				6B57853C2909CC6900F1713D /* cloud.jpeg in Resources */,
 				6B62DB7929079F8700839DE2 /* WelcomeBackground.png in Resources */,
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
+				6B57853F2909D1EE00F1713D /* lightbulb.jpeg in Resources */,
 				6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */,
+				6B5785402909D1EE00F1713D /* lightbulb2.jpeg in Resources */,
 				6B7B1A9A2902FADC00F36C6F /* Assets.xcassets in Resources */,
 				6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */,
+				6B5785372909C19400F1713D /* plus.jpeg in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,
+				6B57853A2909C33300F1713D /* plus3.jpeg in Resources */,
 				6B7B1A982902FADA00F36C6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
