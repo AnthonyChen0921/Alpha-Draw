@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
+		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B62DB4C2906043300839DE2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4B2906043300839DE2 /* FirebaseAnalytics */; };
 		6B62DB4E2906043300839DE2 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4D2906043300839DE2 /* FirebaseAnalyticsSwift */; };
 		6B62DB502906043300839DE2 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4F2906043300839DE2 /* FirebaseAppCheck */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
+		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B62DB6B290640AC00839DE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B62DB6D2907894A00839DE2 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6B62DB702907902E00839DE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */,
 				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
 				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
@@ -348,6 +351,7 @@
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
 				6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */,
 				6B7B1A9A2902FADC00F36C6F /* Assets.xcassets in Resources */,
+				6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,
 				6B7B1A982902FADA00F36C6F /* Main.storyboard in Resources */,

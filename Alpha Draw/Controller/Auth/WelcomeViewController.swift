@@ -289,7 +289,7 @@ class WelcomeViewController: UIViewController {
             }, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
-                    self.backgroundImage.image = UIImage(named: "WelcomeBackground2")
+                    self.backgroundImage.image = UIImage(named: "WelcomeBackground3")
                 }, completion: nil)
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
