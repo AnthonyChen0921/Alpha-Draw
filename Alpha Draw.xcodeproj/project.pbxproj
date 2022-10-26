@@ -51,6 +51,7 @@
 		6B8425352908BC75000AC834 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8425342908BC75000AC834 /* DrawViewController.swift */; };
 		6B8425372908BC89000AC834 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8425362908BC89000AC834 /* RestoreViewController.swift */; };
 		6B8425392908BCDE000AC834 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8425382908BCDE000AC834 /* GalleryViewController.swift */; };
+		6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */; };
 		6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC32903630500DC5200 /* PixrayData.swift */; };
 		6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC62904F5F500DC5200 /* Firebase.swift */; };
 		6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */; };
@@ -87,6 +88,7 @@
 		6B8425342908BC75000AC834 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		6B8425362908BC89000AC834 /* RestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		6B8425382908BCDE000AC834 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeBackground2.png; sourceTree = "<group>"; };
 		6BDE5EC32903630500DC5200 /* PixrayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixrayData.swift; sourceTree = "<group>"; };
 		6BDE5EC62904F5F500DC5200 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
 				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
 			);
@@ -343,6 +346,7 @@
 			files = (
 				6B62DB7929079F8700839DE2 /* WelcomeBackground.png in Resources */,
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
+				6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */,
 				6B7B1A9A2902FADC00F36C6F /* Assets.xcassets in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,

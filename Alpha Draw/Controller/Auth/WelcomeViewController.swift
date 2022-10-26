@@ -8,6 +8,7 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    var currentBackgroundImageIndex = 1;
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var animateBar: UIView!
@@ -53,6 +54,13 @@ class WelcomeViewController: UIViewController {
             self.animateToDeleteDetailText()
         }
         animateBar.alpha = 0.01
+
+        // set background image
+        backgroundImage.image = UIImage(named: "WelcomeBackground")
+        backgroundImage.contentMode = .topLeft
+        backgroundImage.clipsToBounds = true
+
+        
     }
 
     // view did appear
@@ -169,7 +177,13 @@ class WelcomeViewController: UIViewController {
         // add another labeltext to display: "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
         detailText.text = ""
         var charIndex = 0.0
-        let titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        var titleText = "";
+        if (currentBackgroundImageIndex == 1){
+            titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        }
+        else{
+            titleText = "A beatiful painting of sea cliffs in a tumultuous storm. A light house on the another side, shinning glimmer with gold light. Trending on ArtStation."
+        }
         // set the color to silver
         detailText.textColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
         for letter in titleText {
@@ -184,7 +198,13 @@ class WelcomeViewController: UIViewController {
     @objc func animateToDeleteDetailText() {
         // delete the detail text one by one
         var charIndex = 0.0
-        let titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        var titleText = "";
+        if (currentBackgroundImageIndex == 1){
+            titleText = "A painting of a castle standing in a tumultuous storm, the crowd at the bottom. Magnificant clouds and lightning. Light towers glimmer with red light, Trending on ArtStation."
+        }
+        else{
+            titleText = "A beatiful painting of sea cliffs in a tumultuous storm. A light house on the another side, shinning glimmer with gold light. Trending on ArtStation."
+        }
         for _ in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) { (timer) in
                 self.detailText.text?.removeLast()
@@ -194,7 +214,28 @@ class WelcomeViewController: UIViewController {
 
     }
 
+    func switchBackgroundimage(){
+        // change currentBackgroundImageIndex to 1 or 2
+        if(currentBackgroundImageIndex == 1){
+            currentBackgroundImageIndex = 2
+            // switch the backgroundiamge of the view
+            backgroundImage.image = UIImage(named: "WelcomeBackground")
+            // update imageview
+            backgroundImage.contentMode = .topLeft
+            backgroundImage.clipsToBounds = true   
+            // setNeedsDisplay
+        }else{
+            currentBackgroundImageIndex = 1
+            // switch the backgroundiamge of the view
+            backgroundImage.image = UIImage(named: "WelcomeBackground2")
+            backgroundImage.contentMode = .topLeft
+            backgroundImage.clipsToBounds = true
+        }
+    }
+
     @objc func deleteAndAddDetailText(){
+
+        switchBackgroundimage()
         // delete the detail text and add another one
         addAnimatedDetailToWelcomeText()
         DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
