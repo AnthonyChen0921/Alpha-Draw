@@ -133,12 +133,12 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		6B62DB7A2907A0AE00839DE2 /* Custom Segues */ = {
+		6B62DB7A2907A0AE00839DE2 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
 				6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */,
 			);
-			path = "Custom Segues";
+			path = Segues;
 			sourceTree = "<group>";
 		};
 		6B7B1A842902FADA00F36C6F = {
@@ -160,7 +160,7 @@
 		6B7B1A8F2902FADA00F36C6F /* Alpha Draw */ = {
 			isa = PBXGroup;
 			children = (
-				6B62DB7A2907A0AE00839DE2 /* Custom Segues */,
+				6B62DB7A2907A0AE00839DE2 /* Segues */,
 				6BDE5EC52904F5E800DC5200 /* DataBase */,
 				6B7B1ABE290347AD00F36C6F /* Image */,
 				6B7B1AA72902FDB500F36C6F /* Model */,
