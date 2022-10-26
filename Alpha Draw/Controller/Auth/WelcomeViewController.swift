@@ -35,7 +35,7 @@ class WelcomeViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(addGlowEffectToTitle), userInfo: nil, repeats: true)
 
         // call addLinearlyFlashEffectToBottomLine per 2 seconds
-        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(addLinearlyFlashEffectToAnimateBar), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 14, target: self, selector: #selector(addLinearlyFlashEffectToAnimateBar), userInfo: nil, repeats: true)
 
         // call animateBackGroundImage per 4 seconds
         Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(animateBackGroundImage), userInfo: nil, repeats: true)
@@ -132,6 +132,7 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc func addLinearlyFlashEffectToAnimateBar(){
+        // add linearly flash effect to animateBar within 0.5 seconds
         UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseInOut, animations: {
             self.animateBar.alpha = 1
         }, completion: nil)
@@ -204,7 +205,7 @@ class WelcomeViewController: UIViewController {
     @objc func animateBackGroundImage(){
         // animate background image
         UIView.animate(withDuration: 2, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.backgroundImage.alpha = 0.5
+            self.backgroundImage.alpha = 0.3
         }, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             UIView.animate(withDuration: 2, delay: 0.0, options: .curveEaseInOut, animations: {

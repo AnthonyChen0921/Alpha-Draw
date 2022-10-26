@@ -51,7 +51,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     } else {
                         // add user to database
                         let db = Firestore.firestore()
-                        db.collection("users").addDocument(data: ["name": self.nameInputField.text!, "email": self.emailInputField.text!, "password": self.passwordInputField.text!]) { (error) in
+                        db.collection("users").addDocument(data: ["name": self.nameInputField.text!, "email": self.emailInputField.text!]) { (error) in
                             if error != nil {
                                 // show alert
                                 let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

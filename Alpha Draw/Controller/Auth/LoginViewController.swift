@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextInputField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         addStyleToInputField(inputField: emailTextInputField)
         addStyleToInputField(inputField: passwordTextInputField)
@@ -37,15 +37,9 @@ class LoginViewController: UIViewController {
                     alert.overrideUserInterfaceStyle = .dark
                     self.present(alert, animated: true)
                 } else {
-                    // show alert
-                    let alert = UIAlertController(title: "Success", message: "Login Successful", preferredStyle: .alert)
-                    // if user clicks on OK, go to home screen
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                        self.performSegue(withIdentifier: "loginToHome", sender: self)
-                    }))
-                    alert.overrideUserInterfaceStyle = .dark
-                    self.present(alert, animated: true)
-                    
+                    // save user id to UserDefaults
+                    UserDefaults.standard.set(authResult?.user.uid, forKey: "user_id")
+                    self.performSegue(withIdentifier: "loginToHome", sender: self)
                 }
             }
         }

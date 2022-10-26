@@ -20,15 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        // declare a user
-        let user = User(id: "10086", name: "Anthony", email: "test@email.com", password: "123456", balance: 1000)
-        // save user to firebase
-        firebase.addUser(user: user)
-        print("uploaded user")
 
-        // disable back button
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        // hides back button
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.tabBarController?.navigationItem.setHidesBackButton(true, animated: false)
+
+   
 
         
     }
