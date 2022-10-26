@@ -50,16 +50,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         self.present(alert, animated: true)
                     } else {
                         // add user to database
-                        let db = Firestore.firestore()
-                        db.collection("users").addDocument(data: ["name": self.nameInputField.text!, "email": self.emailInputField.text!]) { (error) in
-                            if error != nil {
-                                // show alert
-                                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "Login Now!", style: .default, handler: nil))
-                                alert.overrideUserInterfaceStyle = .dark
-                                self.present(alert, animated: true)
-                            }
-                        }
+                        self.createUserByModal(id: (authResult?.user.uid)!)
                         // show alert
                         let alert = UIAlertController(title: "Success", message: "You have successfully registered", preferredStyle: .alert)
                         // when click on OK button, go to login page
@@ -74,6 +65,26 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
 
+    }
+
+
+    func createUserByModal(id: String) {
+        var currentTime: String = ""
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        currentTime = formatter.string(from: date)
+        let user = User(id: id, name: nameInputField.text!, email: emailInputField.text!, balance: 10, pfp: "https://firebasestorage.googleapis.com/v0/b/alpha-draw-e79cd.appspot.com/o/Admin%2Fpfp.png?alt=media&token=9362659c-0235-4de9-8d78-7dc1f66792f0", date_created: currentTime)
+        let db = Firestore.firestore()
+        db.collection("users").addDocument(data: user.toDict()) { error in
+            if error != nil {
+                // show alert
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.overrideUserInterfaceStyle = .dark
+                self.present(alert, animated: true)
+            }
+        }
     }
 
     // when click other place on screen, dismiss keyboard

@@ -8,17 +8,49 @@
 import UIKit
 
 class User: Encodable {
+    // basic user info
     var id: String?
     var name: String?
     var email: String?
-    var password: String?
     var balance: Double?
+    var pfp: String?
+    var date_created: String?
 
-    init(id: String, name: String, email: String, password: String, balance: Double) {
+    // metadata
+    var is_admin = false
+    var is_banned = false
+    var is_premium = false
+    var is_email_verified = false
+
+    // permissions
+    var permissions: [String?] = []
+
+
+    init (id: String?, name: String?, email: String?, balance: Double?, pfp: String?, date_created: String?) {
         self.id = id
         self.name = name
         self.email = email
-        self.password = password
         self.balance = balance
+        self.pfp = pfp
+        self.date_created = date_created
     }
+
+    // createa user dictionary
+    func toDict() -> [String: Any] {
+        return [
+            "id": self.id!,
+            "name": self.name!,
+            "email": self.email!,
+            "balance": self.balance!,
+            "pfp": self.pfp!,
+            "date_created": self.date_created!,
+            "is_admin": self.is_admin,
+            "is_banned": self.is_banned,
+            "is_premium": self.is_premium,
+            "is_email_verified": self.is_email_verified,
+            "permissions": self.permissions
+        ]
+    }
+        
+
 }
