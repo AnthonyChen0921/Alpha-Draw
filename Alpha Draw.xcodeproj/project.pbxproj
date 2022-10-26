@@ -16,6 +16,10 @@
 		6B57853C2909CC6900F1713D /* cloud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853B2909CC6900F1713D /* cloud.jpeg */; };
 		6B57853F2909D1EE00F1713D /* lightbulb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853D2909D1EE00F1713D /* lightbulb.jpeg */; };
 		6B5785402909D1EE00F1713D /* lightbulb2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */; };
+		6B5785422909D2BA00F1713D /* lightbulb3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785412909D2BA00F1713D /* lightbulb3.jpeg */; };
+		6B5785442909D7C800F1713D /* starrynight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785432909D7C800F1713D /* starrynight.jpg */; };
+		6B5785472909D85400F1713D /* launchScreen2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785452909D85400F1713D /* launchScreen2.jpeg */; };
+		6B5785482909D85400F1713D /* launchScreen1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785462909D85400F1713D /* launchScreen1.jpeg */; };
 		6B62DB4C2906043300839DE2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4B2906043300839DE2 /* FirebaseAnalytics */; };
 		6B62DB4E2906043300839DE2 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4D2906043300839DE2 /* FirebaseAnalyticsSwift */; };
 		6B62DB502906043300839DE2 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 6B62DB4F2906043300839DE2 /* FirebaseAppCheck */; };
@@ -75,6 +79,10 @@
 		6B57853B2909CC6900F1713D /* cloud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloud.jpeg; sourceTree = "<group>"; };
 		6B57853D2909D1EE00F1713D /* lightbulb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb.jpeg; sourceTree = "<group>"; };
 		6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb2.jpeg; sourceTree = "<group>"; };
+		6B5785412909D2BA00F1713D /* lightbulb3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb3.jpeg; sourceTree = "<group>"; };
+		6B5785432909D7C800F1713D /* starrynight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starrynight.jpg; sourceTree = "<group>"; };
+		6B5785452909D85400F1713D /* launchScreen2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen2.jpeg; sourceTree = "<group>"; };
+		6B5785462909D85400F1713D /* launchScreen1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen1.jpeg; sourceTree = "<group>"; };
 		6B62DB6B290640AC00839DE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B62DB6D2907894A00839DE2 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6B62DB702907902E00839DE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B5785492909D85800F1713D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				6B57853D2909D1EE00F1713D /* lightbulb.jpeg */,
+				6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */,
+				6B5785412909D2BA00F1713D /* lightbulb3.jpeg */,
+				6B57853B2909CC6900F1713D /* cloud.jpeg */,
+				6B5785352909C19400F1713D /* plus.jpeg */,
+				6B5785362909C19400F1713D /* plus2.jpeg */,
+				6B5785392909C33300F1713D /* plus3.jpeg */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		6B57854C2909D87A00F1713D /* launchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6B5785432909D7C800F1713D /* starrynight.jpg */,
+				6B5785462909D85400F1713D /* launchScreen1.jpeg */,
+				6B5785452909D85400F1713D /* launchScreen2.jpeg */,
+			);
+			name = launchScreen;
+			sourceTree = "<group>";
+		};
+		6B57854D2909D89500F1713D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */,
+				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
+				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 		6B62DB6F2907900400839DE2 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,15 +297,9 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				6B57853D2909D1EE00F1713D /* lightbulb.jpeg */,
-				6B57853E2909D1EE00F1713D /* lightbulb2.jpeg */,
-				6B57853B2909CC6900F1713D /* cloud.jpeg */,
-				6B5785352909C19400F1713D /* plus.jpeg */,
-				6B5785362909C19400F1713D /* plus2.jpeg */,
-				6B5785392909C33300F1713D /* plus3.jpeg */,
-				6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */,
-				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
-				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
+				6B57854D2909D89500F1713D /* Welcome */,
+				6B57854C2909D87A00F1713D /* launchScreen */,
+				6B5785492909D85800F1713D /* Icons */,
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
 			);
 			path = Image;
@@ -370,16 +406,20 @@
 			files = (
 				6B5785382909C19400F1713D /* plus2.jpeg in Resources */,
 				6B57853C2909CC6900F1713D /* cloud.jpeg in Resources */,
+				6B5785422909D2BA00F1713D /* lightbulb3.jpeg in Resources */,
 				6B62DB7929079F8700839DE2 /* WelcomeBackground.png in Resources */,
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
 				6B57853F2909D1EE00F1713D /* lightbulb.jpeg in Resources */,
+				6B5785482909D85400F1713D /* launchScreen1.jpeg in Resources */,
 				6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */,
 				6B5785402909D1EE00F1713D /* lightbulb2.jpeg in Resources */,
 				6B7B1A9A2902FADC00F36C6F /* Assets.xcassets in Resources */,
 				6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */,
 				6B5785372909C19400F1713D /* plus.jpeg in Resources */,
+				6B5785472909D85400F1713D /* launchScreen2.jpeg in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,
+				6B5785442909D7C800F1713D /* starrynight.jpg in Resources */,
 				6B57853A2909C33300F1713D /* plus3.jpeg in Resources */,
 				6B7B1A982902FADA00F36C6F /* Main.storyboard in Resources */,
 			);

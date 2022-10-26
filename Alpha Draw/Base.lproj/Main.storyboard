@@ -86,7 +86,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EJ8-In-Zlg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" red="0.082352943720000002" green="0.082352943720000002" blue="0.082352943720000002" alpha="0.89510037251655628" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" systemColor="systemIndigoColor"/>
                         <color key="barTintColor" systemColor="systemIndigoColor"/>
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
@@ -510,9 +510,6 @@
         <image name="repeat" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
