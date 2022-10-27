@@ -8,7 +8,9 @@
 import UIKit
 
 
-// get image from url, if url is not valid, use no-image image
+/**
+    * @brief: get image from url, if url is not valid, use no-image image
+    */
 func getImageFromUrl(url: String) -> UIImage {
     // if url is not valid, use no-image image
     if url == "" {
@@ -20,5 +22,12 @@ func getImageFromUrl(url: String) -> UIImage {
     return UIImage(data: data)!
 }
 
-
+/**
+    *  @breif Hides the back button on the navigation bar
+    */
+func hidesBackButton(view: UIViewController) {
+    // hides back button
+    view.navigationItem.setHidesBackButton(true, animated: false)
+    view.tabBarController?.navigationItem.setHidesBackButton(true, animated: false)
+}
 

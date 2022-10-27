@@ -13,14 +13,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+        username.text! = getName()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        getName()
-    }
 
 
     @IBAction func logoutButtonClicked(_ sender: Any) {
