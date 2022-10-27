@@ -10,7 +10,8 @@ import UIKit
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     var middleButton: UIButton! = UIButton()
     var buttonBackground: UIView! = UIView()
-    var colorArray: [CGColor] = [UIColor.white.cgColor, UIColor.systemMint.cgColor, UIColor.systemCyan.cgColor, UIColor.systemOrange.cgColor, UIColor.systemPurple.cgColor]
+    var goldColor = UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00)
+    var colorArray: [CGColor] = [goldColor.cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemOrange.cgColor, UIColor.systemPurple.cgColor]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,8 +78,19 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         *  the whole execution of this function is 4.5 seconds
         */
     @objc func addGloomyShadowEffectAnimation(){
+        // if the selected index is 3, don't do the animation, instead set the shadow color to white forever
+        if self.selectedIndex == 2 {
+            UIView.animate(withDuration: 1.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                // pick color by sequence
+                self.buttonBackground.layer.shadowColor = self.colorArray[self.selectedIndex]
+                self.buttonBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
+                self.buttonBackground.layer.shadowRadius = 10
+                self.buttonBackground.layer.shadowOpacity = 0.8
+            }, completion: nil)
+            return
+        }
+
         // add a gloomy shadow effect animation to the button
-        
         UIView.animate(withDuration: 1.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {            
             self.buttonBackground.layer.shadowColor = UIColor.clear.cgColor
             self.buttonBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -103,6 +115,9 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         */
     @objc func middleButtonAction() {
         self.selectedIndex = 2
+        // also play a vibration when the button is pressed
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 
     /*

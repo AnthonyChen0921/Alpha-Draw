@@ -60,4 +60,15 @@ class LoginViewController: UIViewController {
         inputField.layer.shadowRadius = 10
         inputField.layer.shadowOpacity = 0.5
     }
+
+    // when click other place on screen, dismiss keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    // when click return on keyboard, dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
