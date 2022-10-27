@@ -15,10 +15,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // add style to text input fields
         addStyleToInputField(inputField: emailTextInputField)
         addStyleToInputField(inputField: passwordTextInputField)
     }
+
+    // login button clicked trigger the login process, if the login is successful, the user will be redirected to the home screen
     @IBAction func loginButtonClicked(_ sender: Any) {
         // check if all input fields are filled
         if emailTextInputField.text == "" || passwordTextInputField.text == "" {
@@ -45,6 +47,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /**
+        * This function adds style to the input field
+        */
     func addStyleToInputField(inputField: UITextField) {
         //set the height of the input field to be 50
         inputField.frame.size.height = 50
@@ -55,14 +60,4 @@ class LoginViewController: UIViewController {
         inputField.layer.shadowRadius = 10
         inputField.layer.shadowOpacity = 0.5
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

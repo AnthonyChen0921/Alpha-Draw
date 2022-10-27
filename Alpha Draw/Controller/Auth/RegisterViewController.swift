@@ -17,12 +17,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // add style to input fields
         addStyleToInputField(inputField: nameInputField)
         addStyleToInputField(inputField: emailInputField)
         addStyleToInputField(inputField: passwordInputField)
         addStyleToInputField(inputField: confirmPasswordInputField)
     }
+
+    // when the user clicks the register button, this function is called
     @IBAction func registerButtonClicked(_ sender: Any) {
         // check if all input fields are filled
         if nameInputField.text == "" || emailInputField.text == "" || passwordInputField.text == "" || confirmPasswordInputField.text == "" {
@@ -67,7 +69,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     }
 
-
+    /**
+        * Create user by modal
+        */
     func createUserByModal(id: String) {
         var currentTime: String = ""
         let date = Date()
@@ -102,7 +106,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
 
 
-    
+    /**
+        * Add style to input field
+        */
     func addStyleToInputField(inputField: UITextField) {
         //set the height of the input field to be 50
         inputField.frame.size.height = 50
@@ -114,15 +120,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         inputField.layer.shadowOpacity = 0.5
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

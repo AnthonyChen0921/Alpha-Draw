@@ -4,6 +4,10 @@
 //
 //  Created by Anthony C on 10/24/22.
 //
+// This document is not well-commented, try not to modify it unless you know what you're doing.
+// Basically, this is the first screen that the user sees when they open the app. It has a button that takes them to the login 
+// screen, and a button that takes them to the sign up screen.
+// Huge amount function about making animation, reference to it if you need gloomy animation or something like that.
 
 import UIKit
 
