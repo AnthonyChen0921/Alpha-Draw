@@ -10,8 +10,7 @@ import UIKit
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     var middleButton: UIButton! = UIButton()
     var buttonBackground: UIView! = UIView()
-    var goldColor = UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00)
-    var colorArray: [CGColor] = [goldColor.cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemOrange.cgColor, UIColor.systemPurple.cgColor]
+    var colorArray: [CGColor] = [UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemOrange.cgColor, UIColor.systemPurple.cgColor]
     override func viewDidLoad() {
         super.viewDidLoad()
 
