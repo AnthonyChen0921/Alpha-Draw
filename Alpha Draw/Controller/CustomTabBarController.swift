@@ -38,7 +38,7 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         buttonBackground.center = CGPoint(x: self.tabBar.center.x, y: self.tabBar.frame.height - 34)
         buttonBackground.backgroundColor = UIColor.black
         buttonBackground.layer.cornerRadius = 30
-        buttonBackground.layer.shadowColor = UIColor.white.cgColor
+        buttonBackground.layer.shadowColor = UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor
         buttonBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonBackground.layer.shadowRadius = 10
         buttonBackground.layer.shadowOpacity = 0.8

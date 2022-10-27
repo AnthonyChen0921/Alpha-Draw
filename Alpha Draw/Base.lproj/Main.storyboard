@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="Um0-vN-fIw">
             <objects>
-                <viewController id="W95-PA-eqN" customClass="HomeViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="W95-PA-eqN" customClass="HomeViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ub-ma-kMI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--HomeViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="HomeViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawViewController" title="HomeViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Custom Tab Bar Controller-->
         <scene sceneID="noC-dC-CTf">
             <objects>
-                <tabBarController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="mC3-Zb-l9x" customClass="CustomTabBarController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="mC3-Zb-l9x" customClass="CustomTabBarController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="o2s-Hu-5bz">
                         <barButtonItem key="backBarButtonItem" title="Logout" id="mck-5P-RLe"/>
@@ -87,7 +87,7 @@
         <!--Image Gallery-->
         <scene sceneID="wYS-yZ-eAL">
             <objects>
-                <viewController id="Yeq-HC-FOS" customClass="GalleryViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryViewController" id="Yeq-HC-FOS" customClass="GalleryViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bFz-eN-8KP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Image Restore-->
         <scene sceneID="z4E-du-qLR">
             <objects>
-                <viewController id="slm-uW-sP2" customClass="RestoreViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RestoreViewController" id="slm-uW-sP2" customClass="RestoreViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3g-km-qDi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -435,7 +435,7 @@
         <!--Profile-->
         <scene sceneID="ZfS-3r-JlT">
             <objects>
-                <viewController id="Xnh-f3-oZh" customClass="ProfileViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="Xnh-f3-oZh" customClass="ProfileViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="65a-xs-8aI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         if UserDefaults.standard.object(forKey: "user_id") != nil {
-            let homeVC = storyboard.instantiateViewController(identifier: "HomeViewController")
+            let homeVC = storyboard.instantiateViewController(identifier: "HomeTabBarViewController")
             window?.rootViewController = homeVC
             window?.makeKeyAndVisible()
         }
