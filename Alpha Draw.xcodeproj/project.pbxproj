@@ -67,9 +67,12 @@
 		6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC32903630500DC5200 /* PixrayData.swift */; };
 		6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC62904F5F500DC5200 /* Firebase.swift */; };
 		6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */; };
+		914E6CAEF3C02BF210B5E32D /* Pods_Alpha_Draw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDA127E29A78221A945168D /* Pods_Alpha_Draw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CCAA6BDC11183673A681F81 /* Pods-Alpha Draw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpha Draw.debug.xcconfig"; path = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw.debug.xcconfig"; sourceTree = "<group>"; };
+		44C7ADDF6F35CA2A94E345D6 /* Pods-Alpha Draw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpha Draw.release.xcconfig"; path = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw.release.xcconfig"; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		6BDE5EC32903630500DC5200 /* PixrayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixrayData.swift; sourceTree = "<group>"; };
 		6BDE5EC62904F5F500DC5200 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CDA127E29A78221A945168D /* Pods_Alpha_Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				6B62DB642906043300839DE2 /* FirebaseRemoteConfig in Frameworks */,
 				6B62DB602906043300839DE2 /* FirebaseFunctions in Frameworks */,
 				6B62DB522906043300839DE2 /* FirebaseAuth in Frameworks */,
+				914E6CAEF3C02BF210B5E32D /* Pods_Alpha_Draw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +214,8 @@
 			children = (
 				6B7B1A8F2902FADA00F36C6F /* Alpha Draw */,
 				6B7B1A8E2902FADA00F36C6F /* Products */,
+				DC8CA1DED2E8C89CD0259341 /* Pods */,
+				D25FA321F91B8ABA935D0356 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,6 +340,24 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		D25FA321F91B8ABA935D0356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CDA127E29A78221A945168D /* Pods_Alpha_Draw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC8CA1DED2E8C89CD0259341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CCAA6BDC11183673A681F81 /* Pods-Alpha Draw.debug.xcconfig */,
+				44C7ADDF6F35CA2A94E345D6 /* Pods-Alpha Draw.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,9 +365,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B7B1AA12902FADC00F36C6F /* Build configuration list for PBXNativeTarget "Alpha Draw" */;
 			buildPhases = (
+				6912076574569EEFAA5398E7 /* [CP] Check Pods Manifest.lock */,
 				6B7B1A892902FADA00F36C6F /* Sources */,
 				6B7B1A8A2902FADA00F36C6F /* Frameworks */,
 				6B7B1A8B2902FADA00F36C6F /* Resources */,
+				A9100131084C7BE7D694D81A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,6 +461,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6912076574569EEFAA5398E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alpha Draw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9100131084C7BE7D694D81A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B7B1A892902FADA00F36C6F /* Sources */ = {
@@ -607,6 +676,7 @@
 		};
 		6B7B1AA22902FADC00F36C6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CCAA6BDC11183673A681F81 /* Pods-Alpha Draw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -635,6 +705,7 @@
 		};
 		6B7B1AA32902FADC00F36C6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44C7ADDF6F35CA2A94E345D6 /* Pods-Alpha Draw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

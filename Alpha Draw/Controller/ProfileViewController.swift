@@ -14,8 +14,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var pfpImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        username.text! = getName()
-        pfpImageView.image = getProfilePicture()
+        DispatchQueue.main.async {
+            self.username.text! = self.getName()
+            self.pfpImageView.image = self.getProfilePicture()
+        }
+        
     }
     
 
