@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-TextFieldEffects in Pods, no dependencies
-Pods-Alpha Draw in Pods, depends on:
-TextFieldEffects in Pods (explicit)

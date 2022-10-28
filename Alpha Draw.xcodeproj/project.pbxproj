@@ -67,6 +67,7 @@
 		6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC32903630500DC5200 /* PixrayData.swift */; };
 		6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC62904F5F500DC5200 /* Firebase.swift */; };
 		6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */; };
+		914E6CAEF3C02BF210B5E32D /* Pods_Alpha_Draw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDA127E29A78221A945168D /* Pods_Alpha_Draw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 				6B62DB642906043300839DE2 /* FirebaseRemoteConfig in Frameworks */,
 				6B62DB602906043300839DE2 /* FirebaseFunctions in Frameworks */,
 				6B62DB522906043300839DE2 /* FirebaseAuth in Frameworks */,
+				914E6CAEF3C02BF210B5E32D /* Pods_Alpha_Draw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +354,7 @@
 				2CCAA6BDC11183673A681F81 /* Pods-Alpha Draw.debug.xcconfig */,
 				44C7ADDF6F35CA2A94E345D6 /* Pods-Alpha Draw.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
