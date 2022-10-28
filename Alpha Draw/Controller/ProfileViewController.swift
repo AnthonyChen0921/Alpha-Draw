@@ -11,9 +11,11 @@ import Firebase
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var pfpImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         username.text! = getName()
+        pfpImageView.image = getProfilePicture()
     }
     
 
@@ -41,7 +43,6 @@ class ProfileViewController: UIViewController {
     func getName() -> String {
         // get user data by user_id from UserDefaults
         let user_id = UserDefaults.standard.string(forKey: "user_id")
-        print(user_id!)
 
         // get user data from firebase
         let db = Firestore.firestore()
@@ -62,6 +63,33 @@ class ProfileViewController: UIViewController {
             }
         }
         return name
+    }
+
+    func getProfilePicture() -> UIImage {
+        // get user data by user_id from UserDefaults
+        let user_id = UserDefaults.standard.string(forKey: "user_id")
+
+        // get user data from firebase
+        let db = Firestore.firestore()
+        var pfp = UIImage()
+        db.collection("users").document(user_id!).getDocument { (document, error) in
+            if error != nil {
+                // show alert
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.overrideUserInterfaceStyle = .dark
+                self.present(alert, animated: true)
+            } else {
+                if document != nil && document!.exists {
+                    // get profile picture url
+                    let pfp_url = document!.get("pfp") as! String
+                    // get profile picture from url
+                    pfp = getImageFromUrl(url: pfp_url)
+                    self.pfpImageView.image = pfp
+                }
+            }
+        }
+        return pfp
     }
     
 

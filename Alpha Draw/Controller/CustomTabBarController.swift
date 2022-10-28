@@ -10,7 +10,7 @@ import UIKit
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     var middleButton: UIButton! = UIButton()
     var buttonBackground: UIView! = UIView()
-    var colorArray: [CGColor] = [UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemOrange.cgColor, UIColor.systemPurple.cgColor]
+    var colorArray: [CGColor] = [UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemGreen.cgColor, UIColor.systemPurple.cgColor]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,13 +79,6 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     @objc func addGloomyShadowEffectAnimation(){
         // if the selected index is 3, don't do the animation, instead set the shadow color to white forever
         if self.selectedIndex == 2 {
-            UIView.animate(withDuration: 1.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                // pick color by sequence
-                self.buttonBackground.layer.shadowColor = self.colorArray[self.selectedIndex]
-                self.buttonBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
-                self.buttonBackground.layer.shadowRadius = 10
-                self.buttonBackground.layer.shadowOpacity = 0.8
-            }, completion: nil)
             return
         }
 
@@ -114,19 +107,18 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         */
     @objc func middleButtonAction() {
         self.selectedIndex = 2
+        // animate button to be selected
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                // pick color by sequence
+                self.buttonBackground.layer.shadowColor = self.colorArray[self.selectedIndex]
+                self.buttonBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
+                self.buttonBackground.layer.shadowRadius = 10
+                self.buttonBackground.layer.shadowOpacity = 0.8
+        }, completion: nil)
         // also play a vibration when the button is pressed
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
