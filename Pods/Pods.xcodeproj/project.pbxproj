@@ -52,7 +52,7 @@
 		877D2519CE3C647EE09FDCB3E89C80DF /* TextFieldEffects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TextFieldEffects.release.xcconfig; sourceTree = "<group>"; };
 		8EF7C4F3953DD8485F14CA5EFB67FDD8 /* TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
 		9506DA724C6F10EF01A979CAA24AB55D /* TextFieldEffects */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TextFieldEffects; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5C90B0D7216EBC8C5E7D1CDA649A2ED /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
 		B09F7DC0288B3111A26F6943CF65739A /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
 		B29477B9697CB1C8BCEE55B494CDD0E3 /* TextFieldEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldEffects.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		B70B6FBD2A6ACC875F2439A4002EE9B7 /* Pods-Alpha Draw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alpha Draw.release.xcconfig"; sourceTree = "<group>"; };
 		BA51DB8C44249B387354D1D74D6D1E03 /* TextFieldEffects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TextFieldEffects.debug.xcconfig; sourceTree = "<group>"; };
 		BE655CC77CE6BD758B8B805BCB0509EF /* TextFieldEffects-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TextFieldEffects-Info.plist"; sourceTree = "<group>"; };
-		D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alpha Draw"; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F1EED4AB9CD5C9D6757A94162D9650 /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
 		E40437D6AFA95582339F61A5172D23A2 /* Pods-Alpha Draw.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alpha Draw.modulemap"; sourceTree = "<group>"; };
 		F39BC466B0425113CAC2625AB3FE6E64 /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		2C47BD1D036ED36955C57B7F6317E289 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */,
+				D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */,
 				9506DA724C6F10EF01A979CAA24AB55D /* TextFieldEffects */,
 			);
 			name = Products;
@@ -145,7 +145,6 @@
 				5CA5ADC27A2313F98A4A5602F0FB560C /* YoshikoTextField.swift */,
 				9DBE3EA6B94EFF55E48A4115AA3128F3 /* Support Files */,
 			);
-			name = TextFieldEffects;
 			path = TextFieldEffects;
 			sourceTree = "<group>";
 		};
@@ -229,7 +228,7 @@
 			);
 			name = "Pods-Alpha Draw";
 			productName = Pods_Alpha_Draw;
-			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */;
+			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D09BAB8A20917611A8AD17E2E0EE8271 /* TextFieldEffects */ = {
@@ -545,6 +544,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -583,6 +583,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
