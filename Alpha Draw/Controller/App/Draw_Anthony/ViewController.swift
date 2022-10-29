@@ -59,7 +59,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 40)
     }
 
     // MARK: - WordBubble & Clear Button Clicked

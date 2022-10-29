@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
-                                        <rect key="frame" x="44" y="96" width="303" height="50"/>
+                                        <rect key="frame" x="27" y="96" width="303" height="50"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="cwH-MC-6R1"/>
@@ -75,11 +75,12 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="oC7-5D-wpD"/>
                                         </connections>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lJ-qa-r8m">
-                                        <rect key="frame" x="124" y="220" width="110" height="23"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lJ-qa-r8m">
+                                        <rect key="frame" x="335" y="96" width="47" height="50"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Clear Prompt">
-                                            <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="delete.left.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="clearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ls-eA-e4i"/>
@@ -88,14 +89,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="7lJ-qa-r8m" secondAttribute="bottom" constant="-147" id="5WQ-rw-wHI"/>
-                                    <constraint firstItem="7lJ-qa-r8m" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="220" id="9u4-rE-NKm"/>
+                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="7lJ-qa-r8m" secondAttribute="bottom" constant="-50" id="5WQ-rw-wHI"/>
+                                    <constraint firstItem="7lJ-qa-r8m" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="9u4-rE-NKm"/>
                                     <constraint firstItem="7lJ-qa-r8m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="20" symbolic="YES" id="DbU-h8-vO9"/>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="T82-Wl-cV1"/>
-                                    <constraint firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="43" id="cFo-ho-1xB"/>
-                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="44" id="evA-vr-iXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="60" id="cFo-ho-1xB"/>
+                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="27" id="evA-vr-iXa"/>
                                     <constraint firstAttribute="bottom" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="698" id="kLg-Vi-2QW"/>
-                                    <constraint firstAttribute="trailing" secondItem="7lJ-qa-r8m" secondAttribute="trailing" constant="156" id="kl1-Ek-w7F"/>
+                                    <constraint firstAttribute="trailing" secondItem="7lJ-qa-r8m" secondAttribute="trailing" constant="8" id="kl1-Ek-w7F"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -630,6 +631,7 @@
         <image name="WelcomeBackground.png" width="512" height="768"/>
         <image name="WelcomeBackground2" width="512" height="768"/>
         <image name="WelcomeBackground3.jpg" width="512" height="768"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>

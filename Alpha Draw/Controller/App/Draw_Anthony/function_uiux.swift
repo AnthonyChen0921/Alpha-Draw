@@ -49,7 +49,7 @@ func changeInputFieldBackgroundToLight(inputField: UITextField) {
     UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
         inputField.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.00)
         inputField.layer.shadowOffset = CGSize(width: 0, height: 0)
-        inputField.layer.shadowRadius = 15
+        inputField.layer.shadowRadius = 10
     }, completion: nil)
 }
 
@@ -58,7 +58,7 @@ func changeInputFieldBackgroundToDark(inputField: UITextField) {
     UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
         inputField.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.00)
         inputField.layer.shadowOffset = CGSize(width: 5, height: 5)
-        inputField.layer.shadowRadius = 10
+        inputField.layer.shadowRadius = 5
     }, completion: nil)
 }
 
