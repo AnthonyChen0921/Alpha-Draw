@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import TextFieldEffects
 
 class LoginViewController: UIViewController {
 

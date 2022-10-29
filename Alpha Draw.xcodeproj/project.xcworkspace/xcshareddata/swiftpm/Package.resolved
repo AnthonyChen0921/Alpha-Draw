@@ -107,15 +107,6 @@
         "revision" : "88c7d15e1242fdb6ecbafbc7926426a19be1e98a",
         "version" : "1.20.2"
       }
-    },
-    {
-      "identity" : "textfieldeffects",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/raulriera/TextFieldEffects",
-      "state" : {
-        "revision" : "7e563d4d6d755bb1ab6c1c049f8c215d7c489100",
-        "version" : "1.7.0"
-      }
     }
   ],
   "version" : 2
