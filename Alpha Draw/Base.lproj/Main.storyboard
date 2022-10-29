@@ -18,11 +18,12 @@
                         <viewLayoutGuide key="safeArea" id="MUC-ei-Og4"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="Fpx-c0-WUY"/>
                     <navigationItem key="navigationItem" id="hfy-2L-cWm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCq-cf-rTo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4170.7692307692305" y="-191.23222748815164"/>
+            <point key="canvasLocation" x="3474" y="-670"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -32,24 +33,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6i6-aA-XGw">
-                                <rect key="frame" x="66" y="205" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
+                                <rect key="frame" x="57" y="88" width="276" height="50"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q9e-0P-0Ff"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputPromptEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="DPv-rB-VtU"/>
+                                    <action selector="inputPromptEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NuW-WI-ZnY"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7If-cc-Mj5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="623" id="Gsi-lk-zkt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="57" id="MHq-0Q-aIO"/>
+                            <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="SAa-1Y-6SJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Draw" id="k9h-l7-UCE"/>
+                    <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
+                    <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
+                    <connections>
+                        <outlet property="inputPrompt" destination="wqP-Tm-wy7" id="skz-hP-cLL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4170.7692307692305" y="1190.7582938388625"/>
+            <point key="canvasLocation" x="3474" y="815"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="noC-dC-CTf">
@@ -68,16 +83,16 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ChR-Zj-obk" kind="relationship" relationship="viewControllers" id="QIA-DR-2Cr"/>
-                        <segue destination="w71-m7-M7A" kind="relationship" relationship="viewControllers" id="Eih-6J-Rc4"/>
-                        <segue destination="r5p-Jo-c0i" kind="relationship" relationship="viewControllers" id="5ac-Tp-N9P"/>
-                        <segue destination="Qjb-4S-dYd" kind="relationship" relationship="viewControllers" id="bTH-kC-3E6"/>
-                        <segue destination="hq2-lb-C5f" kind="relationship" relationship="viewControllers" id="ZRG-HM-93E"/>
+                        <segue destination="W95-PA-eqN" kind="relationship" relationship="viewControllers" id="UXr-5f-IJQ"/>
+                        <segue destination="slm-uW-sP2" kind="relationship" relationship="viewControllers" id="fZh-Jw-TdX"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MMb-WX-14a"/>
+                        <segue destination="Yeq-HC-FOS" kind="relationship" relationship="viewControllers" id="quF-sv-fj2"/>
+                        <segue destination="Xnh-f3-oZh" kind="relationship" relationship="viewControllers" id="RIV-Ce-jaQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xah-pB-MbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316.9230769230767" y="1191.4691943127962"/>
+            <point key="canvasLocation" x="2414" y="1192"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="wYS-yZ-eAL">
@@ -107,6 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="hY4-cC-7ZF"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="7G6-Tn-qHN"/>
                     <navigationItem key="navigationItem" id="Sjt-mU-LcC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtf-b8-Yz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,7 +133,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="4170.7692307692305" y="1991.9431279620853"/>
+            <point key="canvasLocation" x="3474" y="1509"/>
         </scene>
         <!--Image Restore-->
         <scene sceneID="z4E-du-qLR">
@@ -129,11 +145,12 @@
                         <viewLayoutGuide key="safeArea" id="G7f-EQ-hHw"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" id="HZ0-mL-5w9"/>
                     <navigationItem key="navigationItem" title="Image Restore" id="LHH-6O-f5h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7S-Up-lyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4170.7692307692305" y="504.73933649289097"/>
+            <point key="canvasLocation" x="3474" y="65"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="fbU-8P-95T">
@@ -401,29 +418,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-BY-ST6">
-                                <rect key="frame" x="81" y="272" width="232" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A very beatiful label say welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeY-WT-Tm0">
+                                <rect key="frame" x="65" y="131" width="252" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-M2-plj" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="78" y="278" width="235" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2Fp-k2-nJt"/>
+                                    <constraint firstAttribute="height" constant="45" id="6Ua-kj-z6V"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
-                                <connections>
-                                    <outlet property="delegate" destination="3Si-qK-m6b" id="QlW-1g-Odm"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" systemColor="systemMintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umQ-4x-ss0">
-                                <rect key="frame" x="78" y="397" width="235" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7UP-um-9ac" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="78" y="407" width="235" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="iEV-fo-CiY"/>
+                                    <constraint firstAttribute="height" constant="45" id="cwU-DZ-1vb"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
-                                <connections>
-                                    <outlet property="delegate" destination="3Si-qK-m6b" id="DDU-tZ-xjT"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" systemColor="systemMintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YeF-e1-2ex"/>
@@ -431,28 +465,28 @@
                         <constraints>
                             <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="5pQ-ER-2HE" secondAttribute="trailing" constant="150" id="1RB-Z1-8Pu"/>
                             <constraint firstItem="5pQ-ER-2HE" firstAttribute="top" secondItem="YeF-e1-2ex" secondAttribute="top" constant="154" id="4FY-Pj-Rhp"/>
-                            <constraint firstItem="umQ-4x-ss0" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="78" id="Dgm-t2-bP4"/>
+                            <constraint firstItem="7UP-um-9ac" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="78" id="FOU-TX-U3n"/>
                             <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="12G-UO-XIo" secondAttribute="trailing" constant="133" id="KBV-pw-O0T"/>
+                            <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="7UP-um-9ac" secondAttribute="trailing" constant="77" id="L3O-zX-pxz"/>
                             <constraint firstItem="5pQ-ER-2HE" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="156" id="Uoh-tp-9xy"/>
+                            <constraint firstItem="AIa-ci-WbI" firstAttribute="top" secondItem="m3Y-M2-plj" secondAttribute="bottom" constant="41" id="WoG-hE-8J1"/>
                             <constraint firstItem="YeF-e1-2ex" firstAttribute="bottom" secondItem="12G-UO-XIo" secondAttribute="bottom" constant="282" id="XL1-hd-jWD"/>
                             <constraint firstItem="12G-UO-XIo" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="134" id="YAF-CV-IeB"/>
-                            <constraint firstItem="umQ-4x-ss0" firstAttribute="top" secondItem="AIa-ci-WbI" secondAttribute="bottom" constant="10.333333333333314" id="c8O-89-lM1"/>
-                            <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="Bx1-BY-ST6" secondAttribute="trailing" constant="77" id="cAa-sU-miz"/>
+                            <constraint firstItem="12G-UO-XIo" firstAttribute="top" secondItem="7UP-um-9ac" secondAttribute="bottom" constant="30.666666666666686" id="cfh-4T-ODa"/>
                             <constraint firstItem="AIa-ci-WbI" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="147" id="cpD-ok-OxG"/>
-                            <constraint firstItem="AIa-ci-WbI" firstAttribute="top" secondItem="Bx1-BY-ST6" secondAttribute="bottom" constant="42" id="dka-Sp-ij1"/>
                             <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="AIa-ci-WbI" secondAttribute="trailing" constant="146" id="efG-3s-j5A"/>
-                            <constraint firstItem="Bx1-BY-ST6" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="81" id="gsE-04-hke"/>
-                            <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="umQ-4x-ss0" secondAttribute="trailing" constant="77" id="mGU-HB-fBo"/>
-                            <constraint firstItem="12G-UO-XIo" firstAttribute="top" secondItem="umQ-4x-ss0" secondAttribute="bottom" constant="35.666666666666686" id="qwM-nd-R56"/>
-                            <constraint firstItem="Bx1-BY-ST6" firstAttribute="top" secondItem="5pQ-ER-2HE" secondAttribute="bottom" constant="7.3333333333333144" id="t1s-0h-T0D"/>
+                            <constraint firstItem="m3Y-M2-plj" firstAttribute="leading" secondItem="YeF-e1-2ex" secondAttribute="leading" constant="78" id="hNF-jc-ggJ"/>
+                            <constraint firstItem="m3Y-M2-plj" firstAttribute="top" secondItem="5pQ-ER-2HE" secondAttribute="bottom" constant="13.333333333333314" id="noa-4V-4ZE"/>
+                            <constraint firstItem="7UP-um-9ac" firstAttribute="top" secondItem="AIa-ci-WbI" secondAttribute="bottom" constant="20.333333333333314" id="rNF-tE-aaV"/>
+                            <constraint firstItem="YeF-e1-2ex" firstAttribute="trailing" secondItem="m3Y-M2-plj" secondAttribute="trailing" constant="77" id="zmh-No-u1m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d1p-Tw-9CP">
                         <barButtonItem key="backBarButtonItem" title="PixelBot" id="Is6-Tw-gWs"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTextInputField" destination="Bx1-BY-ST6" id="ASf-nH-38F"/>
-                        <outlet property="passwordTextInputField" destination="umQ-4x-ss0" id="ADZ-GL-4hC"/>
+                        <outlet property="emailTextInputField" destination="m3Y-M2-plj" id="CzO-t7-2GI"/>
+                        <outlet property="passwordTextInputField" destination="7UP-um-9ac" id="aZO-6o-z8u"/>
                         <segue destination="mC3-Zb-l9x" kind="show" identifier="loginToHome" id="tT2-O9-jkK"/>
                     </connections>
                 </viewController>
@@ -495,6 +529,7 @@
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="Xqw-2d-Q9c"/>
                     <navigationItem key="navigationItem" title="Profile" id="6Ld-a1-2Lh"/>
                     <connections>
                         <outlet property="pfpImageView" destination="9ck-g4-wuL" id="fvT-ka-suR"/>
@@ -503,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY4-ad-hpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316.9230769230767" y="2772.5118483412321"/>
+            <point key="canvasLocation" x="2414" y="2283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qVy-dH-zkN">
@@ -524,120 +559,12 @@
             </objects>
             <point key="canvasLocation" x="-804.61538461538464" y="1192.1800947867298"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xsK-PP-GgF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w71-m7-M7A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="repeat" catalog="system" id="Xbn-IG-bTG"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jrY-6l-H5e">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="slm-uW-sP2" kind="relationship" relationship="rootViewController" id="qhU-65-aLA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QhI-qL-NIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3241.5384615384614" y="504.73933649289097"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Kut-EE-VCz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hq2-lb-C5f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="x2X-VE-iUa"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nW0-Fo-RDy">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xnh-f3-oZh" kind="relationship" relationship="rootViewController" id="ITB-aK-t5A"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eKH-iL-SOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2317" y="1992"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="laW-Q3-x7U">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r5p-Jo-c0i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="vjF-L8-ITq"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3kC-r0-dMT">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z5f-ak-LbR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WzU-f8-fsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3241.5384615384614" y="1190.7582938388625"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jcg-kL-x4g">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ChR-Zj-obk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="QKT-5E-ERS"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzn-1U-BRn">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="W95-PA-eqN" kind="relationship" relationship="rootViewController" id="wLK-Bl-yLO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BzK-pI-Y0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3242" y="-191"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nP4-h0-s1X">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qjb-4S-dYd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="doc.text.image" catalog="system" id="Ibd-0k-MmD"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1JA-fs-r9o">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Yeq-HC-FOS" kind="relationship" relationship="rootViewController" id="FdS-gR-ec2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8g-6H-4MN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3242" y="1992"/>
-        </scene>
     </scenes>
+    <designables>
+        <designable name="7UP-um-9ac">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Nvn-4W-l4t"/>
         <segue reference="tT2-O9-jkK"/>
@@ -646,10 +573,10 @@
         <image name="WelcomeBackground.png" width="512" height="768"/>
         <image name="WelcomeBackground2" width="512" height="768"/>
         <image name="WelcomeBackground3.jpg" width="512" height="768"/>
-        <image name="doc.text.image" catalog="system" width="115" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="sparkles" catalog="system" width="112" height="128"/>
         <image name="starrynight.jpg" width="510" height="439"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -659,6 +586,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

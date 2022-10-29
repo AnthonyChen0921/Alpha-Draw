@@ -21,8 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         if UserDefaults.standard.object(forKey: "user_id") != nil {
+            // embed the home view controller in a navigation controller id: WelcomeViewController
             let homeVC = storyboard.instantiateViewController(identifier: "HomeTabBarViewController")
-            window?.rootViewController = homeVC
+            let navigationController = UINavigationController(rootViewController: homeVC)
+            window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }
         else{
