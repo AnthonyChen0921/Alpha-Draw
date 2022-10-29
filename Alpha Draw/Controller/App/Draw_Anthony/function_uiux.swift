@@ -13,7 +13,7 @@ func addGloomyShadowToInputPrompt(inputPrompt: UITextField) {
     UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
         inputPrompt.layer.shadowColor = UIColor.black.cgColor
         inputPrompt.layer.shadowOffset = CGSize(width: 0, height: 0)
-        inputPrompt.layer.shadowRadius = 10
+        inputPrompt.layer.shadowRadius = 5
         inputPrompt.layer.shadowOpacity = 0.5
     }, completion: nil)
 }
@@ -29,8 +29,8 @@ func removeGloomyShadowToInputPrompt(inputField: UITextField) {
 }
 
 func styleInputField(inputField: UITextField) {
-    // inputField.frame.size.height = 50
-    inputField.layer.cornerRadius = 15
+    inputField.frame.size.height = 50
+    inputField.layer.cornerRadius = 10
     // add a grey background color
     inputField.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.00)
     // holder text
@@ -40,7 +40,7 @@ func styleInputField(inputField: UITextField) {
     // add a black shadow
     inputField.layer.shadowColor = UIColor.black.cgColor
     inputField.layer.shadowOffset = CGSize(width: 5, height: 5)
-    inputField.layer.shadowRadius = 10
+    inputField.layer.shadowRadius = 5
     inputField.layer.shadowOpacity = 0.5       
 }
 
@@ -60,4 +60,17 @@ func changeInputFieldBackgroundToDark(inputField: UITextField) {
         inputField.layer.shadowOffset = CGSize(width: 5, height: 5)
         inputField.layer.shadowRadius = 10
     }, completion: nil)
+}
+
+func createBubbleButton(bubbleText: String) -> UIButton {
+    // create a tinted button in the cell, style tinted button
+    let wordBubbleButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    wordBubbleButton.setTitle(bubbleText, for: .normal)
+    wordBubbleButton.titleLabel?.font = UIFont(name: "Arial", size: 15)
+    wordBubbleButton.setTitleColor(UIColor.purple, for: .normal)
+    wordBubbleButton.backgroundColor = UIColor.purple.withAlphaComponent(0.1)
+    wordBubbleButton.tintColor = UIColor.lightGray
+    wordBubbleButton.layer.cornerRadius = 15
+    wordBubbleButton.layer.masksToBounds = true
+    return wordBubbleButton
 }

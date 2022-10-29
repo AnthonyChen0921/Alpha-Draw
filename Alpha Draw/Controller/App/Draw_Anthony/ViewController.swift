@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
 
+    @IBOutlet weak var clearPromptButton: UIButton!
     @IBOutlet weak var wordBubbleCollectionView: UICollectionView!
     @IBOutlet weak var inputPrompt: UITextField!
 
@@ -43,24 +44,36 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "wordBubbleCell", for: indexPath) 
-        // create a tinted button in the cell
-        let wordBubbleButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-        wordBubbleButton.setTitle(inspirationBubbleString[indexPath.row], for: .normal)
-        wordBubbleButton.backgroundColor = UIColor.purple
-        wordBubbleButton.tintColor = UIColor.lightGray
-        wordBubbleButton.layer.cornerRadius = 10
-        wordBubbleButton.layer.masksToBounds = true
+        // clear the cell before adding the new text
+        for subview in cell.subviews {
+            subview.removeFromSuperview()
+        }
+        let wordBubbleButton = createBubbleButton(bubbleText: inspirationBubbleString[indexPath.row])
         wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonTapped), for: .touchUpInside)
         cell.addSubview(wordBubbleButton)
         return cell
     }
 
-    // MARK: - WordBubble Clicked
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+    }
+
+    // MARK: - WordBubble & Clear Button Clicked
 
     @objc func wordBubbleButtonTapped(sender: UIButton) {
-        print("word bubble button tapped")
-        inputPrompt.text = sender.titleLabel?.text
+        inputPrompt.text! += " " + (sender.titleLabel?.text)!
+        inputPrompt.becomeFirstResponder()
     }
+
+
+    @IBAction func clearButtonClicked(_ sender: Any) {
+        inputPrompt.text = ""
+    }
+    
 
 
     // MARK: - Input Prompt
