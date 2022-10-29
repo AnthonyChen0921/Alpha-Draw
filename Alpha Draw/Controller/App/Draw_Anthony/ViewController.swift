@@ -76,7 +76,7 @@ class ViewController: UIViewController {
 
     func changeInputFieldBackgroundToLight(inputField: UITextField) {
         // add a f1f1f1 background color animation
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             inputField.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.00)
             inputField.layer.shadowOffset = CGSize(width: 0, height: 0)
             inputField.layer.shadowRadius = 15
@@ -85,8 +85,8 @@ class ViewController: UIViewController {
 
     func changeInputFieldBackgroundToDark(inputField: UITextField) {
         // add a grey background color animation
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-            inputField.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.00)
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+            inputField.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.00)
             inputField.layer.shadowOffset = CGSize(width: 5, height: 5)
             inputField.layer.shadowRadius = 10
         }, completion: nil)

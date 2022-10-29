@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,27 +34,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
-                                <rect key="frame" x="57" y="88" width="276" height="50"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7q-HU-Hds">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QHm-Qu-0wc">
+                                        <rect key="frame" x="8" y="154" width="374" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.94509804249999996" green="0.94509804249999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NbJ-YN-IAJ">
+                                            <size key="itemSize" width="120" height="40"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YhX-Qd-f8f">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C3N-el-bzA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="96" width="303" height="50"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="inputPromptEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="DPv-rB-VtU"/>
+                                            <action selector="inputPromptEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NuW-WI-ZnY"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Q9e-0P-0Ff"/>
+                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="T82-Wl-cV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="43" id="cFo-ho-1xB"/>
+                                    <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="44" id="evA-vr-iXa"/>
+                                    <constraint firstAttribute="bottom" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="698" id="kLg-Vi-2QW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="inputPromptEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="DPv-rB-VtU"/>
-                                    <action selector="inputPromptEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NuW-WI-ZnY"/>
-                                </connections>
-                            </textField>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7If-cc-Mj5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="623" id="Gsi-lk-zkt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="57" id="MHq-0Q-aIO"/>
-                            <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="SAa-1Y-6SJ"/>
+                            <constraint firstItem="s7q-HU-Hds" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QyQ-AE-OwK"/>
+                            <constraint firstAttribute="bottom" secondItem="s7q-HU-Hds" secondAttribute="bottom" id="TbH-S8-lt9"/>
+                            <constraint firstItem="s7q-HU-Hds" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7N-r5-cM6"/>
+                            <constraint firstItem="s7q-HU-Hds" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XiX-7k-x6N"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
@@ -64,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3474" y="815"/>
+            <point key="canvasLocation" x="3473.8461538461538" y="814.69194312796208"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="noC-dC-CTf">

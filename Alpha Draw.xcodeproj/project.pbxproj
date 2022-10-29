@@ -149,6 +149,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B063B6C290CD770009C5022 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6B063B72290CD7FD009C5022 /* Restore_Jeffery */,
+				6B063B71290CD7DC009C5022 /* Explore_Jennie */,
+				6B063B70290CD7D3009C5022 /* Gallery_Leo */,
+				6B063B6F290CD7B2009C5022 /* Profile_Katherine */,
+				6B063B6E290CD796009C5022 /* Draw_Anthony */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6B063B6E290CD796009C5022 /* Draw_Anthony */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B1A942902FADA00F36C6F /* ViewController.swift */,
+			);
+			path = Draw_Anthony;
+			sourceTree = "<group>";
+		};
+		6B063B6F290CD7B2009C5022 /* Profile_Katherine */ = {
+			isa = PBXGroup;
+			children = (
+				6B76DF362908A2C60033AED6 /* ProfileViewController.swift */,
+			);
+			path = Profile_Katherine;
+			sourceTree = "<group>";
+		};
+		6B063B70290CD7D3009C5022 /* Gallery_Leo */ = {
+			isa = PBXGroup;
+			children = (
+				6B8425382908BCDE000AC834 /* GalleryViewController.swift */,
+			);
+			path = Gallery_Leo;
+			sourceTree = "<group>";
+		};
+		6B063B71290CD7DC009C5022 /* Explore_Jennie */ = {
+			isa = PBXGroup;
+			children = (
+				6B8425342908BC75000AC834 /* HomeViewController.swift */,
+			);
+			path = Explore_Jennie;
+			sourceTree = "<group>";
+		};
+		6B063B72290CD7FD009C5022 /* Restore_Jeffery */ = {
+			isa = PBXGroup;
+			children = (
+				6B8425362908BC89000AC834 /* RestoreViewController.swift */,
+			);
+			path = Restore_Jeffery;
+			sourceTree = "<group>";
+		};
 		6B1BFA27290CAE4F00EC6004 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +255,8 @@
 		6B57854E290A004F00F1713D /* AppFunctions */ = {
 			isa = PBXGroup;
 			children = (
+				6B5785332909B51500F1713D /* CustomTabBarController.swift */,
+				6B7B1ABC290341F300F36C6F /* Function.swift */,
 			);
 			path = AppFunctions;
 			sourceTree = "<group>";
@@ -273,10 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				6B62DB6F2907900400839DE2 /* Auth */,
-				6B8425332908BC42000AC834 /* App */,
+				6B063B6C290CD770009C5022 /* App */,
 				6B57854E290A004F00F1713D /* AppFunctions */,
-				6B7B1ABC290341F300F36C6F /* Function.swift */,
-				6B5785332909B51500F1713D /* CustomTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,18 +384,6 @@
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		6B8425332908BC42000AC834 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				6B7B1A942902FADA00F36C6F /* ViewController.swift */,
-				6B76DF362908A2C60033AED6 /* ProfileViewController.swift */,
-				6B8425342908BC75000AC834 /* HomeViewController.swift */,
-				6B8425362908BC89000AC834 /* RestoreViewController.swift */,
-				6B8425382908BCDE000AC834 /* GalleryViewController.swift */,
-			);
-			name = App;
 			sourceTree = "<group>";
 		};
 		6BDE5EC52904F5E800DC5200 /* DataBase */ = {
