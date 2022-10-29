@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1BFA22290C8BB700EC6004 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 6B1BFA21290C8BB700EC6004 /* TextFieldEffects */; };
+		6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -70,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPromptTextField.swift; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			files = (
 				6B62DB622906043300839DE2 /* FirebaseMessaging in Frameworks */,
 				6B62DB562906043300839DE2 /* FirebaseDatabaseSwift in Frameworks */,
+				6B1BFA22290C8BB700EC6004 /* TextFieldEffects in Frameworks */,
 				6B62DB542906043300839DE2 /* FirebaseDatabase in Frameworks */,
 				6B62DB662906043300839DE2 /* FirebaseRemoteConfigSwift in Frameworks */,
 				6B62DB4E2906043300839DE2 /* FirebaseAnalyticsSwift in Frameworks */,
@@ -145,6 +149,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1BFA27290CAE4F00EC6004 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B1BFA2A290CAE9300EC6004 /* TextField */,
+				6B62DB7A2907A0AE00839DE2 /* Segues */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6B1BFA2A290CAE9300EC6004 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		6B5785492909D85800F1713D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +244,7 @@
 		6B7B1A8F2902FADA00F36C6F /* Alpha Draw */ = {
 			isa = PBXGroup;
 			children = (
-				6B62DB7A2907A0AE00839DE2 /* Segues */,
+				6B1BFA27290CAE4F00EC6004 /* Components */,
 				6BDE5EC52904F5E800DC5200 /* DataBase */,
 				6B7B1ABE290347AD00F36C6F /* Image */,
 				6B7B1AA72902FDB500F36C6F /* Model */,
@@ -366,6 +387,7 @@
 				6B62DB652906043300839DE2 /* FirebaseRemoteConfigSwift */,
 				6B62DB672906043300839DE2 /* FirebaseStorage */,
 				6B62DB692906043300839DE2 /* FirebaseStorageCombine-Community */,
+				6B1BFA21290C8BB700EC6004 /* TextFieldEffects */,
 			);
 			productName = "Alpha Draw";
 			productReference = 6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */;
@@ -397,6 +419,7 @@
 			mainGroup = 6B7B1A842902FADA00F36C6F;
 			packageReferences = (
 				6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6B1BFA20290C8BB700EC6004 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 			);
 			productRefGroup = 6B7B1A8E2902FADA00F36C6F /* Products */;
 			projectDirPath = "";
@@ -445,6 +468,7 @@
 				6B7B1AB72903013900F36C6F /* Img2Img-tencentarc.swift in Sources */,
 				6B7B1AB32903004900F36C6F /* T2Text-prompt-parrot.swift in Sources */,
 				6B8425352908BC75000AC834 /* HomeViewController.swift in Sources */,
+				6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */,
 				6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */,
 				6B62DB732907903F00839DE2 /* LoginViewController.swift in Sources */,
 				6B62DB6C290640AC00839DE2 /* User.swift in Sources */,
@@ -685,6 +709,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6B1BFA20290C8BB700EC6004 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -696,6 +728,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6B1BFA21290C8BB700EC6004 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B1BFA20290C8BB700EC6004 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
 		6B62DB4B2906043300839DE2 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
