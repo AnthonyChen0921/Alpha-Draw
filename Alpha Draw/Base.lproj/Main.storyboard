@@ -48,7 +48,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YhX-Qd-f8f">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="wordBubble" id="YhX-Qd-f8f">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C3N-el-bzA">
@@ -57,6 +57,10 @@
                                                 </collectionViewCellContentView>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="05f-0a-drS"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="oC7-5D-wpD"/>
+                                        </connections>
                                     </collectionView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
                                         <rect key="frame" x="44" y="96" width="303" height="50"/>
@@ -91,6 +95,7 @@
                     <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
                     <connections>
                         <outlet property="inputPrompt" destination="wqP-Tm-wy7" id="skz-hP-cLL"/>
+                        <outlet property="wordBubbleCollectionView" destination="QHm-Qu-0wc" id="CCg-sv-ZPL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
