@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
 
+    @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var clearPromptButton: UIButton!
     @IBOutlet weak var wordBubbleCollectionView: UICollectionView!
     @IBOutlet weak var inputPrompt: UITextField!
@@ -38,10 +39,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         navigationController?.hero.isEnabled = true
         navigationController?.heroNavigationAnimationType = .fade
 
-        // set all item to alpha 0
-        clearPromptButton.alpha = 0
-        wordBubbleCollectionView.alpha = 0
-        inputPrompt.alpha = 0
+        setAllViewToAlphaZero()
+
+        fsView.transformer = FSPagerViewTransformer(type: .overlap)
     }
 
     // MARK: - FSPageControl
@@ -133,6 +133,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     // MARK: - Animation
+
+    func setAllViewToAlphaZero() {
+        clearPromptButton.alpha = 0
+        wordBubbleCollectionView.alpha = 0
+        inputPrompt.alpha = 0
+        fsView.alpha = 0
+        createButton.alpha = 0
+    }
     // fade in all component of the view controller
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -142,6 +150,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }, completion: nil)
         UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
             self.wordBubbleCollectionView.alpha = 1.0
+        }, completion: nil)
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
+            self.fsView.alpha = 1.0
+        }, completion: nil)
+        UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseIn, animations: {
+            self.createButton.alpha = 1.0
         }, completion: nil)
     }
 }

@@ -101,9 +101,26 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="oC7-5D-wpD"/>
                                         </connections>
                                     </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tee-FC-FRV">
+                                        <rect key="frame" x="27" y="685" width="335" height="39"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Avenir-Black"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="LCF-ut-mbu" kind="show" id="k7b-8H-Mh8"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqK-Ra-1NU" customClass="FSPagerView" customModule="FSPagerView">
-                                        <rect key="frame" x="27" y="229" width="335" height="472"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="27" y="229" width="335" height="441"/>
+                                        <color key="backgroundColor" red="0.94509804249999996" green="0.94509804249999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="CGb-Fp-FTd"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="hXd-8M-xLL"/>
@@ -116,14 +133,15 @@
                                     <constraint firstItem="7lJ-qa-r8m" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="9u4-rE-NKm"/>
                                     <constraint firstItem="7lJ-qa-r8m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="20" symbolic="YES" id="DbU-h8-vO9"/>
                                     <constraint firstAttribute="trailing" secondItem="gqK-Ra-1NU" secondAttribute="trailing" constant="28" id="Dwu-lY-QFe"/>
+                                    <constraint firstItem="Tee-FC-FRV" firstAttribute="top" secondItem="gqK-Ra-1NU" secondAttribute="bottom" constant="15" id="ELX-Br-9Gc"/>
                                     <constraint firstAttribute="trailing" secondItem="QHm-Qu-0wc" secondAttribute="trailing" constant="8" id="LaK-KY-NlR"/>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="T82-Wl-cV1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tee-FC-FRV" secondAttribute="bottom" constant="120" id="aRM-Sy-pBS"/>
                                     <constraint firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="60" id="cFo-ho-1xB"/>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="27" id="evA-vr-iXa"/>
                                     <constraint firstItem="QHm-Qu-0wc" firstAttribute="top" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="17" id="ghA-lZ-noM"/>
                                     <constraint firstAttribute="trailing" secondItem="7lJ-qa-r8m" secondAttribute="trailing" constant="8" id="kl1-Ek-w7F"/>
                                     <constraint firstItem="gqK-Ra-1NU" firstAttribute="top" secondItem="QHm-Qu-0wc" secondAttribute="bottom" constant="24" id="mKD-hC-he1"/>
-                                    <constraint firstAttribute="bottom" secondItem="gqK-Ra-1NU" secondAttribute="bottom" constant="143" id="rId-Fa-fpy"/>
                                     <constraint firstItem="gqK-Ra-1NU" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="27" id="uGj-aT-gAP"/>
                                     <constraint firstItem="QHm-Qu-0wc" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="8" id="ueC-Hq-Hk0"/>
                                 </constraints>
@@ -132,10 +150,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tee-FC-FRV" secondAttribute="trailing" constant="28" id="G5o-g5-Jsg"/>
                             <constraint firstItem="s7q-HU-Hds" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QyQ-AE-OwK"/>
                             <constraint firstAttribute="bottom" secondItem="s7q-HU-Hds" secondAttribute="bottom" id="TbH-S8-lt9"/>
                             <constraint firstItem="s7q-HU-Hds" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7N-r5-cM6"/>
                             <constraint firstItem="s7q-HU-Hds" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XiX-7k-x6N"/>
+                            <constraint firstItem="Tee-FC-FRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="kf7-3I-1qU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
@@ -145,6 +165,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="clearPromptButton" destination="7lJ-qa-r8m" id="ha4-Ma-zqO"/>
+                        <outlet property="createButton" destination="Tee-FC-FRV" id="apN-ds-nNq"/>
                         <outlet property="fsView" destination="gqK-Ra-1NU" id="oqo-Pj-0OO"/>
                         <outlet property="inputPrompt" destination="wqP-Tm-wy7" id="skz-hP-cLL"/>
                         <outlet property="wordBubbleCollectionView" destination="QHm-Qu-0wc" id="CCg-sv-ZPL"/>
@@ -723,6 +744,9 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
