@@ -124,7 +124,6 @@
                     <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="fade"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="clearPromptButton" destination="7lJ-qa-r8m" id="ha4-Ma-zqO"/>
@@ -159,7 +158,6 @@
                     <navigationItem key="navigationItem" id="V74-IL-NpJ"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="fade"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xs-NQ-JFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

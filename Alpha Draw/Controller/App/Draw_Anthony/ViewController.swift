@@ -29,19 +29,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         styleInputField(inputField: inputPrompt)
         
         navigationController?.hero.isEnabled = true
-        navigationController?.heroNavigationAnimationType = .zoomOut
+        navigationController?.heroNavigationAnimationType = .fade
     }
 
 
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSample" {
-            let destinationVC = segue.destination as! OptionModalViewController
-            destinationVC.hero.isEnabled = true
-            destinationVC.hero.modalAnimationType = .selectBy(presenting: .fade, dismissing: .fade)
-            print(1)
-        }
-    }
 
 
 

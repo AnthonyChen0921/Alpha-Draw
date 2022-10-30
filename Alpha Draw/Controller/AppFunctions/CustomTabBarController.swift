@@ -8,15 +8,12 @@
 import UIKit
 import Hero
 
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate, HeroViewControllerDelegate {
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     var middleButton: UIButton! = UIButton()
     var buttonBackground: UIView! = UIView()
     var colorArray: [CGColor] = [UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemGreen.cgColor, UIColor.systemPurple.cgColor]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isHeroEnabled = true
-        self.hero.isEnabled = true
-        self.hero.modalAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
         
         // set up delegate and initialize tarbar first item
         self.delegate = self
