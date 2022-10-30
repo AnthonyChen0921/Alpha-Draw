@@ -7,11 +7,13 @@
 
 import UIKit
 import Hero
-import RAMAnimatedTabBarController
 
-class CustomTabBarController: RAMAnimatedTabBarController, UITabBarControllerDelegate {
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     var middleButton: UIButton! = UIButton()
     var buttonBackground: UIView! = UIView()
+    // create a tabBarColorArray of 5 colors, red, green, blue, yellow, and mint
+    let tabBarColorArray = [UIColor.red, UIColor.green, UIColor.blue, UIColor.yellow, UIColor.systemTeal]
+
     var colorArray: [CGColor] = [UIColor(red: 0.9882352941, green: 0.7607843137, blue: 0.00, alpha: 1.00).cgColor, UIColor.systemMint.cgColor, UIColor.white.cgColor, UIColor.systemGreen.cgColor, UIColor.systemPurple.cgColor]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,9 @@ class CustomTabBarController: RAMAnimatedTabBarController, UITabBarControllerDel
 
         // setup a timer for addGloomyShadowEffectAnimation every 4.5 seconds
         Timer.scheduledTimer(timeInterval: 4.5, target: self, selector: #selector(self.addGloomyShadowEffectAnimation), userInfo: nil, repeats: true)
+    
+
+
     }
 
     /**
@@ -121,6 +126,8 @@ class CustomTabBarController: RAMAnimatedTabBarController, UITabBarControllerDel
         generator.impactOccurred()
     }
 
+    
+ 
     // MARK: TarBar ICON animation
     
     

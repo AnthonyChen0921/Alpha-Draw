@@ -30,6 +30,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         navigationController?.hero.isEnabled = true
         navigationController?.heroNavigationAnimationType = .fade
+
+        // set all item to alpha 0
+        clearPromptButton.alpha = 0
+        wordBubbleCollectionView.alpha = 0
+        inputPrompt.alpha = 0
     }
 
 
@@ -97,6 +102,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Dismiss keyboard when user taps outside of input field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+
+    // MARK: - Animation
+    // fade in all component of the view controller
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+            self.inputPrompt.alpha = 1.0
+            self.clearPromptButton.alpha = 1.0
+        }, completion: nil)
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
+            self.wordBubbleCollectionView.alpha = 1.0
+        }, completion: nil)
     }
 }
 
