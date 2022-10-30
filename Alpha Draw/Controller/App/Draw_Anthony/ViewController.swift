@@ -67,6 +67,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
 
+    // if FsPage is touched, dismiss keyboard
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        self.view.endEditing(true)
+    }
+
 
 
 
@@ -126,12 +131,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             changeInputFieldBackgroundToDark(inputField: inputPrompt)
         }
     }
+    @IBAction func returnKeyboardPressed(_ sender: Any) {
+        inputPrompt.resignFirstResponder()
+    }
     
     // Dismiss keyboard when user taps outside of input field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
+    
     // MARK: - Animation
 
     func setAllViewToAlphaZero() {

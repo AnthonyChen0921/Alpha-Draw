@@ -63,7 +63,7 @@
                                             <constraint firstAttribute="height" constant="50" id="cwH-MC-6R1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -72,6 +72,7 @@
                                         <connections>
                                             <action selector="inputPromptEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="DPv-rB-VtU"/>
                                             <action selector="inputPromptEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NuW-WI-ZnY"/>
+                                            <action selector="returnKeyboardPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rKT-xY-NqU"/>
                                         </connections>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QHm-Qu-0wc">
@@ -209,9 +210,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="HomeTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="mC3-Zb-l9x" customClass="CustomTabBarController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="o2s-Hu-5bz">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="mck-5P-RLe"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="o2s-Hu-5bz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EJ8-In-Zlg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -723,6 +722,7 @@
         <segue reference="Nvn-4W-l4t"/>
         <segue reference="tT2-O9-jkK"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <image name="WelcomeBackground.png" width="512" height="768"/>
         <image name="WelcomeBackground2" width="512" height="768"/>
