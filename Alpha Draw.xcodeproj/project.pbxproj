@@ -13,6 +13,8 @@
 		6B358BDE290ECF79003E2ADD /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BDD290ECF79003E2ADD /* Hero */; };
 		6B358BE0290ED5C6003E2ADD /* OptionModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B358BDF290ED5C6003E2ADD /* OptionModalViewController.swift */; };
 		6B358BE3290F05A1003E2ADD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BE2290F05A1003E2ADD /* SwiftyJSON */; };
+		6B358BEF290F1AA6003E2ADD /* FSPagerView in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BEE290F1AA6003E2ADD /* FSPagerView */; };
+		6B358BF1290F2033003E2ADD /* WelcomeBackground1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358BF0290F2033003E2ADD /* WelcomeBackground1.png */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -79,6 +81,7 @@
 		6B063B73290CD871009C5022 /* function_uiux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function_uiux.swift; sourceTree = "<group>"; };
 		6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPromptTextField.swift; sourceTree = "<group>"; };
 		6B358BDF290ED5C6003E2ADD /* OptionModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionModalViewController.swift; sourceTree = "<group>"; };
+		6B358BF0290F2033003E2ADD /* WelcomeBackground1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeBackground1.png; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 			files = (
 				6B62DB622906043300839DE2 /* FirebaseMessaging in Frameworks */,
 				6B62DB562906043300839DE2 /* FirebaseDatabaseSwift in Frameworks */,
+				6B358BEF290F1AA6003E2ADD /* FSPagerView in Frameworks */,
 				6B063B6B290CCD46009C5022 /* TextFieldEffects in Frameworks */,
 				6B62DB542906043300839DE2 /* FirebaseDatabase in Frameworks */,
 				6B62DB662906043300839DE2 /* FirebaseRemoteConfigSwift in Frameworks */,
@@ -258,6 +262,7 @@
 				6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */,
 				6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */,
 				6B62DB7829079F8700839DE2 /* WelcomeBackground.png */,
+				6B358BF0290F2033003E2ADD /* WelcomeBackground1.png */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				6B063B6A290CCD46009C5022 /* TextFieldEffects */,
 				6B358BDD290ECF79003E2ADD /* Hero */,
 				6B358BE2290F05A1003E2ADD /* SwiftyJSON */,
+				6B358BEE290F1AA6003E2ADD /* FSPagerView */,
 			);
 			productName = "Alpha Draw";
 			productReference = 6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */;
@@ -474,6 +480,7 @@
 				6B063B69290CCD46009C5022 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 				6B358BDC290ECF79003E2ADD /* XCRemoteSwiftPackageReference "Hero" */,
 				6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6B358BED290F1AA6003E2ADD /* XCRemoteSwiftPackageReference "FSPagerView" */,
 			);
 			productRefGroup = 6B7B1A8E2902FADA00F36C6F /* Products */;
 			projectDirPath = "";
@@ -502,6 +509,7 @@
 				6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */,
 				6B5785372909C19400F1713D /* plus.jpeg in Resources */,
 				6B5785472909D85400F1713D /* launchScreen2.jpeg in Resources */,
+				6B358BF1290F2033003E2ADD /* WelcomeBackground1.png in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,
 				6B5785442909D7C800F1713D /* starrynight.jpg in Resources */,
@@ -789,6 +797,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		6B358BED290F1AA6003E2ADD /* XCRemoteSwiftPackageReference "FSPagerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSPagerView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -814,6 +830,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		6B358BEE290F1AA6003E2ADD /* FSPagerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B358BED290F1AA6003E2ADD /* XCRemoteSwiftPackageReference "FSPagerView" */;
+			productName = FSPagerView;
 		};
 		6B62DB4B2906043300839DE2 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

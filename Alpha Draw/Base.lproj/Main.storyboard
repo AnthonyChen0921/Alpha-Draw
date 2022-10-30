@@ -44,6 +44,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7q-HU-Hds">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lJ-qa-r8m">
+                                        <rect key="frame" x="335" y="96" width="47" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted">
+                                            <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ls-eA-e4i"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-Tm-wy7" customClass="InputPromptTextField" customModule="Alpha_Draw" customModuleProvider="target">
                                         <rect key="frame" x="27" y="96" width="303" height="50"/>
                                         <color key="tintColor" systemColor="labelColor"/>
@@ -62,10 +74,12 @@
                                             <action selector="inputPromptEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NuW-WI-ZnY"/>
                                         </connections>
                                     </textField>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QHm-Qu-0wc">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QHm-Qu-0wc">
                                         <rect key="frame" x="8" y="163" width="374" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.94509804249999996" green="0.94509804249999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="6zA-uN-Lw3"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NbJ-YN-IAJ">
                                             <size key="itemSize" width="100" height="40"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -87,38 +101,31 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="oC7-5D-wpD"/>
                                         </connections>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-bd-9pB">
-                                        <rect key="frame" x="212" y="462" width="67" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqK-Ra-1NU" customClass="FSPagerView" customModule="FSPagerView">
+                                        <rect key="frame" x="27" y="229" width="335" height="472"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
-                                            <segue destination="LCF-ut-mbu" kind="show" identifier="showSample" id="8iH-8M-OTN"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="CGb-Fp-FTd"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hXd-8M-xLL"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lJ-qa-r8m">
-                                        <rect key="frame" x="335" y="96" width="47" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted">
-                                            <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
-                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="clearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ls-eA-e4i"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="7lJ-qa-r8m" secondAttribute="bottom" constant="-50" id="5WQ-rw-wHI"/>
                                     <constraint firstItem="7lJ-qa-r8m" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="9u4-rE-NKm"/>
                                     <constraint firstItem="7lJ-qa-r8m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="20" symbolic="YES" id="DbU-h8-vO9"/>
+                                    <constraint firstAttribute="trailing" secondItem="gqK-Ra-1NU" secondAttribute="trailing" constant="28" id="Dwu-lY-QFe"/>
+                                    <constraint firstAttribute="trailing" secondItem="QHm-Qu-0wc" secondAttribute="trailing" constant="8" id="LaK-KY-NlR"/>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="top" secondItem="s7q-HU-Hds" secondAttribute="top" constant="96" id="T82-Wl-cV1"/>
                                     <constraint firstAttribute="trailing" secondItem="wqP-Tm-wy7" secondAttribute="trailing" constant="60" id="cFo-ho-1xB"/>
                                     <constraint firstItem="wqP-Tm-wy7" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="27" id="evA-vr-iXa"/>
-                                    <constraint firstAttribute="bottom" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="698" id="kLg-Vi-2QW"/>
+                                    <constraint firstItem="QHm-Qu-0wc" firstAttribute="top" secondItem="wqP-Tm-wy7" secondAttribute="bottom" constant="17" id="ghA-lZ-noM"/>
                                     <constraint firstAttribute="trailing" secondItem="7lJ-qa-r8m" secondAttribute="trailing" constant="8" id="kl1-Ek-w7F"/>
+                                    <constraint firstItem="gqK-Ra-1NU" firstAttribute="top" secondItem="QHm-Qu-0wc" secondAttribute="bottom" constant="24" id="mKD-hC-he1"/>
+                                    <constraint firstAttribute="bottom" secondItem="gqK-Ra-1NU" secondAttribute="bottom" constant="143" id="rId-Fa-fpy"/>
+                                    <constraint firstItem="gqK-Ra-1NU" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="27" id="uGj-aT-gAP"/>
+                                    <constraint firstItem="QHm-Qu-0wc" firstAttribute="leading" secondItem="s7q-HU-Hds" secondAttribute="leading" constant="8" id="ueC-Hq-Hk0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -138,6 +145,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="clearPromptButton" destination="7lJ-qa-r8m" id="ha4-Ma-zqO"/>
+                        <outlet property="fsView" destination="gqK-Ra-1NU" id="oqo-Pj-0OO"/>
                         <outlet property="inputPrompt" destination="wqP-Tm-wy7" id="skz-hP-cLL"/>
                         <outlet property="wordBubbleCollectionView" destination="QHm-Qu-0wc" id="CCg-sv-ZPL"/>
                     </connections>

@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "fspagerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSPagerView",
+      "state" : {
+        "branch" : "master",
+        "revision" : "968f0aaf120b8cb97d12c3a4447daa4926029f67"
+      }
+    },
+    {
       "identity" : "googleappmeasurement",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",

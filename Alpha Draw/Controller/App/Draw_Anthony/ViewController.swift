@@ -11,8 +11,9 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import TextFieldEffects
 import Hero
+import FSPagerView
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FSPagerViewDelegate, FSPagerViewDataSource {
     let viewControllerIDs = ["DrawViewController", "Sample"]
     
     
@@ -20,7 +21,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var clearPromptButton: UIButton!
     @IBOutlet weak var wordBubbleCollectionView: UICollectionView!
     @IBOutlet weak var inputPrompt: UITextField!
-
+    @IBOutlet weak var fsView: FSPagerView! {
+        didSet {
+            self.fsView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "fscell")
+        }
+    }
+    
+    
     var inspirationBubbleString: [String] = ["Apple", "Banana", "Peach", "Orange", "Watermellon", "Kiwi"]
 
     override func viewDidLoad() {
@@ -37,7 +44,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         inputPrompt.alpha = 0
     }
 
+    // MARK: - FSPageControl
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return 3
+    }
 
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "fscell", at: index)
+        cell.imageView?.image = UIImage(named: "WelcomeBackground\(index+1)")
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.clipsToBounds = true
+        return cell
+    }
+
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        if targetIndex == 2 {
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                self.clearPromptButton.alpha = 1
+                self.wordBubbleCollectionView.alpha = 1
+                self.inputPrompt.alpha = 1
+            }, completion: nil)
+        }
+    }
 
 
 
