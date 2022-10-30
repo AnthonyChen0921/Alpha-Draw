@@ -12,6 +12,7 @@
 		6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */; };
 		6B358BDE290ECF79003E2ADD /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BDD290ECF79003E2ADD /* Hero */; };
 		6B358BE0290ED5C6003E2ADD /* OptionModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B358BDF290ED5C6003E2ADD /* OptionModalViewController.swift */; };
+		6B358BE3290F05A1003E2ADD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BE2290F05A1003E2ADD /* SwiftyJSON */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -148,6 +149,7 @@
 				6B62DB642906043300839DE2 /* FirebaseRemoteConfig in Frameworks */,
 				6B62DB602906043300839DE2 /* FirebaseFunctions in Frameworks */,
 				6B358BDE290ECF79003E2ADD /* Hero in Frameworks */,
+				6B358BE3290F05A1003E2ADD /* SwiftyJSON in Frameworks */,
 				6B62DB522906043300839DE2 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +439,7 @@
 				6B62DB692906043300839DE2 /* FirebaseStorageCombine-Community */,
 				6B063B6A290CCD46009C5022 /* TextFieldEffects */,
 				6B358BDD290ECF79003E2ADD /* Hero */,
+				6B358BE2290F05A1003E2ADD /* SwiftyJSON */,
 			);
 			productName = "Alpha Draw";
 			productReference = 6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */;
@@ -470,6 +473,7 @@
 				6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				6B063B69290CCD46009C5022 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 				6B358BDC290ECF79003E2ADD /* XCRemoteSwiftPackageReference "Hero" */,
+				6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 6B7B1A8E2902FADA00F36C6F /* Products */;
 			projectDirPath = "";
@@ -777,6 +781,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -797,6 +809,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6B358BDC290ECF79003E2ADD /* XCRemoteSwiftPackageReference "Hero" */;
 			productName = Hero;
+		};
+		6B358BE2290F05A1003E2ADD /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 		6B62DB4B2906043300839DE2 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
