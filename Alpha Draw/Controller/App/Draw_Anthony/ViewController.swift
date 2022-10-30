@@ -10,8 +10,10 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import TextFieldEffects
+import Hero
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    let viewControllerIDs = ["DrawViewController", "Sample"]
     
     
 
@@ -25,13 +27,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         hidesBackButton(view: self)
         styleInputField(inputField: inputPrompt)
+        
+        navigationController?.hero.isEnabled = true
+        navigationController?.heroNavigationAnimationType = .zoomOut
     }
 
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSample" {
+            let destinationVC = segue.destination as! OptionModalViewController
+            destinationVC.hero.isEnabled = true
+            destinationVC.hero.modalAnimationType = .selectBy(presenting: .fade, dismissing: .fade)
+            print(1)
+        }
+    }
 
-
-    
 
 
 
@@ -66,12 +77,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @objc func wordBubbleButtonTapped(sender: UIButton) {
         inputPrompt.text! += " " + (sender.titleLabel?.text)!
+        changeInputFieldBackgroundToLight(inputField: inputPrompt)
         inputPrompt.becomeFirstResponder()
     }
 
 
     @IBAction func clearButtonClicked(_ sender: Any) {
         inputPrompt.text = ""
+        changeInputFieldBackgroundToDark(inputField: inputPrompt)
+        inputPrompt.resignFirstResponder()
     }
     
 
