@@ -20,10 +20,20 @@
                         <viewLayoutGuide key="safeArea" id="MUC-ei-Og4"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="Fpx-c0-WUY"/>
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="Fpx-c0-WUY" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="etG-7K-HRI" id="m4m-T9-Gvc"/>
+                        </connections>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="hfy-2L-cWm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCq-cf-rTo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="etG-7K-HRI" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="3474" y="-670"/>
         </scene>
@@ -120,7 +130,11 @@
                             <constraint firstItem="s7q-HU-Hds" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XiX-7k-x6N"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
+                    <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="ExE-Yk-63U" id="d2a-Um-gUu"/>
+                        </connections>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -132,6 +146,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="ExE-Yk-63U" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="3473.8461538461538" y="814.69194312796208"/>
         </scene>
@@ -220,10 +235,20 @@
                         <viewLayoutGuide key="safeArea" id="hY4-cC-7ZF"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="7G6-Tn-qHN"/>
+                    <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="7G6-Tn-qHN" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="HjL-Fg-Aoe" id="kVA-Q8-nhs"/>
+                        </connections>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="Sjt-mU-LcC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtf-b8-Yz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="HjL-Fg-Aoe" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9EV-j8-cUP">
                     <rect key="frame" x="0.0" y="0.0" width="97" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -243,10 +268,20 @@
                         <viewLayoutGuide key="safeArea" id="G7f-EQ-hHw"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" id="HZ0-mL-5w9"/>
+                    <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" id="HZ0-mL-5w9" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="AQZ-oY-2UL" id="pZh-OG-1dp"/>
+                        </connections>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Image Restore" id="LHH-6O-f5h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7S-Up-lyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="AQZ-oY-2UL" customClass="RAMFlipLeftTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="3474" y="65"/>
         </scene>
@@ -627,7 +662,16 @@
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="Xqw-2d-Q9c"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="Xqw-2d-Q9c" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="Xlz-hD-GmE" id="68W-hl-n3E"/>
+                        </connections>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Profile" id="6Ld-a1-2Lh"/>
                     <connections>
                         <outlet property="pfpImageView" destination="9ck-g4-wuL" id="fvT-ka-suR"/>
@@ -635,6 +679,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY4-ad-hpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Xlz-hD-GmE" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="2414" y="2283"/>
         </scene>

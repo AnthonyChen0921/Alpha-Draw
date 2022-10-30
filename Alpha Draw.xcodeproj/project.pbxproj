@@ -13,6 +13,8 @@
 		6B358BDE290ECF79003E2ADD /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BDD290ECF79003E2ADD /* Hero */; };
 		6B358BE0290ED5C6003E2ADD /* OptionModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B358BDF290ED5C6003E2ADD /* OptionModalViewController.swift */; };
 		6B358BE3290F05A1003E2ADD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BE2290F05A1003E2ADD /* SwiftyJSON */; };
+		6B358BE6290F079D003E2ADD /* RAMAnimatedTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 6B358BE5290F079D003E2ADD /* RAMAnimatedTabBarController */; };
+		6B358BE8290F07CF003E2ADD /* NewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B358BE7290F07CF003E2ADD /* NewAnimation.swift */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -79,6 +81,7 @@
 		6B063B73290CD871009C5022 /* function_uiux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function_uiux.swift; sourceTree = "<group>"; };
 		6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPromptTextField.swift; sourceTree = "<group>"; };
 		6B358BDF290ED5C6003E2ADD /* OptionModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionModalViewController.swift; sourceTree = "<group>"; };
+		6B358BE7290F07CF003E2ADD /* NewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAnimation.swift; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 				6B62DB502906043300839DE2 /* FirebaseAppCheck in Frameworks */,
 				6B62DB5E2906043300839DE2 /* FirebaseFirestoreSwift in Frameworks */,
 				6B62DB682906043300839DE2 /* FirebaseStorage in Frameworks */,
+				6B358BE6290F079D003E2ADD /* RAMAnimatedTabBarController in Frameworks */,
 				6B62DB4C2906043300839DE2 /* FirebaseAnalytics in Frameworks */,
 				6B62DB6A2906043300839DE2 /* FirebaseStorageCombine-Community in Frameworks */,
 				6B62DB5A2906043300839DE2 /* FirebaseFirestore in Frameworks */,
@@ -372,6 +376,7 @@
 		6B7B1AA92902FDDF00F36C6F /* UIDesign */ = {
 			isa = PBXGroup;
 			children = (
+				6B358BE7290F07CF003E2ADD /* NewAnimation.swift */,
 			);
 			path = UIDesign;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				6B063B6A290CCD46009C5022 /* TextFieldEffects */,
 				6B358BDD290ECF79003E2ADD /* Hero */,
 				6B358BE2290F05A1003E2ADD /* SwiftyJSON */,
+				6B358BE5290F079D003E2ADD /* RAMAnimatedTabBarController */,
 			);
 			productName = "Alpha Draw";
 			productReference = 6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */;
@@ -474,6 +480,7 @@
 				6B063B69290CCD46009C5022 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 				6B358BDC290ECF79003E2ADD /* XCRemoteSwiftPackageReference "Hero" */,
 				6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6B358BE4290F079D003E2ADD /* XCRemoteSwiftPackageReference "animated-tab-bar" */,
 			);
 			productRefGroup = 6B7B1A8E2902FADA00F36C6F /* Products */;
 			projectDirPath = "";
@@ -524,6 +531,7 @@
 				6B8425352908BC75000AC834 /* HomeViewController.swift in Sources */,
 				6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */,
 				6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */,
+				6B358BE8290F07CF003E2ADD /* NewAnimation.swift in Sources */,
 				6B62DB732907903F00839DE2 /* LoginViewController.swift in Sources */,
 				6B358BE0290ED5C6003E2ADD /* OptionModalViewController.swift in Sources */,
 				6B62DB6C290640AC00839DE2 /* User.swift in Sources */,
@@ -789,6 +797,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		6B358BE4290F079D003E2ADD /* XCRemoteSwiftPackageReference "animated-tab-bar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ramotion/animated-tab-bar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -814,6 +830,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		6B358BE5290F079D003E2ADD /* RAMAnimatedTabBarController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B358BE4290F079D003E2ADD /* XCRemoteSwiftPackageReference "animated-tab-bar" */;
+			productName = RAMAnimatedTabBarController;
 		};
 		6B62DB4B2906043300839DE2 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

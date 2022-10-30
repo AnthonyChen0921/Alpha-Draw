@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "animated-tab-bar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ramotion/animated-tab-bar",
+      "state" : {
+        "revision" : "52174249fa7b296c0fce1114be8f34081b85ffc3",
+        "version" : "5.2.0"
+      }
+    },
+    {
       "identity" : "boringssl-swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/boringssl-SwiftPM.git",
