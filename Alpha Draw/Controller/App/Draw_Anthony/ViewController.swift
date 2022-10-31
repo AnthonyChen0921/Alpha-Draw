@@ -9,16 +9,20 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import TextFieldEffects
 import Hero
 import FSPagerView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FSPagerViewDelegate, FSPagerViewDataSource {
 
+    // MARK: - Constants
     var pageIsFront = true
+    var titleArray = ["Cyberpunk AI", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Stable-diffusion", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
+    var inspirationBubbleString: [String] = ["Apple", "Banana", "Peach", "Orange", "Watermellon", "Kiwi"]
+    var currentSelectedConfig = 1
     
     
-
+    
+    // MARK: - Component links
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var clearPromptButton: UIButton!
     @IBOutlet weak var wordBubbleCollectionView: UICollectionView!
@@ -29,9 +33,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
 
-    var titleArray = ["Cyberpunk AI", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Stable-diffusion", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
-    var inspirationBubbleString: [String] = ["Apple", "Banana", "Peach", "Orange", "Watermellon", "Kiwi"]
-
+    
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         hidesBackButton(view: self)
@@ -47,7 +50,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // FSPageView Animation Type
         fsView.transformer = FSPagerViewTransformer(type: .overlap)
     }
+    
+    //MARK: - API Calls
 
+    
+    
+    
     // MARK: - FSPageControl
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return 9
@@ -76,19 +84,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        if targetIndex == 2 {
-            UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                self.clearPromptButton.alpha = 1
-                self.wordBubbleCollectionView.alpha = 1
-                self.inputPrompt.alpha = 1
-            }, completion: nil)
-        }
+        currentSelectedConfig = targetIndex + 1
+        print("currentSelectedConfig: \(currentSelectedConfig)")
     }
 
     // if FsPage is touched, dismiss keyboard
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         self.view.endEditing(true)
-        
     }
 
     
@@ -112,11 +114,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let saveButton = addSaveButton(x: Int(pagerView.frame.width/2 + 50), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
             saveButton.addTarget(self, action: #selector(flipBack), for: .touchUpInside)
             // saveButton.addTarget(self, action: #selector(saveImage), for: .touchUpInside)
+            let shadowView = addShadowViewBehindButton(x: Int(pagerView.frame.width/2 + 50), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
+            cell?.contentView.addSubview(shadowView)
             cell?.contentView.addSubview(saveButton)
 
             // add a cancel button to flipback the image, at the bottom of the cell
             let cancelButton = addCancelButton(x: Int(pagerView.frame.width/2 - 150), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
             cancelButton.addTarget(self, action: #selector(flipBack), for: .touchUpInside)
+            let shadowView2 = addShadowViewBehindButton(x: Int(pagerView.frame.width/2 - 150), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
+            cell?.contentView.addSubview(shadowView2)
             cell?.contentView.addSubview(cancelButton)
 
             // flip the image in 0.5s, and set to black
@@ -129,6 +135,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 titleLabel.alpha = 1
                 saveButton.alpha = 1
                 cancelButton.alpha = 1
+                shadowView.alpha = 1
+                shadowView2.alpha = 1
             }, completion: nil)
 
         

@@ -99,23 +99,54 @@ func createCellTitleLabel(title: String, width: Int, cell: FSPagerViewCell) -> U
 func addSaveButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
     let saveButton = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
     saveButton.setTitle("Save", for: .normal)
-    saveButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
-    saveButton.setTitleColor(.green, for: .normal)
-    saveButton.layer.borderWidth = 2
-    saveButton.layer.borderColor = UIColor.systemGreen.cgColor
-    saveButton.layer.cornerRadius = 10
+    saveButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+    saveButton.setTitleColor(.white, for: .normal)
+    
+    // create a linear gradient for button background color
+    let gradientLayer = CAGradientLayer()
+    gradientLayer.frame = saveButton.bounds
+    gradientLayer.colors = [UIColor.systemMint.cgColor, UIColor.systemIndigo.cgColor, UIColor.systemPink.cgColor]
+    gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+    gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+    saveButton.layer.insertSublayer(gradientLayer, at: 0)
+    saveButton.layer.cornerRadius = 15
+    saveButton.layer.masksToBounds = true
     saveButton.alpha = 0
+
     return saveButton
 }
 
 func addCancelButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
     let cancelButton = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
     cancelButton.setTitle("Cancel", for: .normal)
-    cancelButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
-    cancelButton.setTitleColor(.red, for: .normal)
-    cancelButton.layer.borderWidth = 2
-    cancelButton.layer.borderColor = UIColor.systemRed.cgColor
-    cancelButton.layer.cornerRadius = 10
+    cancelButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+    cancelButton.setTitleColor(.white, for: .normal)
+    
+    // create a linear gradient for button background color
+    let gradientLayer = CAGradientLayer()
+    gradientLayer.frame = cancelButton.bounds
+    gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.orange.cgColor, UIColor.red.cgColor ]
+    gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+    gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+    cancelButton.layer.insertSublayer(gradientLayer, at: 0)
+    cancelButton.layer.cornerRadius = 15
+    cancelButton.layer.masksToBounds = true
     cancelButton.alpha = 0
+    
     return cancelButton
 }
+
+func addShadowViewBehindButton(x: Int, y:Int, width: Int, height: Int) -> UIView {
+    let shadowView = UIView(frame: CGRect(x: x, y: y, width: width, height: height))
+    shadowView.backgroundColor = .white
+    shadowView.layer.shadowColor = UIColor.white.cgColor
+    shadowView.layer.shadowOffset = CGSize(width: 4, height: 4)
+    shadowView.layer.shadowRadius = 5
+    shadowView.layer.shadowOpacity = 0.5
+    shadowView.layer.cornerRadius = 15
+    shadowView.layer.masksToBounds = false
+    shadowView.alpha = 0
+    return shadowView
+}
+
+
