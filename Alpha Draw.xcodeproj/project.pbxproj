@@ -33,6 +33,10 @@
 		6B358C15290F71EB003E2ADD /* Page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C0C290F71EB003E2ADD /* Page3.png */; };
 		6B358C16290F71EB003E2ADD /* Page9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C0D290F71EB003E2ADD /* Page9.png */; };
 		6B358C1829103909003E2ADD /* black.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C1729103908003E2ADD /* black.jpeg */; };
+		6B4B003029106F98009C06BE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B002F29106F98009C06BE /* Config.swift */; };
+		6B4B003229106FA9009C06BE /* StableDiffusionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B003129106FA9009C06BE /* StableDiffusionConfig.swift */; };
+		6B4B0034291071A4009C06BE /* PixrayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B0033291071A4009C06BE /* PixrayConfig.swift */; };
+		6B4B0036291071B4009C06BE /* NightmareConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B0035291071B4009C06BE /* NightmareConfig.swift */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -118,6 +122,10 @@
 		6B358C0C290F71EB003E2ADD /* Page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page3.png; sourceTree = "<group>"; };
 		6B358C0D290F71EB003E2ADD /* Page9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page9.png; sourceTree = "<group>"; };
 		6B358C1729103908003E2ADD /* black.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.jpeg; sourceTree = "<group>"; };
+		6B4B002F29106F98009C06BE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		6B4B003129106FA9009C06BE /* StableDiffusionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionConfig.swift; sourceTree = "<group>"; };
+		6B4B0033291071A4009C06BE /* PixrayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixrayConfig.swift; sourceTree = "<group>"; };
+		6B4B0035291071B4009C06BE /* NightmareConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightmareConfig.swift; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 		6B063B6C290CD770009C5022 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6B4B002E29106F6F009C06BE /* Config */,
 				6B063B72290CD7FD009C5022 /* Restore_Jeffery */,
 				6B063B71290CD7DC009C5022 /* Explore_Jennie */,
 				6B063B70290CD7D3009C5022 /* Gallery_Leo */,
@@ -283,6 +292,17 @@
 				6B358C0D290F71EB003E2ADD /* Page9.png */,
 			);
 			name = FSpage;
+			sourceTree = "<group>";
+		};
+		6B4B002E29106F6F009C06BE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6B4B002F29106F98009C06BE /* Config.swift */,
+				6B4B003129106FA9009C06BE /* StableDiffusionConfig.swift */,
+				6B4B0033291071A4009C06BE /* PixrayConfig.swift */,
+				6B4B0035291071B4009C06BE /* NightmareConfig.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		6B5785492909D85800F1713D /* Icons */ = {
@@ -606,8 +626,11 @@
 			files = (
 				6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */,
 				6B8425372908BC89000AC834 /* RestoreViewController.swift in Sources */,
+				6B4B003029106F98009C06BE /* Config.swift in Sources */,
 				6B7B1AB72903013900F36C6F /* Img2Img-tencentarc.swift in Sources */,
 				6B7B1AB32903004900F36C6F /* T2Text-prompt-parrot.swift in Sources */,
+				6B4B0036291071B4009C06BE /* NightmareConfig.swift in Sources */,
+				6B4B0034291071A4009C06BE /* PixrayConfig.swift in Sources */,
 				6B358BF3290F42D9003E2ADD /* GifExtension.swift in Sources */,
 				6B8425352908BC75000AC834 /* HomeViewController.swift in Sources */,
 				6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */,
@@ -617,6 +640,7 @@
 				6B62DB6C290640AC00839DE2 /* User.swift in Sources */,
 				6B76DF372908A2C60033AED6 /* ProfileViewController.swift in Sources */,
 				6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */,
+				6B4B003229106FA9009C06BE /* StableDiffusionConfig.swift in Sources */,
 				6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */,
 				6B7B1ABD290341F300F36C6F /* Function.swift in Sources */,
 				6B7B1AB5290300A800F36C6F /* T2Img-Pixray.swift in Sources */,

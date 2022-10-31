@@ -11,8 +11,11 @@ import ImageIO
 
 class OptionModalViewController: UIViewController {
 
+    @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        hidesBackButton(view: self)
+        addShadowToButton(button: cancelButton)
 
         // add a gif view to the view, and set the gif to loop forever, 
         // and set the gif to play automatically when the view loads
@@ -27,9 +30,22 @@ class OptionModalViewController: UIViewController {
         imageView.startAnimating()
         self.view.addSubview(imageView)
         addGloomyShadowEffectAnimation(imageView: imageView)
+        
 
     }
+    
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        // alert user to confirm cancel
+        let alert = UIAlertController(title: "Cancel", message: "Are you sure you want to cancel?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.overrideUserInterfaceStyle = .dark
 
+        self.present(alert, animated: true)
+    }
+    
     // add gloomy shadow effect to imageView
     func addGloomyShadowEffectAnimation(imageView: UIImageView) {
         // add shadow to the imageView

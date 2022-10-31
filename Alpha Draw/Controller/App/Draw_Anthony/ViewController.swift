@@ -63,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
 
         // add an image view to the cell, with padding 10 to fspage frame
-        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: pagerView.frame.width - 60, height: pagerView.frame.height - 20))
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 20, width: pagerView.frame.width - 60, height: pagerView.frame.height - 20))
         imageView.image = UIImage(named: "Page\(index+1)")
         imageView.contentMode = .scaleAspectFill
         imageView.center = cell.contentView.center
@@ -105,25 +105,57 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             pageIsFront = false
 
             // add to title label to cell
-            let titleLabel = createCellTitleLabel()
+            let titleLabel = createCellTitleLabel(title: titleArray[index], width: Int(pagerView.frame.width), cell: cell!)
             cell?.contentView.addSubview(titleLabel)
+
+            // add a save button to flipback the image, at the bottom of the cell
+            let saveButton = addSaveButton(x: Int(pagerView.frame.width/2 + 50), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
+            saveButton.addTarget(self, action: #selector(flipBack), for: .touchUpInside)
+            // saveButton.addTarget(self, action: #selector(saveImage), for: .touchUpInside)
+            cell?.contentView.addSubview(saveButton)
+
+            // add a cancel button to flipback the image, at the bottom of the cell
+            let cancelButton = addCancelButton(x: Int(pagerView.frame.width/2 - 150), y: Int(pagerView.frame.height - 60), width: 100, height: 30)
+            cancelButton.addTarget(self, action: #selector(flipBack), for: .touchUpInside)
+            cell?.contentView.addSubview(cancelButton)
 
             // flip the image in 0.5s, and set to black
             UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromRight, animations: {
                 imageView.image = UIImage(named: "black")
             }, completion: nil)
 
-            // add label animation to fade in
+            // add animation to fade in
             UIView.animate(withDuration: 0.5, delay: 0.5, options: [.curveEaseInOut, .allowUserInteraction], animations: {
                 titleLabel.alpha = 1
+                saveButton.alpha = 1
+                cancelButton.alpha = 1
             }, completion: nil)
 
-            
         
         } 
         return false
     }
 
+    // flip back the image
+    @objc func flipBack(_ sender: UIButton) {
+        // get cell and image view handle
+        let cell = sender.superview
+        let imageView = cell?.subviews[0] as! UIImageView
+        pageIsFront = true
+
+        // animate the image flip back
+        UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromLeft, animations: {
+            imageView.image = UIImage(named: "Page\(self.fsView.currentIndex+1)")
+        }, completion: nil)
+
+        // remove everthing except the image view
+        for subview in cell!.subviews {
+            if subview != imageView {
+                subview.removeFromSuperview()
+            }
+        }
+
+    }
 
 
 

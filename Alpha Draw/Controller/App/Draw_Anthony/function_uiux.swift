@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FSPagerView
 
 
 // create a gloomy shadow animation for the input prompt, done within 1 second
@@ -82,14 +83,39 @@ func addShadowToButton(button: UIButton) {
     button.layer.shadowOpacity = 0.5
 }
 
-func createCellTitleLabel() -> UILabel {
-    let titleLabel = UILabel(frame: CGRect(x: 0, y: 30, width: pagerView.frame.width - 80, height: 60))
-    titleLabel.text = self.titleArray[index]
+func createCellTitleLabel(title: String, width: Int, cell: FSPagerViewCell) -> UILabel {
+    let titleLabel = UILabel(frame: CGRect(x: 0, y: 30, width: width - 80, height: 60))
+    titleLabel.text = title
     titleLabel.textColor = .white
     titleLabel.textAlignment = .center
-    titleLabel.center.x = cell!.contentView.center.x
+    titleLabel.center.x = cell.contentView.center.x
     titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
     titleLabel.alpha = 0
     titleLabel.numberOfLines = 2
     return titleLabel
+}
+
+
+func addSaveButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
+    let saveButton = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
+    saveButton.setTitle("Save", for: .normal)
+    saveButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
+    saveButton.setTitleColor(.green, for: .normal)
+    saveButton.layer.borderWidth = 2
+    saveButton.layer.borderColor = UIColor.systemGreen.cgColor
+    saveButton.layer.cornerRadius = 10
+    saveButton.alpha = 0
+    return saveButton
+}
+
+func addCancelButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
+    let cancelButton = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
+    cancelButton.setTitle("Cancel", for: .normal)
+    cancelButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
+    cancelButton.setTitleColor(.red, for: .normal)
+    cancelButton.layer.borderWidth = 2
+    cancelButton.layer.borderColor = UIColor.systemRed.cgColor
+    cancelButton.layer.cornerRadius = 10
+    cancelButton.alpha = 0
+    return cancelButton
 }
