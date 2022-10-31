@@ -183,16 +183,6 @@
                     <view key="view" contentMode="scaleToFill" id="WDC-em-kPN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="starrynight.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Rof-yW-qRF">
-                                <rect key="frame" x="44" y="299" width="302" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j7R-0f-cB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

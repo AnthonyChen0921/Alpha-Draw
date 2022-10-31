@@ -159,10 +159,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
             self.wordBubbleCollectionView.alpha = 1.0
         }, completion: nil)
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseIn, animations: {
             self.fsView.alpha = 1.0
         }, completion: nil)
-        UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
             self.createButton.alpha = 1.0
         }, completion: nil)
     }
