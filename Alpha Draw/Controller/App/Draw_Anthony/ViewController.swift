@@ -14,6 +14,8 @@ import Hero
 import FSPagerView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FSPagerViewDelegate, FSPagerViewDataSource {
+
+    var pageIsFront = true
     
     
 
@@ -26,8 +28,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.fsView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "fscell")
         }
     }
-    
-    
+
+    var titleArray = ["Cyberpunk AI", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Stable-diffusion", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
     var inspirationBubbleString: [String] = ["Apple", "Banana", "Peach", "Orange", "Watermellon", "Kiwi"]
 
     override func viewDidLoad() {
@@ -61,12 +63,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
 
         // add an image view to the cell, with padding 10 to fspage frame
-        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: pagerView.frame.width - 20, height: pagerView.frame.height - 20))
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: pagerView.frame.width - 60, height: pagerView.frame.height - 20))
         imageView.image = UIImage(named: "Page\(index+1)")
         imageView.contentMode = .scaleAspectFill
         imageView.center = cell.contentView.center
         imageView.clipsToBounds = true
+
+        // add to cell
         cell.contentView.addSubview(imageView)
+        pageIsFront = true
         return cell
     }
 
@@ -83,12 +88,41 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // if FsPage is touched, dismiss keyboard
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         self.view.endEditing(true)
+        
     }
+
+    
+
+    
+    // MARK: - FSPageFilp
+
 
     func pagerView(_ pagerView: FSPagerView, shouldSelectItemAt index: Int) -> Bool {
+        if pageIsFront {
+            // get cell and image view handle
+            let cell = pagerView.cellForItem(at: index)
+            let imageView = cell?.contentView.subviews[0] as! UIImageView
+            pageIsFront = false
+
+            // add to title label to cell
+            let titleLabel = createCellTitleLabel()
+            cell?.contentView.addSubview(titleLabel)
+
+            // flip the image in 0.5s, and set to black
+            UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromRight, animations: {
+                imageView.image = UIImage(named: "black")
+            }, completion: nil)
+
+            // add label animation to fade in
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                titleLabel.alpha = 1
+            }, completion: nil)
+
+            
+        
+        } 
         return false
     }
-
 
 
 
@@ -137,14 +171,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     // if wordBubbleButton hovered, set the button to light color
     @objc func wordBubbleButtonHover(sender: UIButton) {
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             sender.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.5)
         }, completion: nil)
     }
 
     // if wordButtonButton unhovered, set the button back
     @objc func wordBubbleButtonHoverEnd(sender: UIButton) {
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             sender.backgroundColor = UIColor.purple.withAlphaComponent(0.1)
         }, completion: nil)
     }
@@ -168,9 +202,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func addAlphaDrawTitle(){
         self.parent?.navigationItem.title = "Alpha Draw"
         self.parent?.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        self.parent?.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 1, height: 1)
-        self.parent?.navigationController?.navigationBar.layer.shadowRadius = 2
-        self.parent?.navigationController?.navigationBar.layer.shadowOpacity = 0.5
+        self.parent?.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        self.parent?.navigationController?.navigationBar.layer.shadowRadius = 1
+        self.parent?.navigationController?.navigationBar.layer.shadowOpacity = 0.3
         self.parent?.navigationController?.navigationBar.layer.masksToBounds = false
     }
     

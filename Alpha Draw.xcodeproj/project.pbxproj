@@ -32,6 +32,7 @@
 		6B358C14290F71EB003E2ADD /* Page8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C0B290F71EB003E2ADD /* Page8.png */; };
 		6B358C15290F71EB003E2ADD /* Page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C0C290F71EB003E2ADD /* Page3.png */; };
 		6B358C16290F71EB003E2ADD /* Page9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C0D290F71EB003E2ADD /* Page9.png */; };
+		6B358C1829103909003E2ADD /* black.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6B358C1729103908003E2ADD /* black.jpeg */; };
 		6B4CEC802907A19A0055C880 /* SimpleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */; };
 		6B5785322908FA0500F1713D /* WelcomeBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */; };
 		6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5785332909B51500F1713D /* CustomTabBarController.swift */; };
@@ -116,6 +117,7 @@
 		6B358C0B290F71EB003E2ADD /* Page8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page8.png; sourceTree = "<group>"; };
 		6B358C0C290F71EB003E2ADD /* Page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page3.png; sourceTree = "<group>"; };
 		6B358C0D290F71EB003E2ADD /* Page9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page9.png; sourceTree = "<group>"; };
+		6B358C1729103908003E2ADD /* black.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.jpeg; sourceTree = "<group>"; };
 		6B4CEC7F2907A19A0055C880 /* SimpleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegue.swift; sourceTree = "<group>"; };
 		6B5785312908FA0500F1713D /* WelcomeBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WelcomeBackground3.jpg; sourceTree = "<group>"; };
 		6B5785332909B51500F1713D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		6B358BFE290F5B23003E2ADD /* FSpage */ = {
 			isa = PBXGroup;
 			children = (
+				6B358C1729103908003E2ADD /* black.jpeg */,
 				6B358C09290F71EB003E2ADD /* Page1.jpeg */,
 				6B358C05290F71EA003E2ADD /* Page2.png */,
 				6B358C0C290F71EB003E2ADD /* Page3.png */,
@@ -570,6 +573,7 @@
 				6B358C16290F71EB003E2ADD /* Page9.png in Resources */,
 				6B358BFB290F5183003E2ADD /* WelcomeBackground4.jpeg in Resources */,
 				6B358C10290F71EB003E2ADD /* Page6.png in Resources */,
+				6B358C1829103909003E2ADD /* black.jpeg in Resources */,
 				6B5785402909D1EE00F1713D /* lightbulb2.jpeg in Resources */,
 				6B358C13290F71EB003E2ADD /* Page5.png in Resources */,
 				6B358C0E290F71EB003E2ADD /* Page2.png in Resources */,

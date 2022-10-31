@@ -81,3 +81,15 @@ func addShadowToButton(button: UIButton) {
     button.layer.shadowRadius = 5
     button.layer.shadowOpacity = 0.5
 }
+
+func createCellTitleLabel() -> UILabel {
+    let titleLabel = UILabel(frame: CGRect(x: 0, y: 30, width: pagerView.frame.width - 80, height: 60))
+    titleLabel.text = self.titleArray[index]
+    titleLabel.textColor = .white
+    titleLabel.textAlignment = .center
+    titleLabel.center.x = cell!.contentView.center.x
+    titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
+    titleLabel.alpha = 0
+    titleLabel.numberOfLines = 2
+    return titleLabel
+}
