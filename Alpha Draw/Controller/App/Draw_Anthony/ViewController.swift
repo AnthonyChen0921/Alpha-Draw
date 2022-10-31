@@ -240,12 +240,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Input Prompt & title
 
     func addAlphaDrawTitle(){
-        self.parent?.navigationItem.title = "Alpha Draw"
-        self.parent?.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        self.parent?.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        self.parent?.navigationController?.navigationBar.layer.shadowRadius = 1
-        self.parent?.navigationController?.navigationBar.layer.shadowOpacity = 0.3
-        self.parent?.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationItem.title = "Alpha Draw"
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        self.navigationController?.navigationBar.layer.shadowRadius = 1
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.3
+        self.navigationController?.navigationBar.layer.masksToBounds = false
     }
     
     @IBAction func inputPromptEditingDidBegin(_ sender: Any) {

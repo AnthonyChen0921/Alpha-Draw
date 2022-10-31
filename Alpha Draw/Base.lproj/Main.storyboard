@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MUC-ei-Og4"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="Fpx-c0-WUY">
                         <userDefinedRuntimeAttributes>
@@ -63,7 +63,7 @@
                                             <constraint firstAttribute="height" constant="50" id="cwH-MC-6R1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -188,6 +188,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZX-qA-YDZ">
                                 <rect key="frame" x="39" y="690" width="311" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ZRh-pS-am5"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -212,7 +215,7 @@
                             <constraint firstItem="KZX-qA-YDZ" firstAttribute="leading" secondItem="j7R-0f-cB4" secondAttribute="leading" constant="39" id="JOh-cX-1Pi"/>
                             <constraint firstItem="j7R-0f-cB4" firstAttribute="bottom" secondItem="KZX-qA-YDZ" secondAttribute="bottom" constant="81" id="OgU-n1-gB7"/>
                             <constraint firstItem="j7R-0f-cB4" firstAttribute="trailing" secondItem="KZX-qA-YDZ" secondAttribute="trailing" constant="40" id="eAi-wZ-jkp"/>
-                            <constraint firstItem="KZX-qA-YDZ" firstAttribute="top" secondItem="j7R-0f-cB4" secondAttribute="top" constant="602" id="srp-GI-tUX"/>
+                            <constraint firstItem="KZX-qA-YDZ" firstAttribute="top" secondItem="j7R-0f-cB4" secondAttribute="top" priority="750" constant="602" id="srp-GI-tUX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V74-IL-NpJ"/>
@@ -279,7 +282,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hY4-cC-7ZF"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="7G6-Tn-qHN">
                         <userDefinedRuntimeAttributes>
@@ -308,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="G7f-EQ-hHw"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" id="HZ0-mL-5w9"/>
                     <navigationItem key="navigationItem" title="Image Restore" id="LHH-6O-f5h"/>
@@ -692,7 +695,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="Xqw-2d-Q9c">
                         <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
