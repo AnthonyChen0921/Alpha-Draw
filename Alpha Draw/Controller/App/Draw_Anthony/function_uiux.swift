@@ -67,10 +67,17 @@ func createBubbleButton(bubbleText: String) -> UIButton {
     let wordBubbleButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
     wordBubbleButton.setTitle(bubbleText, for: .normal)
     wordBubbleButton.titleLabel?.font = UIFont(name: "Arial", size: 15)
-    wordBubbleButton.setTitleColor(UIColor.purple, for: .normal)
+    wordBubbleButton.setTitleColor(UIColor.systemIndigo, for: .normal)
     wordBubbleButton.backgroundColor = UIColor.purple.withAlphaComponent(0.1)
     wordBubbleButton.tintColor = UIColor.lightGray
     wordBubbleButton.layer.cornerRadius = 15
     wordBubbleButton.layer.masksToBounds = true
     return wordBubbleButton
+}
+
+func addShadowToButton(button: UIButton) {
+    button.layer.shadowColor = UIColor.black.cgColor
+    button.layer.shadowOffset = CGSize(width: 4, height: 4)
+    button.layer.shadowRadius = 5
+    button.layer.shadowOpacity = 0.5
 }

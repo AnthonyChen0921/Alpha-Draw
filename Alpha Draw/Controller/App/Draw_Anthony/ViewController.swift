@@ -35,23 +35,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         hidesBackButton(view: self)
         styleInputField(inputField: inputPrompt)
+        addShadowToButton(button: createButton)
+        setAllViewToAlphaZero()
         
         navigationController?.hero.isEnabled = true
         navigationController?.heroNavigationAnimationType = .fade
 
-        setAllViewToAlphaZero()
 
         fsView.transformer = FSPagerViewTransformer(type: .overlap)
+
     }
 
     // MARK: - FSPageControl
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return 3
+        return 9
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "fscell", at: index)
-        cell.imageView?.image = UIImage(named: "WelcomeBackground\(index+1)")
+        cell.imageView?.image = UIImage(named: "Page\(index+1)")
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
         return cell
@@ -70,6 +72,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // if FsPage is touched, dismiss keyboard
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         self.view.endEditing(true)
+    }
+
+    func pagerView(_ pagerView: FSPagerView, shouldSelectItemAt index: Int) -> Bool {
+        return false
     }
 
 
@@ -91,6 +97,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         let wordBubbleButton = createBubbleButton(bubbleText: inspirationBubbleString[indexPath.row])
         wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonTapped), for: .touchUpInside)
+        wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonHover), for: .touchDown)
+        wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonHoverEnd), for: .touchDragExit)
         cell.addSubview(wordBubbleButton)
         return cell
     }
@@ -103,13 +111,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 40)
     }
 
+
+
+
+
     // MARK: - WordBubble & Clear Button Clicked
 
     @objc func wordBubbleButtonTapped(sender: UIButton) {
+        wordBubbleButtonHoverEnd(sender: sender)
         inputPrompt.text! += " " + (sender.titleLabel?.text)!
         changeInputFieldBackgroundToLight(inputField: inputPrompt)
         inputPrompt.becomeFirstResponder()
     }
+
+    // if wordBubbleButton hovered, set the button to light color
+    @objc func wordBubbleButtonHover(sender: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+            sender.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.5)
+        }, completion: nil)
+    }
+
+    // if wordButtonButton unhovered, set the button back
+    @objc func wordBubbleButtonHoverEnd(sender: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+            sender.backgroundColor = UIColor.purple.withAlphaComponent(0.1)
+        }, completion: nil)
+    }
+
+
 
 
     @IBAction func clearButtonClicked(_ sender: Any) {
@@ -118,6 +147,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         inputPrompt.resignFirstResponder()
     }
     
+
+
+
 
 
     // MARK: - Input Prompt
@@ -140,6 +172,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.view.endEditing(true)
     }
     
+
+
+
     // MARK: - Animation
 
     func setAllViewToAlphaZero() {
@@ -166,5 +201,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.createButton.alpha = 1.0
         }, completion: nil)
     }
+
+    
 }
 
