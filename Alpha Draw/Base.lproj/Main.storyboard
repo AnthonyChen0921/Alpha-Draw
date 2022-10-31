@@ -160,7 +160,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
-                    <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
+                    <navigationItem key="navigationItem" title="Draw" id="k9h-l7-UCE"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -176,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="3473.8461538461538" y="814.69194312796208"/>
         </scene>
-        <!--Option Modal View Controller-->
+        <!--Draw-->
         <scene sceneID="xXA-r6-rED">
             <objects>
                 <viewController storyboardIdentifier="Sample" id="LCF-ut-mbu" customClass="OptionModalViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +186,7 @@
                         <viewLayoutGuide key="safeArea" id="j7R-0f-cB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V74-IL-NpJ"/>
+                    <navigationItem key="navigationItem" title="Draw" id="V74-IL-NpJ"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>

@@ -14,7 +14,6 @@ import Hero
 import FSPagerView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FSPagerViewDelegate, FSPagerViewDataSource {
-    let viewControllerIDs = ["DrawViewController", "Sample"]
     
     
 
@@ -37,13 +36,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         styleInputField(inputField: inputPrompt)
         addShadowToButton(button: createButton)
         setAllViewToAlphaZero()
-        
+        addAlphaDrawTitle()
+
+        // Navigation Bar Animation Type
         navigationController?.hero.isEnabled = true
         navigationController?.heroNavigationAnimationType = .fade
 
-
+        // FSPageView Animation Type
         fsView.transformer = FSPagerViewTransformer(type: .overlap)
-
     }
 
     // MARK: - FSPageControl
@@ -51,11 +51,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 9
     }
 
+    // image: UIImage(named: "Page\(index+1)")
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "fscell", at: index)
-        cell.imageView?.image = UIImage(named: "Page\(index+1)")
-        cell.imageView?.contentMode = .scaleAspectFill
-        cell.imageView?.clipsToBounds = true
+
+        // remove all subviews from the cell
+        for subview in cell.contentView.subviews {
+            subview.removeFromSuperview()
+        }
+
+        // add an image view to the cell, with padding 10 to fspage frame
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: pagerView.frame.width - 20, height: pagerView.frame.height - 20))
+        imageView.image = UIImage(named: "Page\(index+1)")
+        imageView.contentMode = .scaleAspectFill
+        imageView.center = cell.contentView.center
+        imageView.clipsToBounds = true
+        cell.contentView.addSubview(imageView)
         return cell
     }
 
@@ -152,7 +163,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 
 
-    // MARK: - Input Prompt
+    // MARK: - Input Prompt & title
+
+    func addAlphaDrawTitle(){
+        self.parent?.navigationItem.title = "Alpha Draw"
+        self.parent?.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.parent?.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.parent?.navigationController?.navigationBar.layer.shadowRadius = 2
+        self.parent?.navigationController?.navigationBar.layer.shadowOpacity = 0.5
+        self.parent?.navigationController?.navigationBar.layer.masksToBounds = false
+    }
     
     @IBAction func inputPromptEditingDidBegin(_ sender: Any) {
         changeInputFieldBackgroundToLight(inputField: inputPrompt)

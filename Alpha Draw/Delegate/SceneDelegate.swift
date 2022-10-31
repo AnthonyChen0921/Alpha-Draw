@@ -25,10 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let homeVC = storyboard.instantiateViewController(identifier: "HomeTabBarViewController")
             let navigationController = UINavigationController(rootViewController: homeVC)
             navigationController.navigationBar.topItem?.backButtonTitle = "Back"
-            // set back button color to red
             navigationController.navigationBar.tintColor = UIColor.red
-            // set the navigation bar color to black
             // navigationController.navigationBar.barTintColor = UIColor.red
+            navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }
