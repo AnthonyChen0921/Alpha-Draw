@@ -61,6 +61,26 @@ func fetchStableDiffusionByPredictionId(completion: @escaping (StableDiffusionDa
     }.resume()
 }
 
+func cancelStableDiffusionRequest(cancelUrl: String, token: String) {
+    let url = URL(string: cancelUrl)!
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        guard let data = data else {
+            print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
+            return
+        }
+        do {
+            let stableDiffusion = try JSONDecoder().decode(StableDiffusionData.self, from: data)
+            print(stableDiffusion)
+        } catch {
+            print("Error decoding response: \(error)")
+        }
+    }.resume()
+}
+
 /**
     *  @brief: This function is used to convert the body request from Swift Struct to a String Array
     *  @param: bodyRequest: The body request of the API, written in Swift Struct, see PokemonData.swift for more details

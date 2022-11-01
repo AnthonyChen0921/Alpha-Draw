@@ -63,9 +63,15 @@ func changeInputFieldBackgroundToDark(inputField: UITextField) {
     }, completion: nil)
 }
 
-func createBubbleButton(bubbleText: String) -> UIButton {
+func getButtonWidth(text: String, font: UIFont) -> CGFloat {
+    let fontAttributes = [NSAttributedString.Key.font: font]
+    let size = (text as NSString).size(withAttributes: fontAttributes)
+    return size.width
+}
+
+func createBubbleButton(bubbleText: String, width: Int) -> UIButton {
     // create a tinted button in the cell, style tinted button
-    let wordBubbleButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    let wordBubbleButton = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: 30))
     wordBubbleButton.setTitle(bubbleText, for: .normal)
     wordBubbleButton.titleLabel?.font = UIFont(name: "Arial", size: 15)
     wordBubbleButton.setTitleColor(UIColor.systemIndigo, for: .normal)

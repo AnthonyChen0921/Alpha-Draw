@@ -81,7 +81,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="6zA-uN-Lw3"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NbJ-YN-IAJ">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NbJ-YN-IAJ">
                                             <size key="itemSize" width="100" height="40"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -241,10 +241,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-Nb-kCG">
-                                <rect key="frame" x="40" y="690" width="311" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zQ-rW-I88">
+                                <rect key="frame" x="40" y="685" width="142" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="UUG-SJ-1VW"/>
+                                    <constraint firstAttribute="height" constant="40" id="yeb-hf-OYW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Discard">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="LCF-ut-mbu" eventType="touchUpInside" id="ixJ-R3-LTx"/>
+                                    <action selector="discardButtonClicked:" destination="QSV-SG-ni2" eventType="touchUpInside" id="lwk-z0-u4a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCN-M9-Y8E">
+                                <rect key="frame" x="209" y="685" width="142" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="17S-m7-Wno"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -260,17 +283,22 @@
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="cancelButtonClicked:" destination="LCF-ut-mbu" eventType="touchUpInside" id="VDM-86-FVQ"/>
+                                    <action selector="cancelButtonClicked:" destination="LCF-ut-mbu" eventType="touchUpInside" id="3Nh-4c-Fpt"/>
+                                    <action selector="saveButtonClicked:" destination="QSV-SG-ni2" eventType="touchUpInside" id="e1O-7e-SCj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mdl-nC-1JE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mdl-nC-1JE" firstAttribute="trailing" secondItem="zjn-Nb-kCG" secondAttribute="trailing" constant="39" id="Htz-3s-ENu"/>
-                            <constraint firstItem="Mdl-nC-1JE" firstAttribute="bottom" secondItem="zjn-Nb-kCG" secondAttribute="bottom" constant="80" id="I45-MM-kOY"/>
-                            <constraint firstItem="zjn-Nb-kCG" firstAttribute="leading" secondItem="Mdl-nC-1JE" secondAttribute="leading" constant="40" id="LyN-3D-kSr"/>
-                            <constraint firstItem="zjn-Nb-kCG" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" priority="750" constant="602" id="fs3-8t-wB5"/>
+                            <constraint firstItem="Mdl-nC-1JE" firstAttribute="bottom" secondItem="1zQ-rW-I88" secondAttribute="bottom" constant="85" id="4Xh-Qj-4ij"/>
+                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="leading" secondItem="1zQ-rW-I88" secondAttribute="trailing" constant="27" id="7mY-TX-GBT"/>
+                            <constraint firstItem="1zQ-rW-I88" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" constant="597" id="BqQ-01-yN3"/>
+                            <constraint firstItem="Mdl-nC-1JE" firstAttribute="trailing" secondItem="PCN-M9-Y8E" secondAttribute="trailing" constant="39" id="Pu4-ow-SAX"/>
+                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" constant="597" id="gDI-J0-FZ3"/>
+                            <constraint firstItem="1zQ-rW-I88" firstAttribute="leading" secondItem="Mdl-nC-1JE" secondAttribute="leading" constant="40" id="kWO-HX-4Z5"/>
+                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="height" secondItem="1zQ-rW-I88" secondAttribute="height" id="mhI-ny-ysG"/>
+                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="width" secondItem="1zQ-rW-I88" secondAttribute="width" id="sOz-dH-4qi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kRg-wW-GsM"/>
@@ -818,6 +846,9 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

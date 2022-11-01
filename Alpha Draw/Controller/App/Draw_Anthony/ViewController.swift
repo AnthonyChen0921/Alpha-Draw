@@ -16,8 +16,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     // MARK: - Constants
     var pageIsFront = true
-    var titleArray = ["Cyberpunk AI", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Stable-diffusion", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
-    var inspirationBubbleString: [String] = ["Apple", "Banana", "Peach", "Orange", "Watermellon", "Kiwi"]
+    var titleArray = ["Stable-diffusion", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Cyberpunk AI", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
+    var inspirationBubbleString: [String] = ["Multicolor Hyperspace", "Splendid Star Sea", "Beautiful Digital Matte pastel paint sunflowers, artstation"]
     var currentSelectedConfig: Int = 1
 
     var currentSelectedWidth: Int = 512
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         } 
 
         // if current currentSelectedConfig == 4, prepare StableDiffusion Data and push to loadingViewController
-        else if currentSelectedConfig == 4 {
+        else if currentSelectedConfig == 1 {
             let loadingViewController = storyboard?.instantiateViewController(identifier: "loadingViewController") as! LoadingViewController
             var stableDiffusionInput = StableDiffusionInput()
             stableDiffusionInput.prompt = String(inputPrompt.text!)
@@ -87,6 +87,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             loadingViewController.stableDiffusionInput = stableDiffusionInput
             // performSegue(withIdentifier: "createToLoad", sender: self)
             navigationController?.pushViewController(loadingViewController, animated: true)
+        }
+
+        else {
+            let alert = UIAlertController(title: "Coming Soon", message: "This feature is coming soon!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.overrideUserInterfaceStyle = .dark
+            self.present(alert, animated: true)
         }
     }
     
@@ -404,12 +411,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         for subview in cell.subviews {
             subview.removeFromSuperview()
         }
-        let wordBubbleButton = createBubbleButton(bubbleText: inspirationBubbleString[indexPath.row])
+        let buttonWidth = getButtonWidth(text: inspirationBubbleString[indexPath.row], font: UIFont(name: "Arial", size: 15)!) + 20
+        // get the button width accrording to the text length
+        let wordBubbleButton = createBubbleButton(bubbleText: inspirationBubbleString[indexPath.row], width: Int(buttonWidth))
         wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonTapped), for: .touchUpInside)
         wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonHover), for: .touchDown)
         wordBubbleButton.addTarget(self, action: #selector(wordBubbleButtonHoverEnd), for: .touchDragExit)
         cell.addSubview(wordBubbleButton)
         return cell
+    }
+
+    // set collectionview cell size dynamically according to constant buttonWidth
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bubbleText = inspirationBubbleString[indexPath.row]
+        let bubbleTextWidth = getButtonWidth(text: bubbleText, font: UIFont(name: "Arial", size: 15)!)
+        return CGSize(width: bubbleTextWidth + 20, height: 35)
     }
 
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
