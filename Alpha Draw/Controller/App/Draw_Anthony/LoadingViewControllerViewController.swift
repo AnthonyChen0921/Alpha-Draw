@@ -30,8 +30,6 @@ class LoadingViewController: UIViewController {
             self.loadStableDiffusionRequest()
         })
 
-
-
     }
 
     // get token from user and provide a escaping closure for token string
@@ -68,6 +66,7 @@ class LoadingViewController: UIViewController {
         fetchStableDiffusionInitialRequest(completion: { stableDiffusionData in
             print(stableDiffusionData)
             self.currentRunningId = stableDiffusionData.id!
+            self.refreshStableDiffusionResult()
         }
         , bodyRequest: request, token: token)
     }
@@ -77,11 +76,14 @@ class LoadingViewController: UIViewController {
             print(stableDiffusionData)
             if (stableDiffusionData.status == "succeeded") {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let outputT2IViewController = storyboard.instantiateViewController(identifier: "OutputT2IViewController") as! OutputT2IViewController
+                let outputT2IViewController = storyboard.instantiateViewController(identifier: "outputT2IPage") as! OutputT2IViewController
                 outputT2IViewController.stableDiffusionData = stableDiffusionData
                 self.navigationController?.pushViewController(outputT2IViewController, animated: true)
             } else {
-                self.refreshStableDiffusionResult()
+                // wait 1 second and call refreshStableDiffusionResult again
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.refreshStableDiffusionResult()
+                }
             }
         }, predictionId: currentRunningId, token: token)
     }
