@@ -125,7 +125,7 @@ func addCancelButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
     // create a linear gradient for button background color
     let gradientLayer = CAGradientLayer()
     gradientLayer.frame = cancelButton.bounds
-    gradientLayer.colors = [UIColor.systemMint.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor ]
+    gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.darkGray.cgColor]
     gradientLayer.startPoint = CGPoint(x: 0, y: 0)
     gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     cancelButton.layer.insertSublayer(gradientLayer, at: 0)

@@ -106,6 +106,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         currentSelectedConfig = targetIndex + 1
         print("currentSelectedConfig: \(currentSelectedConfig)")
+        currentSelectedWidth = 512
+        currentSelectedHeight = 768
+        prompt_strength = 0.8
+        num_inference_steps = 50
+        guidance_scale = 7.5
     }
 
     // if FsPage is touched, dismiss keyboard
@@ -202,7 +207,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 
 
-
+            // restore the value
+            // restoreValue(restoreButton)
+            
             // flip the image in 0.5s, and set to black
             UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromRight, animations: {
                 imageView.image = UIImage(named: "black")
