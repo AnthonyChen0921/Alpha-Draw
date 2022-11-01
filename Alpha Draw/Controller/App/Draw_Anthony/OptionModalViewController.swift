@@ -9,7 +9,7 @@ import UIKit
 import Hero
 import ImageIO
 
-class OptionModalViewController: UIViewController {
+class LoadingViewController: UIViewController {
 
     @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {

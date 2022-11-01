@@ -118,14 +118,14 @@ func addSaveButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
 
 func addCancelButton(x: Int, y:Int, width: Int, height: Int) -> UIButton {
     let cancelButton = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
-    cancelButton.setTitle("Cancel", for: .normal)
+    cancelButton.setTitle("Restore", for: .normal)
     cancelButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
     cancelButton.setTitleColor(.white, for: .normal)
     
     // create a linear gradient for button background color
     let gradientLayer = CAGradientLayer()
     gradientLayer.frame = cancelButton.bounds
-    gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.orange.cgColor, UIColor.red.cgColor ]
+    gradientLayer.colors = [UIColor.systemMint.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor ]
     gradientLayer.startPoint = CGPoint(x: 0, y: 0)
     gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     cancelButton.layer.insertSublayer(gradientLayer, at: 0)
@@ -149,4 +149,39 @@ func addShadowViewBehindButton(x: Int, y:Int, width: Int, height: Int) -> UIView
     return shadowView
 }
 
+func addLabelText(x: Int, y:Int, width: Int, height: Int, text: String) -> UILabel {
+    let label = UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
+    label.text = text
+    label.textColor = .white
+    label.textAlignment = .left
+    label.font = UIFont(name: "HelveticaNeue", size: 15)
+    label.alpha = 0
+    return label
+}
 
+
+func addSegementControl(x: Int, y:Int, width: Int, height: Int) -> UISegmentedControl {
+    let widthSegmentedControl = UISegmentedControl(items: ["256", "512", "768"])
+    widthSegmentedControl.frame = CGRect(x: x, y: y, width: width, height: height)
+    widthSegmentedControl.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+    widthSegmentedControl.alpha = 0
+    return widthSegmentedControl
+}
+
+func addSlider(x: Int, y:Int, width: Int, height: Int, minValue: Float, maxValue: Float, value: Float) -> UISlider {
+    let slider = UISlider(frame: CGRect(x: x, y: y, width: width, height: height))
+    slider.minimumValue = minValue
+    slider.maximumValue = maxValue
+    slider.value = value
+    slider.alpha = 0
+    return slider
+}
+
+func styleLabelText(x: Int, y:Int, width: Int, height: Int, text: String, label: UILabel) {
+    label.frame = CGRect(x: x, y: y, width: width, height: height)
+    label.text = text
+    label.textColor = .white
+    label.textAlignment = .left
+    label.font = UIFont(name: "HelveticaNeue", size: 15)
+    label.alpha = 0
+}

@@ -117,6 +117,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="cancelButton:" destination="YOC-nR-cAm" eventType="touchUpInside" id="xdW-e6-ySB"/>
+                                            <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b43-pA-ivt"/>
                                             <segue destination="LCF-ut-mbu" kind="show" identifier="createToLoad" id="k7b-8H-Mh8"/>
                                         </connections>
                                     </button>
@@ -178,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="3473.8461538461538" y="814.69194312796208"/>
         </scene>
-        <!--Option Modal View Controller-->
+        <!--Loading View Controller-->
         <scene sceneID="xXA-r6-rED">
             <objects>
-                <viewController storyboardIdentifier="Sample" id="LCF-ut-mbu" customClass="OptionModalViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sample" id="LCF-ut-mbu" customClass="LoadingViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WDC-em-kPN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
