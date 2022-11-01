@@ -72,6 +72,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             alert.overrideUserInterfaceStyle = .dark
             self.present(alert, animated: true)
         } 
+
+        // if current currentSelectedConfig == 4, prepare StableDiffusion Data and push to loadingViewController
+        else if currentSelectedConfig == 4 {
+            let loadingViewController = storyboard?.instantiateViewController(identifier: "loadingViewController") as! LoadingViewController
+            var stableDiffusionInput = StableDiffusionInput()
+            stableDiffusionInput.prompt = String(inputPrompt.text!)
+            stableDiffusionInput.width = String(currentSelectedWidth)
+            stableDiffusionInput.height = String(currentSelectedHeight)
+            stableDiffusionInput.guidance_scale = String(guidance_scale)
+            stableDiffusionInput.num_inference_steps = String(num_inference_steps)
+            stableDiffusionInput.prompt_strength = String(prompt_strength)
+            stableDiffusionInput.num_outputs = "1"
+            loadingViewController.stableDiffusionInput = stableDiffusionInput
+            // performSegue(withIdentifier: "createToLoad", sender: self)
+            navigationController?.pushViewController(loadingViewController, animated: true)
+        }
     }
     
     
