@@ -104,6 +104,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        if currentSelectedConfig == targetIndex + 1 {
+            return
+        }
         currentSelectedConfig = targetIndex + 1
         print("currentSelectedConfig: \(currentSelectedConfig)")
         currentSelectedWidth = 512
@@ -156,13 +159,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
             // add a width segemented control to the cell, value of 256, 512, 768
             let widthSegmentedControl = addSegementControl(x: Int(pagerView.frame.width/2 - 150), y: 120, width: 300, height: 30)
-            widthSegmentedControl.selectedSegmentIndex = 1
+            if(currentSelectedWidth == 256) {
+                widthSegmentedControl.selectedSegmentIndex = 0
+            } else if(currentSelectedWidth == 512) {
+                widthSegmentedControl.selectedSegmentIndex = 1
+            } else {
+                widthSegmentedControl.selectedSegmentIndex = 2
+            }
             widthSegmentedControl.addTarget(self, action: #selector(widthSegmentedControlValueChanged(_:)), for: .valueChanged)
             cell?.contentView.addSubview(widthSegmentedControl)
 
             // add a height segemented control to the cell, value of 256, 512, 768
             let heightSegmentedControl = addSegementControl(x: Int(pagerView.frame.width/2 - 150), y: 160, width: 300, height: 30)
-            heightSegmentedControl.selectedSegmentIndex = 2
+            if(currentSelectedHeight == 256) {
+                heightSegmentedControl.selectedSegmentIndex = 0
+            } else if(currentSelectedHeight == 512) {
+                heightSegmentedControl.selectedSegmentIndex = 1
+            } else {
+                heightSegmentedControl.selectedSegmentIndex = 2
+            }
             heightSegmentedControl.addTarget(self, action: #selector(heightSegmentedControlValueChanged(_:)), for: .valueChanged)
             cell?.contentView.addSubview(heightSegmentedControl)
 
