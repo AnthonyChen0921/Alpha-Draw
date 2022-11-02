@@ -16,8 +16,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     // MARK: - Constants
     var pageIsFront = true
-    var titleArray = ["Stable-diffusion", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Cyberpunk AI", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
-    var inspirationBubbleString: [String] = ["Multicolor Hyperspace", "Splendid Star Sea", "Beautiful Digital Matte pastel paint sunflowers, artstation"]
+    var titleArray = ["Stable-diffusion", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Cyberpunk", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
+    var inspirationBubbleString: [String] = ["Artstation", "Unreal engine rendering", "Acrylic painting", "Digital Art", "Pencil sketch", "Paint", "low poly", "film grain", "hyper realistic", "epic scale", "sense of awe", "hypermaximalist", "artstation HQ", "cinematic"]
     var currentSelectedConfig: Int = 1
 
     var currentSelectedWidth: Int = 512
@@ -131,7 +131,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return
         }
         currentSelectedConfig = targetIndex + 1
-        print("currentSelectedConfig: \(currentSelectedConfig)")
+        print("currentSelectedStyle: \(titleArray[currentSelectedConfig - 1])")
         currentSelectedWidth = 512
         currentSelectedHeight = 768
         prompt_strength = 0.8

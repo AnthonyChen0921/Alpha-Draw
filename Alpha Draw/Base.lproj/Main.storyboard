@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="MUC-ei-Og4"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="Fpx-c0-WUY">
+                    <tabBarItem key="tabBarItem" title="" image="tag.fill" catalog="system" id="Fpx-c0-WUY">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,10 +292,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mdl-nC-1JE" firstAttribute="bottom" secondItem="1zQ-rW-I88" secondAttribute="bottom" constant="85" id="4Xh-Qj-4ij"/>
+                            <constraint firstItem="Mdl-nC-1JE" firstAttribute="bottom" secondItem="PCN-M9-Y8E" secondAttribute="bottom" constant="85" id="4c5-f9-k5i"/>
                             <constraint firstItem="PCN-M9-Y8E" firstAttribute="leading" secondItem="1zQ-rW-I88" secondAttribute="trailing" constant="27" id="7mY-TX-GBT"/>
-                            <constraint firstItem="1zQ-rW-I88" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" constant="597" id="BqQ-01-yN3"/>
+                            <constraint firstItem="1zQ-rW-I88" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" priority="750" constant="597" id="BqQ-01-yN3"/>
                             <constraint firstItem="Mdl-nC-1JE" firstAttribute="trailing" secondItem="PCN-M9-Y8E" secondAttribute="trailing" constant="39" id="Pu4-ow-SAX"/>
-                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" constant="597" id="gDI-J0-FZ3"/>
+                            <constraint firstItem="PCN-M9-Y8E" firstAttribute="top" secondItem="Mdl-nC-1JE" secondAttribute="top" priority="750" constant="597" id="gDI-J0-FZ3"/>
                             <constraint firstItem="1zQ-rW-I88" firstAttribute="leading" secondItem="Mdl-nC-1JE" secondAttribute="leading" constant="40" id="kWO-HX-4Z5"/>
                             <constraint firstItem="PCN-M9-Y8E" firstAttribute="height" secondItem="1zQ-rW-I88" secondAttribute="height" id="mhI-ny-ysG"/>
                             <constraint firstItem="PCN-M9-Y8E" firstAttribute="width" secondItem="1zQ-rW-I88" secondAttribute="width" id="sOz-dH-4qi"/>
@@ -830,11 +831,11 @@
         <image name="WelcomeBackground2" width="512" height="768"/>
         <image name="WelcomeBackground3.jpg" width="512" height="768"/>
         <image name="delete.left.fill" catalog="system" width="128" height="104"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="sparkles" catalog="system" width="112" height="128"/>
         <image name="starrynight.jpg" width="510" height="439"/>
+        <image name="tag.fill" catalog="system" width="128" height="119"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

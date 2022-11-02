@@ -23,6 +23,7 @@ class LoadingViewController: UIViewController {
     var flag = false
     var cancelUrl: String = ""
     var loadingViewAdded = false
+    var errorMessage = ""
 
     @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
@@ -91,7 +92,7 @@ class LoadingViewController: UIViewController {
             else if(stableDiffusionData.status == "failed") {
                 self.stableDiffusionData = stableDiffusionData
                 self.status = "failed"
-                print(self.stableDiffusionData?.error!)
+                self.errorMessage = stableDiffusionData.error!
             }
             else{
                 print("current status is \(stableDiffusionData.status ?? "Starting")")
@@ -107,8 +108,8 @@ class LoadingViewController: UIViewController {
         }
         else if (!flag && status == "failed") {
             // add an alert to notify user that the request failed, click ok to go back
-            let alert = UIAlertController(title: "Request Failed: NSFW content detected", message: "Please try again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            let alert = UIAlertController(title: "Request Failed", message: "\(self.errorMessage)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { action in
                 self.navigationController?.popViewController(animated: true)
             }))
             self.present(alert, animated: true)
