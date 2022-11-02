@@ -480,12 +480,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Input Prompt & title
 
     func addAlphaDrawTitle(){
-        self.navigationItem.title = "Alpha Draw"
-        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        self.navigationController?.navigationBar.layer.shadowRadius = 1
-        self.navigationController?.navigationBar.layer.shadowOpacity = 0.3
-        self.navigationController?.navigationBar.layer.masksToBounds = false
+        // add a label text title arial 30 called "AlphaDraw" at the top of the screen
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        title.center = CGPoint(x: view.frame.width/2, y: 70)
+        title.textAlignment = .center
+        title.text = "Alpha Draw"
+        title.font = UIFont(name: "Arial", size: 20)
+        title.textColor = UIColor.black
+        self.view.addSubview(title)
     }
     
     @IBAction func inputPromptEditingDidBegin(_ sender: Any) {
