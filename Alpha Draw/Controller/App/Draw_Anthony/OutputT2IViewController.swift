@@ -23,8 +23,8 @@ class OutputT2IViewController: UIViewController {
         hidesBackButton(view: self)
 
         // get width and height from getWidthAndHeightOfstableDiffusionData
-        width = getWidthOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 2
-        height = getHeightOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 2
+        width = getWidthOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 2 * 3
+        height = getHeightOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 2 * 3
         id = getIdOfstableDiffusionData(stableDiffusionData: stableDiffusionData!)
 
         // get prompt name from getInputNameOfstableDiffusionData
