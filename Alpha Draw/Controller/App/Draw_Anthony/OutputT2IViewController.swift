@@ -21,7 +21,6 @@ class OutputT2IViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hidesBackButton(view: self)
-
         // get width and height from getWidthAndHeightOfstableDiffusionData
         width = getWidthOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 3 * 2
         height = getHeightOfstableDiffusionData(stableDiffusionData: stableDiffusionData!) / 3 * 2
@@ -50,8 +49,10 @@ class OutputT2IViewController: UIViewController {
         // show an alert to tell the user that the image has been saved
         let alert = UIAlertController(title: "Saved", message: "Your image has been saved to your cloud.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            // change this to nav to tab bar controllers
-            // self.navigationController?.popToRootViewController(animated: true)
+            // pop navigation controller to previous view controller, with count of 2
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true)
+            
             self.uploadToFireStore()
         }))
         self.present(alert, animated: true)

@@ -162,7 +162,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="JBh-fe-CAv"/>
-                    <navigationItem key="navigationItem" title="Draw" id="k9h-l7-UCE"/>
+                    <navigationItem key="navigationItem" id="k9h-l7-UCE"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -210,6 +210,13 @@
                                     <action selector="cancelButtonClicked:" destination="LCF-ut-mbu" eventType="touchUpInside" id="Fxe-eK-SdC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-ZA-Xyc">
+                                <rect key="frame" x="52" y="112" width="275" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j7R-0f-cB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -226,6 +233,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="cancelButton" destination="KZX-qA-YDZ" id="87k-5Q-HHI"/>
+                        <outlet property="loadingTitle" destination="9GL-ZA-Xyc" id="fwH-ej-5gP"/>
                         <segue destination="QSV-SG-ni2" kind="show" identifier="loadingToOutput" id="g1U-Gj-YBF"/>
                     </connections>
                 </viewController>

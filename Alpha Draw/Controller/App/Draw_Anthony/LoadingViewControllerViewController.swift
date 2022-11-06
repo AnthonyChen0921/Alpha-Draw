@@ -24,7 +24,9 @@ class LoadingViewController: UIViewController {
     var cancelUrl: String = ""
     var loadingViewAdded = false
     var errorMessage = ""
+    var loadingDotCount = 0
 
+    @IBOutlet weak var loadingTitle: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,8 @@ class LoadingViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshStableDiffusionResult), userInfo: nil, repeats: true)
         // register a timer to call checkStatus every 1 second
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkStatus), userInfo: nil, repeats: true)
+        // register a timer to call changeLoadingTitle every 1 second
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeLoadingTitle), userInfo: nil, repeats: true)
     }
 
     // get token from user and provide a escaping closure for token string
@@ -94,10 +98,38 @@ class LoadingViewController: UIViewController {
                 self.status = "failed"
                 self.errorMessage = stableDiffusionData.error!
             }
-            else{
-                print("current status is \(stableDiffusionData.status ?? "Starting")")
+            else if(stableDiffusionData.status == "processing") {
+                self.stableDiffusionData = stableDiffusionData
+                self.status = "processing"
             }
         }, predictionId: currentRunningId, token: token)
+    }
+
+    @objc func changeLoadingTitle() {
+        if(status == "processing") {
+            if(loadingDotCount == 0) {
+                loadingTitle.text = "Processing"
+                loadingDotCount += 1
+            }
+            else if(loadingDotCount == 1) {
+                loadingTitle.text = "Processing."
+                loadingDotCount += 1
+            }
+            else if(loadingDotCount == 2) {
+                loadingTitle.text = "Processing.."
+                loadingDotCount += 1
+            }
+            else if(loadingDotCount == 3) {
+                loadingTitle.text = "Processing..."
+                loadingDotCount = 0
+            }
+        }
+        else if(status == "succeeded") {
+            loadingTitle.text = "Succeeded!"
+        }
+        else if(status == "failed") {
+            loadingTitle.text = "Error: \(errorMessage)"
+        }
     }
 
     @objc func checkStatus(){
