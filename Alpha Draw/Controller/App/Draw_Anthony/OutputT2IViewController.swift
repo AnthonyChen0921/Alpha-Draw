@@ -50,7 +50,8 @@ class OutputT2IViewController: UIViewController {
         // show an alert to tell the user that the image has been saved
         let alert = UIAlertController(title: "Saved", message: "Your image has been saved to your cloud.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            self.navigationController?.popToRootViewController(animated: true)
+            // change this to nav to tab bar controllers
+            // self.navigationController?.popToRootViewController(animated: true)
             self.uploadToFireStore()
         }))
         self.present(alert, animated: true)
