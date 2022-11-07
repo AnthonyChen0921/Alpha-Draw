@@ -51,7 +51,7 @@ class OutputT2IViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             // pop navigation controller to previous view controller, with count of 2
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true)
+            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
             
             self.uploadToFireStore()
         }))
