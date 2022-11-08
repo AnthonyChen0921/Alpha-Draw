@@ -25,6 +25,9 @@ class User: Encodable {
     // permissions
     var permissions: [String?] = []
 
+    // token
+    var token: String = "null"
+
 
     init (id: String?, name: String?, email: String?, balance: Double?, pfp: String?, date_created: String?) {
         self.id = id
@@ -48,7 +51,8 @@ class User: Encodable {
             "is_banned": self.is_banned,
             "is_premium": self.is_premium,
             "is_email_verified": self.is_email_verified,
-            "permissions": self.permissions
+            "permissions": self.permissions,
+            "token": self.token
         ]
     }
         
