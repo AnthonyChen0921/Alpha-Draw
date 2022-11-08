@@ -26,9 +26,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var num_inference_steps: Int = 50
     var guidance_scale: Float = 7.5
 
-    
-    
-    
+    // MARK: - User Defaults
+    let defaults = UserDefaults.standard
+    var hasToken: Bool = true
+
     // MARK: - Component links
     var sliderNum1: UILabel = UILabel()
     var sliderNum2: UILabel = UILabel()
@@ -52,6 +53,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         addShadowToButton(button: createButton)
         setAllViewToAlphaZero()
         addAlphaDrawTitle()
+        checkTokenFromUser()
 
         // Navigation Bar Animation Type
         navigationController?.hero.isEnabled = true
@@ -64,7 +66,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //MARK: - API Calls
 
+
+    // checkTokenFromUser, add an escape handler
+    func checkTokenFromUser() {
+        // get user data by user_id from UserDefaults
+        let user_id = UserDefaults.standard.string(forKey: "user_id")
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(user_id!)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let token = document.data()!["token"] as! String
+                // if token is null
+                if token == "null" {
+                    self.hasToken = false
+                }
+            } else {
+                self.hasToken = false
+            }
+        }
+    }
+
     @IBAction func createButtonClicked(_ sender: Any) {
+        if(!hasToken){
+            // show alert to tell user to add token
+            let alert = UIAlertController(title: "Token Setup Required", message: "Please setup your token first to use this feature.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.overrideUserInterfaceStyle = .dark
+            self.present(alert, animated: true)
+        }
         // if the input prompt is empty, show a message
         if inputPrompt.text == "" {
             let alert = UIAlertController(title: "Empty Prompt", message: "Please enter a prompt to generate an image.", preferredStyle: .alert)
