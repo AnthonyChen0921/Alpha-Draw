@@ -3,6 +3,15 @@
 //  Alpha Draw
 //
 //  Created by Anthony C on 10/21/22.
+//  This view controller is used to control the drawing process, text to image generation, and the drawing view.
+//  I am using FSpagerView to display the images with slideshows, and smooth animations between switiching the images.
+//  Currently TODO: 
+//               - Add to support nightmare mode to generate the images: nightmare config needed, 
+//                 send nightmare data to another view controller for nightmare mode only
+//                 This is because different from the basic stable diffusion modes that only takes 10 seconds to run
+//                 Nightmare model takes about 5 min the generate the image, but it will return the changing image over time
+//                 What I am expecting is: a view pop up with loading and fetch the image in process, that allows user to switch tabs
+//
 //
 
 import UIKit
