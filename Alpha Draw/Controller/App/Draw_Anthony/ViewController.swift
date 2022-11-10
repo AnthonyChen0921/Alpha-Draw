@@ -29,11 +29,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var inspirationBubbleString: [String] = ["Artstation", "Unreal engine rendering", "Acrylic painting", "Digital Art", "Pencil sketch", "Paint", "low poly", "film grain", "hyper realistic", "epic scale", "sense of awe", "hypermaximalist", "artstation HQ", "cinematic"]
     var currentSelectedConfig: Int = 1
 
-    var currentSelectedWidth: Int = 512
-    var currentSelectedHeight: Int = 768
-    var prompt_strength: Float = 0.8
-    var num_inference_steps: Int = 50
-    var guidance_scale: Float = 7.5
+
+    // MARK: - Congfigurations
+    var sdConfig: StableDiffusionConfig = StableDiffusionConfig(width: 512, height: 768, prompt_strength: 0.8, num_inference_steps: 50, guidance_scale: 7.5)
 
     // MARK: - User Defaults
     let defaults = UserDefaults.standard
@@ -114,14 +112,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // if current currentSelectedConfig == 4, prepare StableDiffusion Data and push to loadingViewController
         else if currentSelectedConfig == 1 {
             let loadingViewController = storyboard?.instantiateViewController(identifier: "loadingViewController") as! LoadingViewController
-            var stableDiffusionInput = StableDiffusionInput()
-            stableDiffusionInput.prompt = String(inputPrompt.text!)
-            stableDiffusionInput.width = String(currentSelectedWidth)
-            stableDiffusionInput.height = String(currentSelectedHeight)
-            stableDiffusionInput.guidance_scale = String(guidance_scale)
-            stableDiffusionInput.num_inference_steps = String(num_inference_steps)
-            stableDiffusionInput.prompt_strength = String(prompt_strength)
-            stableDiffusionInput.num_outputs = "1"
+            let stableDiffusionInput = sdConfig.toStableDiffusionInput(prompt: inputPrompt.text!)
             loadingViewController.stableDiffusionInput = stableDiffusionInput
             // performSegue(withIdentifier: "createToLoad", sender: self)
             navigationController?.pushViewController(loadingViewController, animated: true)
@@ -170,11 +161,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         currentSelectedConfig = targetIndex + 1
         print("currentSelectedStyle: \(titleArray[currentSelectedConfig - 1])")
-        currentSelectedWidth = 512
-        currentSelectedHeight = 768
-        prompt_strength = 0.8
-        num_inference_steps = 50
-        guidance_scale = 7.5
+        sdConfig.width = 512
+        sdConfig.height = 768
+        sdConfig.prompt_strength = 0.8
+        sdConfig.num_inference_steps = 50
+        sdConfig.guidance_scale = 7.5
     }
 
     // if FsPage is touched, dismiss keyboard
@@ -220,9 +211,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
             // add a width segemented control to the cell, value of 256, 512, 768
             let widthSegmentedControl = addSegementControl(x: Int(pagerView.frame.width/2 - 150), y: 120, width: 300, height: 30)
-            if(currentSelectedWidth == 256) {
+            if(sdConfig.width == 256) {
                 widthSegmentedControl.selectedSegmentIndex = 0
-            } else if(currentSelectedWidth == 512) {
+            } else if(sdConfig.width == 512) {
                 widthSegmentedControl.selectedSegmentIndex = 1
             } else {
                 widthSegmentedControl.selectedSegmentIndex = 2
@@ -232,9 +223,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
             // add a height segemented control to the cell, value of 256, 512, 768
             let heightSegmentedControl = addSegementControl(x: Int(pagerView.frame.width/2 - 150), y: 160, width: 300, height: 30)
-            if(currentSelectedHeight == 256) {
+            if(sdConfig.height == 256) {
                 heightSegmentedControl.selectedSegmentIndex = 0
-            } else if(currentSelectedHeight == 512) {
+            } else if(sdConfig.height == 512) {
                 heightSegmentedControl.selectedSegmentIndex = 1
             } else {
                 heightSegmentedControl.selectedSegmentIndex = 2
@@ -247,11 +238,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell?.contentView.addSubview(promptLabel)
 
             // add a number indicator before the slider
-            styleLabelText(x: 50, y: 240, width: Int(pagerView.frame.width - 100), height: 30, text: "\(prompt_strength)", label: sliderNum1)
+            styleLabelText(x: 50, y: 240, width: Int(pagerView.frame.width - 100), height: 30, text: "\(sdConfig.prompt_strength)", label: sliderNum1)
             cell?.contentView.addSubview(sliderNum1)
 
             // add a slider to the cell after the text label
-            let prompt_strength_slider = addSlider(x: 80, y: 240, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 1, value: prompt_strength)
+            let prompt_strength_slider = addSlider(x: 80, y: 240, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 1, value: sdConfig.prompt_strength)
             prompt_strength_slider.addTarget(self, action: #selector(prompt_strength_sliderValueChanged(_:)), for: .valueChanged)
             cell?.contentView.addSubview(prompt_strength_slider)
 
@@ -260,11 +251,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell?.contentView.addSubview(inferenceLabel)
 
             // add a number indicator before the slider
-            styleLabelText(x: 50, y: 310, width: Int(pagerView.frame.width - 100), height: 30, text: "\(num_inference_steps)", label: sliderNum2)
+            styleLabelText(x: 50, y: 310, width: Int(pagerView.frame.width - 100), height: 30, text: "\(sdConfig.num_inference_steps)", label: sliderNum2)
             cell?.contentView.addSubview(sliderNum2)
 
             // add a slider to the cell after the text label
-            let inference_strength_slider = addSlider(x: 80, y: 310, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 500, value: Float(num_inference_steps))
+            let inference_strength_slider = addSlider(x: 80, y: 310, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 500, value: Float(sdConfig.num_inference_steps))
             inference_strength_slider.addTarget(self, action: #selector(inference_strength_sliderValueChanged(_:)), for: .valueChanged)
             cell?.contentView.addSubview(inference_strength_slider)
 
@@ -273,11 +264,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell?.contentView.addSubview(guidanceLabel)
 
             // add a number indicator before the slider
-            styleLabelText(x: 50, y: 380, width: Int(pagerView.frame.width - 100), height: 30, text: "\(guidance_scale)", label: sliderNum3)
+            styleLabelText(x: 50, y: 380, width: Int(pagerView.frame.width - 100), height: 30, text: "\(sdConfig.guidance_scale)", label: sliderNum3)
             cell?.contentView.addSubview(sliderNum3)
 
             // add a slider to the cell after the text label
-            let guidance_strength_slider = addSlider(x: 80, y: 380, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 20, value: guidance_scale)
+            let guidance_strength_slider = addSlider(x: 80, y: 380, width: Int(pagerView.frame.width - 150), height: 30, minValue: 0, maxValue: 20, value: sdConfig.guidance_scale)
             guidance_strength_slider.addTarget(self, action: #selector(guidance_strength_sliderValueChanged(_:)), for: .valueChanged)
             cell?.contentView.addSubview(guidance_strength_slider)
 
@@ -341,11 +332,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // get cell and image view handle
         print("saving config...")
         print("currentSelectedConfig: \(currentSelectedConfig)")
-        print("width: \(currentSelectedWidth)")
-        print("height: \(currentSelectedHeight)")
-        print("prompt_strength: \(prompt_strength)")
-        print("num_inference_steps: \(num_inference_steps)")
-        print("guidance_scale: \(guidance_scale)")
+        print("width: \(sdConfig.width)")
+        print("height: \(sdConfig.height)")
+        print("prompt_strength: \(sdConfig.prompt_strength)")
+        print("num_inference_steps: \(sdConfig.num_inference_steps)")
+        print("guidance_scale: \(sdConfig.guidance_scale)")
 
     }
 
@@ -355,15 +346,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = sender.superview
 
         // set sliderNum1, sliderNum2, sliderNum3 to default value as defined in the beginning
-        prompt_strength = 0.8
-        num_inference_steps = 50
-        guidance_scale = 7.5
-        sliderNum1.text = "\(prompt_strength)"
-        sliderNum2.text = "\(num_inference_steps)"
-        sliderNum3.text = "\(guidance_scale)"
+        sdConfig.prompt_strength = 0.8
+        sdConfig.num_inference_steps = 50
+        sdConfig.guidance_scale = 7.5
+        sliderNum1.text = "\(sdConfig.prompt_strength)"
+        sliderNum2.text = "\(sdConfig.num_inference_steps)"
+        sliderNum3.text = "\(sdConfig.guidance_scale)"
 
-        currentSelectedWidth = 512
-        currentSelectedHeight = 768
+        sdConfig.width = 512
+        sdConfig.height = 768
         // set segmented control to default value as defined in the beginning, get segement control from cell
         let widthSegmentedControl = cell?.subviews[7] as! UISegmentedControl
         let heightSegmentedControl = cell?.subviews[8] as! UISegmentedControl
@@ -376,9 +367,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let guidance_strength_slider = cell?.subviews[17] as! UISlider
         
         // set slider to default value as defined in the beginning
-        prompt_strength_slider.value = prompt_strength
-        inference_strength_slider.value = Float(num_inference_steps)
-        guidance_strength_slider.value = guidance_scale
+        prompt_strength_slider.value = sdConfig.prompt_strength
+        inference_strength_slider.value = Float(sdConfig.num_inference_steps)
+        guidance_strength_slider.value = sdConfig.guidance_scale
 
     }
 
@@ -389,14 +380,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func widthSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            currentSelectedWidth = 256
-            print(currentSelectedWidth)
+            sdConfig.width = 256
         case 1:
-            currentSelectedWidth = 512
-            print(currentSelectedWidth)
+            sdConfig.width = 512
         case 2:
-            currentSelectedWidth = 768
-            print(currentSelectedWidth)
+            sdConfig.width = 768
         default:
             break
         }
@@ -405,11 +393,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func heightSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            currentSelectedHeight = 256
+            sdConfig.height = 256
         case 1:
-            currentSelectedHeight = 512
+            sdConfig.height = 512
         case 2:
-            currentSelectedHeight = 768
+            sdConfig.height = 768
         default:
             break
         }
@@ -418,21 +406,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func prompt_strength_sliderValueChanged(_ sender: UISlider) {
         // round to 0.x
         let roundedValue = round(sender.value * 10) / 10
-        prompt_strength = roundedValue
-        sliderNum1.text = String(format: "%.1f", prompt_strength)
+        sdConfig.prompt_strength = roundedValue
+        sliderNum1.text = String(format: "%.1f", sdConfig.prompt_strength)
     }
     
     @objc func inference_strength_sliderValueChanged(_ sender: UISlider) {
         // round to int
-        num_inference_steps = Int(sender.value)
-        sliderNum2.text = String(num_inference_steps)
+        sdConfig.num_inference_steps = Int(sender.value)
+        sliderNum2.text = String(sdConfig.num_inference_steps)
     }
 
     @objc func guidance_strength_sliderValueChanged(_ sender: UISlider) {
         // round to 0.x
         let roundedValue = round(sender.value * 10) / 10
-        guidance_scale = roundedValue
-        sliderNum3.text = String(format: "%.1f", guidance_scale)
+        sdConfig.guidance_scale = roundedValue
+        sliderNum3.text = String(format: "%.1f", sdConfig.guidance_scale)
     }
 
     

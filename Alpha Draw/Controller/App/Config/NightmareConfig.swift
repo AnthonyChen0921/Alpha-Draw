@@ -67,4 +67,29 @@ class NightmareConfig: Config{
             "num_inference_steps": self.num_inference_steps
         ]
     }
+
+    func toNightmareInput(prompt: String) -> NightmareInput {
+        return NightmareInput(
+            prompt: prompt,
+            step: String(self.step),
+            width: String(self.width),
+            height: String(self.height),
+            diffusion_model: String(self.diffusion_model),
+            diffusion_sampling_mode: String(self.diffusion_sampling_mode),
+            ViTB32: self.ViTB32,
+            ViTB16: self.ViTB16,
+            RN50: self.RN50,
+            use_secondary_model: self.use_secondary_model,
+            clip_guidance_scale: String(self.clip_guidance_scale),
+            range_scale: String(self.range_scale),
+            cutn_batches: String(self.cutn_batches),
+            init_scale: String(self.init_scale),
+            target_scale: String(self.target_scale),
+            skip_steps: String(self.skip_steps),
+            display_rate: String(self.display_rate),
+            guidance_scale: String(self.guidance_scale),
+            num_inference_steps: String(self.num_inference_steps)
+            
+        )
+    }
 }
