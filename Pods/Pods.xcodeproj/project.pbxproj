@@ -12,25 +12,42 @@
 		146E9FA66D8A55CCD9E7A89DB40FADD6 /* TTGTagCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E295DD951528E9E59F0DEDFAA99335 /* TTGTagCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FC9E4050EB7749949E19A0678CA0A87 /* TTGTextTagStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = CC75F898A5513CE70449E4B702316CAA /* TTGTextTagStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C6B934D837785259E680FD93F5C5741 /* TTGTextTagStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 35975B69FEE6CF5748E048298964D093 /* TTGTextTagStyle.m */; };
+		34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		39AF39DD3144702AF34A3FE2B7B5D6E0 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4AA4EB3AEA0AB3F8DB835DF382FD9 /* TTGTagCollectionView.m */; };
 		408FCE218B25F440E10D4A7EB4A3EDE2 /* TTGTagCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09096397B6B21BE437A1935698CB8AA1 /* TTGTagCollectionView-dummy.m */; };
 		4AC654FE7310099512B0BC69400041D9 /* TTGTextTagStringContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C498BB098AE208DD1A157223482BCF /* TTGTextTagStringContent.m */; };
 		503140F95A90B833EB88EE59E1CF51B8 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = CCADB7959843BE2C86ADDA09441855A8 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C9EEBDD40F9208123928D1091C3A3 /* DropDown+Appearance.swift */; };
 		5B6944E076027C33A08ED451345457DE /* TTGTextTagStringContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ABF209F8ABB8F66EF8497BFC9ECF762 /* TTGTextTagStringContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA41CA74F914E735189454A70621E48 /* DropDownCell.xib */; };
+		74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE2B5210D421273F4B7A650A90AE7E /* DPDConstants.swift */; };
 		7E6F5C355E3A24A61494C6B6652C4C9E /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B0107A48BAF18CFEE4FC8503BA4B1A0 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833BE524EAF49F1ABE505FB2B2B439E0 /* Pods-Alpha Draw-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C2F4FD6737DA2F3AF4AD4985AEB5BC /* Pods-Alpha Draw-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8E2E534F3348529D36816EF51BF8C /* DropDown.swift */; };
+		89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AAC89D0E7EAF5035D5D6A835AE14BE /* DPDKeyboardListener.swift */; };
 		8CB779F93023DDE9B418AEA62541D3FA /* TTGTextTagContent.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3BC3DB10CD476DC42B7AEA306938D0 /* TTGTextTagContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACFCB5589256F36898C1CCFE2A8915 /* DropDown-dummy.m */; };
 		ADB177592311340C9B133979A9779B8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		ADE42A4126B82494B773E1EF309781A8 /* TTGTextTag.h in Headers */ = {isa = PBXBuildFile; fileRef = A3D533F0244BFAF08F297C4886FA089E /* TTGTextTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4587BFFFD57C836559E7BBAF52C24B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A8D9509358A897F5F996B95851A4F5 /* DPDUIView+Extension.swift */; };
 		BB7688BEC17FF0772F12E0C211FE9293 /* TTGTextTagAttributedStringContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 25EDF95C72D051821958984E86C6EE84 /* TTGTextTagAttributedStringContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD42DACEBB0A78B23261FADC2F2A13B /* DropDownCell.swift */; };
 		CC7105F41ED9698A54F6302038BF7B71 /* TTGTextTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CCE1B45559834C2C79B1762B52AF9 /* TTGTextTag.m */; };
 		DBC27A3BA5551A00C3BB06E0CC9AF642 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347CADD976DC6E5B3F86DE3E9AF7338 /* TTGTextTagCollectionView.m */; };
+		E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E30E9B00F4F27446C519A7D721F6B0 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB51A41587E6BD487011DB89B1EEE877 /* TTGTagCollectionView-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 1918461E84D60D1BF4441757830EEC80 /* TTGTagCollectionView-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBBDD6E6A128CD769399E1F128934020 /* TTGTextTagContent.m in Sources */ = {isa = PBXBuildFile; fileRef = B4849B0221B96908422F58D44411D5DA /* TTGTextTagContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1AC44D7A6DB98890F21C0E83F19E831E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
 		D1320CB84434E73A4F91A6C08293E1C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -79,13 +96,14 @@
 		88898F0583B44C28B48A944A7CB1FBC0 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
 		9271E9D330A00FAA8A6D4BD102E81E1A /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
 		9A3F88B8E95D5041FE00DF0159BF51D0 /* TTGTextTagAttributedStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagAttributedStringContent.m; path = Sources/TTGTextTagAttributedStringContent.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3D533F0244BFAF08F297C4886FA089E /* TTGTextTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTag.h; path = Sources/TTGTextTag.h; sourceTree = "<group>"; };
 		B4849B0221B96908422F58D44411D5DA /* TTGTextTagContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagContent.m; path = Sources/TTGTextTagContent.m; sourceTree = "<group>"; };
 		B70B6FBD2A6ACC875F2439A4002EE9B7 /* Pods-Alpha Draw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alpha Draw.release.xcconfig"; sourceTree = "<group>"; };
 		CC75F898A5513CE70449E4B702316CAA /* TTGTextTagStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagStyle.h; path = Sources/TTGTextTagStyle.h; sourceTree = "<group>"; };
 		CCADB7959843BE2C86ADDA09441855A8 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagCollectionView.h; path = Sources/TTGTextTagCollectionView.h; sourceTree = "<group>"; };
-		D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alpha Draw"; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C498BB098AE208DD1A157223482BCF /* TTGTextTagStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagStringContent.m; path = Sources/TTGTextTagStringContent.m; sourceTree = "<group>"; };
 		DF3BC3DB10CD476DC42B7AEA306938D0 /* TTGTextTagContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagContent.h; path = Sources/TTGTextTagContent.h; sourceTree = "<group>"; };
 		E40437D6AFA95582339F61A5172D23A2 /* Pods-Alpha Draw.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alpha Draw.modulemap"; sourceTree = "<group>"; };
@@ -98,6 +116,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB177592311340C9B133979A9779B8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +173,7 @@
 				35975B69FEE6CF5748E048298964D093 /* TTGTextTagStyle.m */,
 				263E7DC61D12FD5317A9DE43C95D9AD3 /* Support Files */,
 			);
+			name = TTGTagCollectionView;
 			path = TTGTagCollectionView;
 			sourceTree = "<group>";
 		};
@@ -246,13 +273,15 @@
 				91D5B8790C162A053FDADB3AD82DE9EE /* Resources */,
 				D8590B6E09BEFFA8ED2DEA41BBAF02D4 /* Support Files */,
 			);
+			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
 		F26E17AFF0D3E9BEBB13A89DA107B7A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */,
+				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
+				D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */,
 				36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView */,
 			);
 			name = Products;
@@ -261,6 +290,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		97CE91431E229797751455423C79CA4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5C23DC1D8354ECB5ABB8665FC85C91A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,11 +337,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				27C5FE90859C95F57E35FA6E4CA9F81D /* PBXTargetDependency */,
 				8356E7CAC44394E45BBB7C283AD4FE97 /* PBXTargetDependency */,
 			);
 			name = "Pods-Alpha Draw";
 			productName = Pods_Alpha_Draw;
-			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */;
+			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				97CE91431E229797751455423C79CA4F /* Headers */,
+				48864C435B3DB37698CF568C638CF98F /* Sources */,
+				808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */,
+				EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown */;
 			productType = "com.apple.product-type.framework";
 		};
 		F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */ = {
@@ -347,6 +403,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				6A7C02DAE9006B5C15693BBBF5C25C86 /* Pods-Alpha Draw */,
 				F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */,
 			);
@@ -368,9 +425,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		48864C435B3DB37698CF568C638CF98F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */,
+				89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */,
+				B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */,
+				84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */,
+				515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */,
+				907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */,
+				BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86DA8F7D8CC97F095FE57CF06A091CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +476,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		27C5FE90859C95F57E35FA6E4CA9F81D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = 1AC44D7A6DB98890F21C0E83F19E831E /* PBXContainerItemProxy */;
+		};
 		8356E7CAC44394E45BBB7C283AD4FE97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TTGTagCollectionView;
@@ -406,6 +491,107 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1CC1A22D08B294E9736A1227367AD925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CDF51A4F7220DB802FA3281D5EEC3CA /* TTGTagCollectionView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = TTGTags;
+				PRODUCT_NAME = TTGTags;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2DE0D8898245310716431F92FA4989FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,6 +690,112 @@
 			};
 			name = Release;
 		};
+		BCF3C2ADD5C3D3500682A55A95731348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 563395339AC186817C16E5EAA4BA72B0 /* Pods-Alpha Draw.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C24518E891FAA59668669823639498EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88898F0583B44C28B48A944A7CB1FBC0 /* DropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325CCC895FC59F23010259C73ADA43EB /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		EA5406770C600C2FBE3491DA7D54E0D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B70B6FBD2A6ACC875F2439A4002EE9B7 /* Pods-Alpha Draw.release.xcconfig */;
@@ -548,6 +840,7 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
+				09909ECBA13E8F70A928465E7F7A9A92 /* Debug */,
 				2DE0D8898245310716431F92FA4989FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -556,7 +849,17 @@
 		517232101916CA8C1C37F946D5806BF3 /* Build configuration list for PBXNativeTarget "Pods-Alpha Draw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
+				BCF3C2ADD5C3D3500682A55A95731348 /* Debug */,
 				EA5406770C600C2FBE3491DA7D54E0D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */,
+				C24518E891FAA59668669823639498EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -564,6 +867,7 @@
 		F02EFB3BE04BFE1134209F4719E0ED0C /* Build configuration list for PBXNativeTarget "TTGTagCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
+				1CC1A22D08B294E9736A1227367AD925 /* Debug */,
 				980F429D8185500A62B9C6822763B11F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
