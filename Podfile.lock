@@ -1,0 +1,20 @@
+PODS:
+  - DropDown (2.3.13)
+  - TTGTagCollectionView (2.3.0)
+
+DEPENDENCIES:
+  - DropDown
+  - TTGTagCollectionView
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - TTGTagCollectionView
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  TTGTagCollectionView: 4104f93281097eae5adbf4444811e32f5e52dc95
+
+PODFILE CHECKSUM: aaff2cfb8d6c74bf0b247cd93971ee4603d4bd55
+
+COCOAPODS: 1.11.3
