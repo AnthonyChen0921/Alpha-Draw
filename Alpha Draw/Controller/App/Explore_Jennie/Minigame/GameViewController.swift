@@ -6,24 +6,38 @@
 //
 
 import UIKit
+import SpriteKit
+
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var skView: SKView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let scene = GameScene(fileNamed: "GameScene") {
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
+        skView.ignoresSiblingOrder = true
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override var shouldAutorotate : Bool {
+        return true
     }
-    */
 
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return UIInterfaceOrientationMask.allButUpsideDown
+        } else {
+            return UIInterfaceOrientationMask.all
+        }
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
 }

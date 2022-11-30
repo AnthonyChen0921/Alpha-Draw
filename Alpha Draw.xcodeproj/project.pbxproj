@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E01D3F82936B5FD00993BF7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E01D3F72936B5FD00993BF7 /* GameViewController.swift */; };
+		2E01D3FA2936B61D00993BF7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E01D3F92936B61D00993BF7 /* GameScene.swift */; };
+		2E01D3FC2936BD2800993BF7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2E01D3FB2936BD2800993BF7 /* GameScene.sks */; };
 		6B063B6B290CCD46009C5022 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 6B063B6A290CCD46009C5022 /* TextFieldEffects */; };
 		6B063B74290CD871009C5022 /* function_uiux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063B73290CD871009C5022 /* function_uiux.swift */; };
 		6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */; };
@@ -105,6 +108,9 @@
 
 /* Begin PBXFileReference section */
 		020E670EA41CC78F1DD5D7D4 /* Pods_Alpha_Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E01D3F72936B5FD00993BF7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2E01D3F92936B61D00993BF7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2E01D3FB2936BD2800993BF7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		4871D68BE87165D798688BDB /* Pods-Alpha Draw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpha Draw.debug.xcconfig"; path = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw.debug.xcconfig"; sourceTree = "<group>"; };
 		6B063B73290CD871009C5022 /* function_uiux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function_uiux.swift; sourceTree = "<group>"; };
 		6B1BFA28290CAE8D00EC6004 /* InputPromptTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPromptTextField.swift; sourceTree = "<group>"; };
@@ -216,6 +222,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E01D3F62936B5B800993BF7 /* Minigame */ = {
+			isa = PBXGroup;
+			children = (
+				2E01D3FB2936BD2800993BF7 /* GameScene.sks */,
+				2E01D3F72936B5FD00993BF7 /* GameViewController.swift */,
+				2E01D3F92936B61D00993BF7 /* GameScene.swift */,
+			);
+			path = Minigame;
+			sourceTree = "<group>";
+		};
 		3F1AB3CB34D201F7D247FA51 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +284,7 @@
 		6B063B71290CD7DC009C5022 /* Explore_Jennie */ = {
 			isa = PBXGroup;
 			children = (
+				2E01D3F62936B5B800993BF7 /* Minigame */,
 				6B8425342908BC75000AC834 /* HomeViewController.swift */,
 			);
 			path = Explore_Jennie;
@@ -620,6 +637,7 @@
 				6B358C0F290F71EB003E2ADD /* Page7.png in Resources */,
 				6B7B1A9D2902FADC00F36C6F /* LaunchScreen.storyboard in Resources */,
 				6B57853F2909D1EE00F1713D /* lightbulb.jpeg in Resources */,
+				2E01D3FC2936BD2800993BF7 /* GameScene.sks in Resources */,
 				6B358BF9290F4D66003E2ADD /* loadingTeatres.gif in Resources */,
 				6B5785482909D85400F1713D /* launchScreen1.jpeg in Resources */,
 				6B358C14290F71EB003E2ADD /* Page8.png in Resources */,
@@ -709,6 +727,7 @@
 				6B4B0036291071B4009C06BE /* NightmareConfig.swift in Sources */,
 				6B4B003829108291009C06BE /* T2Img-Stable-diffusion.swift in Sources */,
 				6B4B0034291071A4009C06BE /* PixrayConfig.swift in Sources */,
+				2E01D3F82936B5FD00993BF7 /* GameViewController.swift in Sources */,
 				6B358BF3290F42D9003E2ADD /* GifExtension.swift in Sources */,
 				6B8425352908BC75000AC834 /* HomeViewController.swift in Sources */,
 				6B1BFA29290CAE8D00EC6004 /* InputPromptTextField.swift in Sources */,
@@ -721,6 +740,7 @@
 				6B4B003A291082CD009C06BE /* StableDiffusionData.swift in Sources */,
 				6B7B1A952902FADA00F36C6F /* ViewController.swift in Sources */,
 				6B4B003229106FA9009C06BE /* StableDiffusionConfig.swift in Sources */,
+				2E01D3FA2936B61D00993BF7 /* GameScene.swift in Sources */,
 				6B5785342909B51500F1713D /* CustomTabBarController.swift in Sources */,
 				6B7B1ABD290341F300F36C6F /* Function.swift in Sources */,
 				6B7B1AB5290300A800F36C6F /* T2Img-Pixray.swift in Sources */,
@@ -885,7 +905,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GT89928NCS;
+				DEVELOPMENT_TEAM = 94BF8MCDUZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Alpha Draw/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -914,7 +934,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GT89928NCS;
+				DEVELOPMENT_TEAM = 94BF8MCDUZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Alpha Draw/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
