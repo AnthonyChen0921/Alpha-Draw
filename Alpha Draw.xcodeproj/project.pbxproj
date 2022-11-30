@@ -100,6 +100,7 @@
 		6B8425372908BC89000AC834 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8425362908BC89000AC834 /* RestoreViewController.swift */; };
 		6B8425392908BCDE000AC834 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8425382908BCDE000AC834 /* GalleryViewController.swift */; };
 		6B84253B2908C1DF000AC834 /* WelcomeBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B84253A2908C1DF000AC834 /* WelcomeBackground2.png */; };
+		6B85667F29244E9F001C88B2 /* TTGTags in Frameworks */ = {isa = PBXBuildFile; productRef = 6B85667E29244E9F001C88B2 /* TTGTags */; };
 		6BDE5EC42903630500DC5200 /* PixrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC32903630500DC5200 /* PixrayData.swift */; };
 		6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC62904F5F500DC5200 /* Firebase.swift */; };
 		6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */; };
@@ -210,6 +211,7 @@
 				6B62DB6A2906043300839DE2 /* FirebaseStorageCombine-Community in Frameworks */,
 				6B62DB5A2906043300839DE2 /* FirebaseFirestore in Frameworks */,
 				6B62DB582906043300839DE2 /* FirebaseDynamicLinks in Frameworks */,
+				6B85667F29244E9F001C88B2 /* TTGTags in Frameworks */,
 				6B62DB642906043300839DE2 /* FirebaseRemoteConfig in Frameworks */,
 				6B62DB602906043300839DE2 /* FirebaseFunctions in Frameworks */,
 				6B358BDE290ECF79003E2ADD /* Hero in Frameworks */,
@@ -580,6 +582,7 @@
 				6B358BDD290ECF79003E2ADD /* Hero */,
 				6B358BE2290F05A1003E2ADD /* SwiftyJSON */,
 				6B358BEE290F1AA6003E2ADD /* FSPagerView */,
+				6B85667E29244E9F001C88B2 /* TTGTags */,
 			);
 			productName = "Alpha Draw";
 			productReference = 6B7B1A8D2902FADA00F36C6F /* Alpha Draw.app */;
@@ -615,6 +618,7 @@
 				6B358BDC290ECF79003E2ADD /* XCRemoteSwiftPackageReference "Hero" */,
 				6B358BE1290F05A1003E2ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				6B358BED290F1AA6003E2ADD /* XCRemoteSwiftPackageReference "FSPagerView" */,
+				6B85667D29244E9F001C88B2 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */,
 			);
 			productRefGroup = 6B7B1A8E2902FADA00F36C6F /* Products */;
 			projectDirPath = "";
@@ -1019,6 +1023,14 @@
 				minimumVersion = 9.6.0;
 			};
 		};
+		6B85667D29244E9F001C88B2 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zekunyan/TTGTagCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1121,6 +1133,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6B62DB4A2906043300839DE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		6B85667E29244E9F001C88B2 /* TTGTags */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B85667D29244E9F001C88B2 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */;
+			productName = TTGTags;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
