@@ -309,6 +309,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTU-wI-eDQ">
+                                <rect key="frame" x="0.0" y="195" width="400" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j7R-0f-cB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,6 +330,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="KZX-qA-YDZ" id="87k-5Q-HHI"/>
                         <outlet property="loadingTitle" destination="9GL-ZA-Xyc" id="fwH-ej-5gP"/>
+                        <outlet property="skView" destination="OTU-wI-eDQ" id="UIF-8J-5Lu"/>
                         <segue destination="QSV-SG-ni2" kind="show" identifier="loadingToOutput" id="g1U-Gj-YBF"/>
                     </connections>
                 </viewController>
@@ -480,6 +485,32 @@
                 </textField>
             </objects>
             <point key="canvasLocation" x="3474" y="1509"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Pef-HA-VWE">
+            <objects>
+                <viewController id="aLA-A5-CFO" customClass="GameViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFV-ev-OKo" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-Kf-67W">
+                                <rect key="frame" x="16" y="171" width="358" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AZO-hB-zyo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="jkZ-jP-ysC"/>
+                    <navigationItem key="navigationItem" id="nIB-u8-NOJ"/>
+                    <connections>
+                        <outlet property="skView" destination="pUj-Kf-67W" id="vpE-ax-6XT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyO-Ku-I7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5314" y="-670"/>
         </scene>
         <!--Image Restore-->
         <scene sceneID="z4E-du-qLR">
@@ -944,7 +975,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="W95-PA-eqN" kind="relationship" relationship="rootViewController" id="Lxc-LX-4Ip"/>
+                        <segue destination="W95-PA-eqN" kind="relationship" relationship="rootViewController" id="8cJ-j1-rTl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBL-Hz-qEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

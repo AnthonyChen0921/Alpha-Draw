@@ -11,7 +11,7 @@ import ImageIO
 import Firebase
 import FirebaseStorage
 import FirebaseDatabase
-
+import SpriteKit
 
 class LoadingViewController: UIViewController {
     var stableDiffusionInput: StableDiffusionInput?
@@ -28,6 +28,8 @@ class LoadingViewController: UIViewController {
 
     @IBOutlet weak var loadingTitle: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var skView: SKView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hidesBackButton(view: self)
@@ -38,6 +40,15 @@ class LoadingViewController: UIViewController {
             self.token = token
             self.loadStableDiffusionRequest()
         })
+        
+//minigame stuff
+        if let scene = GameScene(fileNamed: "GameScene") {
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
+        skView.ignoresSiblingOrder = true
+
+        
         // register a timer to call refreshStableDiffusionResult every 1 second
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshStableDiffusionResult), userInfo: nil, repeats: true)
         // register a timer to call checkStatus every 1 second
@@ -159,21 +170,22 @@ class LoadingViewController: UIViewController {
     func addGifLoadingImages(){
         // add a gif view to the view, and set the gif to loop forever, 
         // and set the gif to play automatically when the view loads
-        if(!loadingViewAdded){
-            let loadingGif = UIImage.gifImageWithName("loadingTeatres")
-            let imageView = UIImageView(image: loadingGif)  
-            // set the frame to full screen
-            // imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-            imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-            imageView.center = self.view.center
-            imageView.contentMode = .scaleAspectFit
-            imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            imageView.startAnimating()
-            self.view.addSubview(imageView)
-            addGloomyShadowEffectAnimation(imageView: imageView)
-            loadingViewAdded = true
-        }
+//        if(!loadingViewAdded){
+//            let loadingGif = UIImage.gifImageWithName("loadingTeatres")
+//            let imageView = UIImageView(image: loadingGif)  
+//            // set the frame to full screen
+//            // imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+//            imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//            imageView.center = self.view.center
+//            imageView.contentMode = .scaleAspectFit
+//            imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            imageView.startAnimating()
+//            self.view.addSubview(imageView)
+//            addGloomyShadowEffectAnimation(imageView: imageView)
+//            loadingViewAdded = true
+//        }
     }
+    
     func removeGiftLoadingImages(){
         for subview in self.view.subviews {
             if subview is UIImageView {
