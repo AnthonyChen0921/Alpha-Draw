@@ -48,6 +48,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as? UITabBarController
+        tabBarController?.selectedIndex = 2
+    }
+    
     /**
         * This function adds style to the input field
         */
