@@ -3,7 +3,9 @@
 //  Alpha Draw
 //
 //  Created by Jennie Lu on 11/29/22.
-//
+// Dino game is from google chrome
+// Followed a tutorial+github on how to make it https://www.youtube.com/watch?v=1H9EG15mycI + https://github.com/johnlk/DinoRunner + https://www.youtube.com/watch?v=0gOi_2Jwt28
+
 
 import UIKit
 import SpriteKit
