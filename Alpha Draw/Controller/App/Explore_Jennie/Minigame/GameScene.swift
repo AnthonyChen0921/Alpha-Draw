@@ -5,6 +5,7 @@
 //  Created by Jennie Lu on 11/29/22.
 //
 
+
 import UIKit
 import SpriteKit
 import GameplayKit
@@ -23,10 +24,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var scoreNode: SKLabelNode!
     var resetInstructions: SKLabelNode!
     var score = 0 as Int
-    
-    //sound effects
-//    let jumpSound = SKAction.playSoundFileNamed("dino.assets/sounds/jump", waitForCompletion: false)
-//    let dieSound = SKAction.playSoundFileNamed("dino.assets/sounds/die", waitForCompletion: false)
     
     //sprites
     var dinoSprite: SKSpriteNode!
@@ -70,8 +67,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         //background elements
         backgroundNode = SKNode()
         backgroundNode.zPosition = background
-//        createMoon()
-//        createClouds()
         
         //dinosaur
         dinosaurNode = SKNode()
@@ -222,7 +217,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         for i in 0 ..< numberOfGroundNodes {
             let node = SKSpriteNode(texture: groundTexture)
             node.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-            node.position = CGPoint(x: CGFloat(i) * (groundTexture.size().width)-700, y: groundHeight!-50)
+            node.position = CGPoint(x: CGFloat(i) * (groundTexture.size().width)-400, y: groundHeight!-50)
             groundNode.addChild(node)
             node.run(SKAction.repeatForever(groundLoop))
         }
@@ -306,7 +301,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let distanceToMove = screenWidth + distanceOffscreen + texture.size().width
         
         //actions
-        let moveCactus = SKAction.moveBy(x: -distanceToMove, y: 0.0, duration: TimeInterval(screenWidth / groundSpeed))
+        let moveCactus = SKAction.moveBy(x: -distanceToMove - 100, y: 0.0, duration: TimeInterval(screenWidth / groundSpeed))
         let removeCactus = SKAction.removeFromParent()
         let moveAndRemove = SKAction.sequence([moveCactus, removeCactus])
         
@@ -328,7 +323,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let distanceToMove = screenWidth + distanceOffscreen + birdTexture1.size().width * birdScale
         
         let flapAnimation = SKAction.animate(with: [birdTexture1, birdTexture2], timePerFrame: 0.5)
-        let moveBird = SKAction.moveBy(x: -distanceToMove, y: 0.0, duration: TimeInterval(screenWidth / groundSpeed))
+        let moveBird = SKAction.moveBy(x: -distanceToMove - 100, y: 0.0, duration: TimeInterval(screenWidth / groundSpeed))
         let removeBird = SKAction.removeFromParent()
         let moveAndRemove = SKAction.sequence([moveBird, removeBird])
         
