@@ -529,7 +529,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let title = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         title.center = CGPoint(x: view.frame.width/2, y: 70)
         title.textAlignment = .center
-        title.text = "PixlBot"
+        title.text = "PixelBot"
         title.font = UIFont(name: "Arial", size: 20)
         title.textColor = UIColor.black
         self.view.addSubview(title)
