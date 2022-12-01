@@ -26,7 +26,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Constants
     var pageIsFront = true
     var titleArray = ["Stable-diffusion", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Cyberpunk", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
-    var inspirationBubbleString: [String] = ["Artstation", "Unreal engine rendering", "Acrylic painting", "Digital Art", "Pencil sketch", "Paint", "low poly", "film grain", "hyper realistic", "epic scale", "sense of awe", "hypermaximalist", "artstation HQ", "cinematic"]
+    var tempString: [String] = ["Artstation", "Unreal Engine Rendering", "Digital Art", "Pencil Sketch", "Paint", "Low Poly", "Film Grain", "Hyper Realistic", "Epic Scale", "Sense of Awe", "Hypermaximalist", "Artstation HQ", "Cinematic"]
+    var inspirationBubbleString: [String]!
     var currentSelectedConfig: Int = 1
 
 
@@ -68,6 +69,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         // FSPageView Animation Type
         fsView.transformer = FSPagerViewTransformer(type: .overlap)
+//        UserDefaults.standard.set([],forKey: "selectedTags")
+
+        inspirationBubbleString = tempString
+    }
+    
+    var moreTags: [String]!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        moreTags = UserDefaults.standard.stringArray(forKey: "selectedTags") ?? []
+        wordBubbleCollectionView.reloadData()
+
+        if moreTags != []{
+            inspirationBubbleString = moreTags + tempString
+        }
+        else{
+            inspirationBubbleString = tempString
+        }
+//        print(moreTags)
     }
     
     
@@ -510,7 +529,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let title = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         title.center = CGPoint(x: view.frame.width/2, y: 70)
         title.textAlignment = .center
-        title.text = "Alpha Draw"
+        title.text = "PixlBot"
         title.font = UIFont(name: "Arial", size: 20)
         title.textColor = UIColor.black
         self.view.addSubview(title)
@@ -562,6 +581,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
             self.createButton.alpha = 1.0
         }, completion: nil)
+        
+
     }
 
     

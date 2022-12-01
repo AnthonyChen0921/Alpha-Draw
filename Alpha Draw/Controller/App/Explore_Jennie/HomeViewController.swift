@@ -37,6 +37,9 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
         mediumButton.setTitle("Medium", for: .normal)
         madeButton.setTitle("Made Of...", for: .normal)
         suggestedButton.setTitle("Suggested Topics", for: .normal)
+        
+        UserDefaults.standard.set([],forKey: "selectedTags")
+
     }
     
     func visibleButton(){
@@ -53,10 +56,10 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
         visibleButton()
     }
     
-    let styleArray = ["abstract","realism","impressionism","moderism","cubism","minimalism","art deco","expressionism"]
-    let mediumArray = ["oil","chalk","watercolour", "spray paint", "pixel", "bokeh", "acrylic", "ink"]
-    let madeArray = ["buttons", "crystals", "glass", "tape", "coins", "wood", "food", "plastic"]
-    let suggestedArray = ["landscape","fantasy","geometric","modern","cityscape","portrait","urban"]
+    let styleArray = ["Abstract","Realism","Impressionism","Moderism","Cubism","Minimalism","Art Deco","Expressionism"]
+    let mediumArray = ["Oil","Chalk","Watercolour", "Spray Paint", "Pixel", "Bokeh", "Acrylic", "Ink"]
+    let madeArray = ["Buttons", "Crystals", "Glass", "Tape", "Coins", "Wood", "Food", "Plastic"]
+    let suggestedArray = ["Landscape","Fantasy","Geometric","Modern","Cityscape","Portrait","Urban"]
     
     @IBAction func optionAction(_ sender: UIButton){
         visibleButton()
@@ -76,10 +79,12 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
         }
         collectionView.isHidden = false
     }
-    var selectedTags = UserDefaults.standard.array(forKey: "selectedTags") as? [String] ?? []
+    var selectedTags: [String]!
 
     func textTagCollectionView(_ textTagCollectionView: TTGTextTagCollectionView!, didTap tag: TTGTextTag!, at index: UInt) {
-
+        
+        selectedTags = UserDefaults.standard.stringArray(forKey: "selectedTags") ?? []
+        
         if tag.selected == true {
             selectedTags.append(tag.content.getAttributedString().string)
         }
@@ -90,8 +95,9 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
                 }
             }
         }
-
-        print(selectedTags)
+        UserDefaults.standard.set(selectedTags,forKey: "selectedTags")
+//        print("selection tags")
+//        print(selectedTags)
     }
     
     func tagContent(array: [String]){
