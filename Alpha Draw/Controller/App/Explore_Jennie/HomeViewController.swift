@@ -21,7 +21,7 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
     @IBOutlet weak var madeButton: UIButton!
     @IBOutlet weak var suggestedButton: UIButton!
     
-    let collectionView = TTGTextTagCollectionView()
+    let collectionView =  TTGTextTagCollectionView()
 
     
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
         navigationController?.isNavigationBarHidden = true
         
         collectionView.alignment = .center
+//        collectionView.backgroundColor = UIColor.lightGray
         collectionView.delegate = self
         view.addSubview(collectionView)
 
@@ -56,10 +57,13 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
         visibleButton()
     }
     
-    let styleArray = ["Abstract","Realism","Impressionism","Moderism","Cubism","Minimalism","Art Deco","Expressionism"]
-    let mediumArray = ["Oil","Chalk","Watercolour", "Spray Paint", "Pixel", "Bokeh", "Acrylic", "Ink"]
-    let madeArray = ["Buttons", "Crystals", "Glass", "Tape", "Coins", "Wood", "Food", "Plastic"]
-    let suggestedArray = ["Landscape","Fantasy","Geometric","Modern","Cityscape","Portrait","Urban"]
+    
+    //["Artstation", "Unreal Engine Rendering", "Digital Art", "Pencil Sketch", "Paint", "Low Poly", "Film Grain", "Hyper Realistic", "Epic Scale", "Sense of Awe", "Hypermaximalist", "Artstation HQ", "Cinematic"]
+    
+    let styleArray = ["Abstract","Realism","Impressionism","Moderism","Cubism","Minimalism","Art Deco","Expressionism","Banksy","Futurism","Gothic","OP-Art","Pop Art","Ukiyo-E","Symbolism","Renaissance","Purism","Pop Surealism","Neo-Baroque","Fauvism","Art Nouveau","Baroque"]
+    let mediumArray = ["Oil Paint","Chalk","Watercolour", "Spray Paint", "Pixel", "Bokeh", "Acrylic", "Ink","Crayon","Glass Paint","Charcoal","Pastel","Glitter","Freeform Ferrofluids","Metallic","Shiny","Matte","Neon"]
+    let madeArray = ["Buttons", "Crystals", "Glass", "Tape", "Coins", "Wood", "Food", "Plastic","Bronze","Gold","Silver","Marble","Sand","Ice","Bubbles","Clay","Wax","Flower","Plants","Shell","CD","Newspaper","Bones","Jade","Rubber"]
+    let suggestedArray = ["Landscape","Fantasy","Geometric","Modern","Cityscape","Portrait","Urban","Mosaic","Collage","New Beginning","Cyberpunk","Inner Demon","Ambience","Dodecahedron","Medival Warriors","Coastline","Underwater"]
     
     @IBAction func optionAction(_ sender: UIButton){
         visibleButton()
@@ -104,11 +108,15 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
     
         for text in array{
             let style = TTGTextTagStyle.init()
-            style.extraSpace = CGSize.init(width: 8, height: 8)
+            style.extraSpace = CGSize.init(width: 20, height: 20)
+            style.shadowColor = UIColor.clear
+            style.cornerRadius = 8
             style.backgroundColor = #colorLiteral(red: 0.7864235067, green: 0.724478529, blue: 0.9273951054, alpha: 1)
 
             let selected = TTGTextTagStyle.init()
-            selected.extraSpace = CGSize.init(width: 8, height: 8)
+            selected.extraSpace = CGSize.init(width: 20, height: 20)
+            selected.shadowColor = UIColor.clear
+            selected.cornerRadius = 8
             selected.backgroundColor = #colorLiteral(red: 0.4619611431, green: 0.5393713899, blue: 0.9273951054, alpha: 1)
             
             let tag = TTGTextTag.init()
@@ -116,6 +124,15 @@ class HomeViewController : UIViewController,TTGTextTagCollectionViewDelegate{
             tag.content = TTGTextTagStringContent(text: text ,textFont: UIFont.systemFont(ofSize: 20), textColor: UIColor.systemIndigo)
             tag.style = style
             tag.selectedStyle = selected
+            
+            if selectedTags != nil {
+                for t in selectedTags{
+                    if text == t {
+                        tag.selected = true
+                    }
+                }
+            }
+        
             collectionView.addTag(tag)
         }
         collectionView.reload()

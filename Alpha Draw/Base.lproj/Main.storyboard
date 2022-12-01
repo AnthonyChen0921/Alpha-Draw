@@ -23,7 +23,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZm-Fh-tjp">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                        <color key="backgroundColor" red="0.38656564319999998" green="0.37604760529999998" blue="0.90672280920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.61117843360000002" green="0.59375104609999996" blue="0.93949711319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="dAe-0g-IHX"/>
                                         </constraints>
@@ -38,7 +38,7 @@
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi9-bL-JOe" userLabel="Style">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                        <color key="backgroundColor" red="0.52285389976168173" green="0.38419322101593822" blue="0.92739510536193848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.61117843360000002" green="0.59375104609999996" blue="0.93949711319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ueq-ma-H1W"/>
                                         </constraints>
@@ -53,7 +53,7 @@
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VME-3O-7uw" userLabel="Medium">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                        <color key="backgroundColor" red="0.59686378659014971" green="0.47179631821978474" blue="0.92739510536193848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.61117843360000002" green="0.59375104609999996" blue="0.93949711319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ogz-3Y-l9J"/>
                                         </constraints>
@@ -68,7 +68,7 @@
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zg-92-0fD" userLabel="Made of...">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                        <color key="backgroundColor" red="0.67812734872463931" green="0.63323369027639487" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.61117843360000002" green="0.59375104609999996" blue="0.93949711319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="FF7-69-sIA"/>
                                         </constraints>
@@ -83,7 +83,7 @@
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-54-gp4" userLabel="Suggested Topics">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                        <color key="backgroundColor" red="0.68479258089999995" green="0.63484183549999995" blue="0.90672280920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.61117843358741986" green="0.59375104614355068" blue="0.93949711322784424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="SuI-Fk-fX4"/>
                                         </constraints>
@@ -489,32 +489,6 @@
                 </textField>
             </objects>
             <point key="canvasLocation" x="3474" y="1509"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="Pef-HA-VWE">
-            <objects>
-                <viewController id="aLA-A5-CFO" customClass="GameViewController" customModule="Alpha_Draw" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TFV-ev-OKo" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-Kf-67W">
-                                <rect key="frame" x="16" y="171" width="358" height="503"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </skView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="AZO-hB-zyo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jkZ-jP-ysC"/>
-                    <navigationItem key="navigationItem" id="nIB-u8-NOJ"/>
-                    <connections>
-                        <outlet property="skView" destination="pUj-Kf-67W" id="vpE-ax-6XT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xyO-Ku-I7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5314" y="-670"/>
         </scene>
         <!--Image Restore-->
         <scene sceneID="z4E-du-qLR">

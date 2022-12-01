@@ -26,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Constants
     var pageIsFront = true
     var titleArray = ["Stable-diffusion", "Nightmare Stable-diffusion", "High-resolution Stable-diffusion", "Cyberpunk", "Pixray Style", "Anime waifu-diffusion", "LOGO", "retrieval-augmented", "Arcane-diffusion"]
-    var tempString: [String] = ["Artstation", "Unreal Engine Rendering", "Digital Art", "Pencil Sketch", "Paint", "Low Poly", "Film Grain", "Hyper Realistic", "Epic Scale", "Sense of Awe", "Hypermaximalist", "Artstation HQ", "Cinematic"]
+    var tempString: [String] = ["Artstation", "Unreal Engine Rendering", "Digital Art", "Pencil Sketch", "Low Poly", "Film Grain", "Hyper Realistic", "Epic Scale", "Sense of Awe", "Hypermaximalist", "Artstation HQ", "Cinematic"]
     var inspirationBubbleString: [String]!
     var currentSelectedConfig: Int = 1
 
