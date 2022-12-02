@@ -8,6 +8,6 @@ target 'Alpha Draw' do
   # Pods for Alpha Draw
 
 pod 'TTGTagCollectionView'
-pod 'DropDown'
+#pod 'DropDown'
 
 end
