@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController {
         
         // get user data from firebase
         let db = Firestore.firestore()
-        var pfp = UIImage()
+        let pfp = UIImage()
         db.collection("users").document(user_id!).getDocument { (document, error) in
             if error != nil {
                 // show alert
@@ -116,7 +116,7 @@ class ProfileViewController: UIViewController {
             print(imageData!)
             let path = "Admin/images/"+UserDefaults.standard.string(forKey: "user_id")!+".png"
             let storageRef = Storage.storage().reference().child(path)
-            let uploadTask = storageRef.putData(imageData!, metadata:nil) {metadata, error in
+            storageRef.putData(imageData!, metadata:nil) {metadata, error in
                 if error == nil && metadata != nil{
                     let user_id = UserDefaults.standard.string(forKey: "user_id")
                     let db = Firestore.firestore()
