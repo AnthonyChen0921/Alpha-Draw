@@ -97,13 +97,13 @@
 		9271E9D330A00FAA8A6D4BD102E81E1A /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
 		9A3F88B8E95D5041FE00DF0159BF51D0 /* TTGTextTagAttributedStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagAttributedStringContent.m; path = Sources/TTGTextTagAttributedStringContent.m; sourceTree = "<group>"; };
 		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3D533F0244BFAF08F297C4886FA089E /* TTGTextTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTag.h; path = Sources/TTGTextTag.h; sourceTree = "<group>"; };
 		B4849B0221B96908422F58D44411D5DA /* TTGTextTagContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagContent.m; path = Sources/TTGTextTagContent.m; sourceTree = "<group>"; };
 		B70B6FBD2A6ACC875F2439A4002EE9B7 /* Pods-Alpha Draw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alpha Draw.release.xcconfig"; sourceTree = "<group>"; };
 		CC75F898A5513CE70449E4B702316CAA /* TTGTextTagStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagStyle.h; path = Sources/TTGTextTagStyle.h; sourceTree = "<group>"; };
 		CCADB7959843BE2C86ADDA09441855A8 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagCollectionView.h; path = Sources/TTGTextTagCollectionView.h; sourceTree = "<group>"; };
-		D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alpha Draw"; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpha_Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C498BB098AE208DD1A157223482BCF /* TTGTextTagStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagStringContent.m; path = Sources/TTGTextTagStringContent.m; sourceTree = "<group>"; };
 		DF3BC3DB10CD476DC42B7AEA306938D0 /* TTGTextTagContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagContent.h; path = Sources/TTGTextTagContent.h; sourceTree = "<group>"; };
 		E40437D6AFA95582339F61A5172D23A2 /* Pods-Alpha Draw.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alpha Draw.modulemap"; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 				35975B69FEE6CF5748E048298964D093 /* TTGTextTagStyle.m */,
 				263E7DC61D12FD5317A9DE43C95D9AD3 /* Support Files */,
 			);
-			name = TTGTagCollectionView;
 			path = TTGTagCollectionView;
 			sourceTree = "<group>";
 		};
@@ -273,7 +272,6 @@
 				91D5B8790C162A053FDADB3AD82DE9EE /* Resources */,
 				D8590B6E09BEFFA8ED2DEA41BBAF02D4 /* Support Files */,
 			);
-			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
@@ -281,7 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
-				D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */,
+				D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */,
 				36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView */,
 			);
 			name = Products;
@@ -342,7 +340,7 @@
 			);
 			name = "Pods-Alpha Draw";
 			productName = Pods_Alpha_Draw;
-			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods-Alpha Draw */;
+			productReference = D2420E78D3D4E78C171D67133F760F50 /* Pods_Alpha_Draw.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {

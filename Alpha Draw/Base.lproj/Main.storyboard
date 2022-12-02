@@ -873,16 +873,6 @@
                                     <action selector="logoutButtonClicked:" destination="Xnh-f3-oZh" eventType="touchUpInside" id="ApT-x0-4KL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-dy-iA4">
-                                <rect key="frame" x="100" y="129" width="191" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="change profile picture"/>
-                                <connections>
-                                    <action selector="changeProfilePic:" destination="Xnh-f3-oZh" eventType="touchUpInside" id="q7u-mg-azr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
