@@ -105,6 +105,10 @@
 		6BDE5EC72904F5F500DC5200 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC62904F5F500DC5200 /* Firebase.swift */; };
 		6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */; };
 		6D46C2F4A09CDF4A70B8FF38 /* Pods_Alpha_Draw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020E670EA41CC78F1DD5D7D4 /* Pods_Alpha_Draw.framework */; };
+		D82D2036293A68E100DB9ECD /* SuperResolutionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D2035293A68E100DB9ECD /* SuperResolutionData.swift */; };
+		D82D2038293AFE6500DB9ECD /* upload defalut.png in Resources */ = {isa = PBXBuildFile; fileRef = D82D2037293AFE6500DB9ECD /* upload defalut.png */; };
+		D82D203A293B0A1500DB9ECD /* HighResConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D2039293B0A1500DB9ECD /* HighResConfig.swift */; };
+		D82D203C293B0C1D00DB9ECD /* T2Img-SuperRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D203B293B0C1D00DB9ECD /* T2Img-SuperRes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +193,10 @@
 		6BDE5EC62904F5F500DC5200 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		6BDE5EC82904F70500DC5200 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		892DE8EAF192CFF4BB43CBE9 /* Pods-Alpha Draw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpha Draw.release.xcconfig"; path = "Target Support Files/Pods-Alpha Draw/Pods-Alpha Draw.release.xcconfig"; sourceTree = "<group>"; };
+		D82D2035293A68E100DB9ECD /* SuperResolutionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperResolutionData.swift; sourceTree = "<group>"; };
+		D82D2037293AFE6500DB9ECD /* upload defalut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload defalut.png"; sourceTree = "<group>"; };
+		D82D2039293B0A1500DB9ECD /* HighResConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighResConfig.swift; sourceTree = "<group>"; };
+		D82D203B293B0C1D00DB9ECD /* T2Img-SuperRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "T2Img-SuperRes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +347,7 @@
 			children = (
 				6B4B002F29106F98009C06BE /* Config.swift */,
 				6B4B003129106FA9009C06BE /* StableDiffusionConfig.swift */,
+				D82D2039293B0A1500DB9ECD /* HighResConfig.swift */,
 				6B4B0033291071A4009C06BE /* PixrayConfig.swift */,
 				6B4B0035291071B4009C06BE /* NightmareConfig.swift */,
 			);
@@ -478,6 +487,7 @@
 				6B7B1AC12903518900F36C6F /* NightmareData.swift */,
 				6BDE5EC32903630500DC5200 /* PixrayData.swift */,
 				6B4B0039291082CD009C06BE /* StableDiffusionData.swift */,
+				D82D2035293A68E100DB9ECD /* SuperResolutionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				6B4B003729108291009C06BE /* T2Img-Stable-diffusion.swift */,
+				D82D203B293B0C1D00DB9ECD /* T2Img-SuperRes.swift */,
 				6B7B1AAE2902FFC800F36C6F /* T2Img-nightmare-ai.swift */,
 				6B7B1AB02902FFDC00F36C6F /* T2Img-Pokemon.swift */,
 				6B7B1AB4290300A800F36C6F /* T2Img-Pixray.swift */,
@@ -515,6 +526,7 @@
 		6B7B1ABE290347AD00F36C6F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D82D2037293AFE6500DB9ECD /* upload defalut.png */,
 				6B358BF4290F4340003E2ADD /* loading.gif */,
 				6B7B1ABF290347C500F36C6F /* no-image.png */,
 				6B358BF6290F4503003E2ADD /* loading2.gif */,
@@ -663,6 +675,7 @@
 				6B358BF7290F4503003E2ADD /* loading2.gif in Resources */,
 				6B358C15290F71EB003E2ADD /* Page3.png in Resources */,
 				6B358BF1290F2033003E2ADD /* WelcomeBackground1.png in Resources */,
+				D82D2038293AFE6500DB9ECD /* upload defalut.png in Resources */,
 				6BDE5EC92904F70500DC5200 /* GoogleService-Info.plist in Resources */,
 				6B358BFD290F5B11003E2ADD /* WelcomeBackground5.png in Resources */,
 				6B7B1AC0290347C500F36C6F /* no-image.png in Resources */,
@@ -730,6 +743,8 @@
 				6B7B1AB32903004900F36C6F /* T2Text-prompt-parrot.swift in Sources */,
 				6B4B0036291071B4009C06BE /* NightmareConfig.swift in Sources */,
 				6B4B003829108291009C06BE /* T2Img-Stable-diffusion.swift in Sources */,
+				D82D203A293B0A1500DB9ECD /* HighResConfig.swift in Sources */,
+				D82D203C293B0C1D00DB9ECD /* T2Img-SuperRes.swift in Sources */,
 				6B4B0034291071A4009C06BE /* PixrayConfig.swift in Sources */,
 				2E01D3F82936B5FD00993BF7 /* GameViewController.swift in Sources */,
 				6B358BF3290F42D9003E2ADD /* GifExtension.swift in Sources */,
@@ -750,6 +765,7 @@
 				6B7B1AB5290300A800F36C6F /* T2Img-Pixray.swift in Sources */,
 				6B8425392908BCDE000AC834 /* GalleryViewController.swift in Sources */,
 				6B7B1AAF2902FFC800F36C6F /* T2Img-nightmare-ai.swift in Sources */,
+				D82D2036293A68E100DB9ECD /* SuperResolutionData.swift in Sources */,
 				6B62DB712907902E00839DE2 /* WelcomeViewController.swift in Sources */,
 				6B62DB752907904E00839DE2 /* RegisterViewController.swift in Sources */,
 				6B7B1A912902FADA00F36C6F /* AppDelegate.swift in Sources */,
