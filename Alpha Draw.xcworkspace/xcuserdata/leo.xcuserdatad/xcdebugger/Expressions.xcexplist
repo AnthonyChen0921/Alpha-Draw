@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GalleryViewController.didSwipeLeft(_:):GalleryViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PhotoAccess.loadPhotos():PhotoAccess.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(UIImage)((UIKit.UIImage)0x0000600002ff58c0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
