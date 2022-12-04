@@ -19,21 +19,31 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
     var currentRunId: String = ""
     var cancelUrl: String = ""
     var superResolutionInitialData: SuperResolutionData?
+    var SuperResolutionData: SuperResolutionData?
+    var current_imageUrl2: String = ""
+    var outputImage: UIImage?
+    var status = ""
     
     @IBOutlet weak var upLoadImage: UIImageView!
+    
+    @IBOutlet weak var resultImage: UIImageView!
+    
     let db = Firebase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getTokenFromUser()
         addShadowToImage(image : upLoadImage)
+        addShadowToImage(image: resultImage)
         // upLoadImage.image = getFixingPicture()
         // let the image be clickable and give the tap
         upLoadImage.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
         upLoadImage.addGestureRecognizer(tapGesture)
         //print the current user using the get current user function
-        print("123412412412412341241241241241")
-        print(getCurrentUser())
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshStableDiffusionResult), userInfo: nil, repeats: true)
+        // register a timer to call checkStatus every 1 second
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkStatus), userInfo: nil, repeats: true)
     }
 
     //fuction to add shadow to the image using the image view
@@ -128,6 +138,7 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
             } 
             else{
                 loadSuperResRequest()
+                //loadSuperResRequest()
             }
             
             
@@ -141,16 +152,86 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
         var superRes = srConfig.superRes(image_url: current_imageUrl)
         print(superRes)
         request.version = "660d922d33153019e8c263a3bba265de882e7f4f70396546b6c9c8f9d47a021a"
+        //request.version = "9283608cc6b7be6b65a8e44983db012355fde4132009bf99d976b2f0896856a3"
         request.input = superRes
         getTokenFromUser()
 
         // call fetchStableDiffusionInitialRequest to get the initial request data
         fetchSuperResImage(completion: { SuperResolutionData in
+            print("141421341241241421412412341")
+            print(SuperResolutionData)
             self.currentRunId = SuperResolutionData.id!
             self.cancelUrl = SuperResolutionData.urls!.cancel!
             self.superResolutionInitialData = SuperResolutionData
+            //self.setImageOfSuperResData(SuperResolutionData: SuperResolutionData)
+            //get the image url from the output
+            //self.current_imageUrl2 = SuperResolutionData.output![0]
         }, bodyRequest: request, token: token)
-        
+        //check if the request is done if not then call the function again
+    }
+
+    
+    func setImageOfSuperResData(SuperResolutionData: SuperResolutionData) {
+        // get stableDiffusionData image url
+        let imageUrl = SuperResolutionData.output!
+        outputImage = getImageFromUrl(url: imageUrl)
+        //set the resultImage to outputImage
+        //print the imageURL
+        print("123123123123" + imageUrl)
+        resultImage.image = outputImage
+    }
+    
+    func uploadToFireStore() {
+        // get user_id from UserDefaults
+        let user_id = UserDefaults.standard.string(forKey: "user_id")!
+        // uploadImageToStorage(image: UIImage, id: String, userid: String? = "Admin", imageType: String? = "Image",completion: @escaping (String) -> Void)
+        db.uploadImageToStorage(image: outputImage!, id: "result", userid: user_id, imageType: "SuperRes", completion: { url in
+            // uploadImageToFireStore(imageUrl: String, id: String, userid: String? = "Admin", imageType: String? = "Image", completion: @escaping (String) -> Void)
+            // do nothing
+        })
+    }
+
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        // UIImageWriteToSavedPhotosAlbum(outputImage!, nil, nil, nil)
+        // show an alert to tell the user that the image has been saved
+        let alert = UIAlertController(title: "Saved", message: "Your image has been saved to your cloud.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.uploadToFireStore()
+        }))
+        self.present(alert, animated: true)
+    }
+    
+    
+    
+    @objc func refreshStableDiffusionResult(){
+        fetchsuperResByPredictionId(completion: { SuperResolutionData in
+            if (SuperResolutionData.status == "succeeded") {
+                self.SuperResolutionData = SuperResolutionData
+                self.status = "succeeded"
+            }
+            else if(SuperResolutionData.status == "failed") {
+                self.SuperResolutionData = SuperResolutionData
+                self.status = "failed"
+                //self.errorMessage = SuperResolutionData.error!
+            }
+            else if(SuperResolutionData.status == "processing") {
+                self.SuperResolutionData = SuperResolutionData
+                self.status = "processing"
+            }
+        }, predictionId: currentRunId, token: token)
+    }
+    
+    
+    @objc func checkStatus(){
+        if (status == "succeeded") {
+            //print(SuperResolutionData)
+            setImageOfSuperResData(SuperResolutionData: SuperResolutionData!)
+            
+        }
+        else if (status == "failed") {
+            // add an alert to notify user that the request failed, click ok to go back
+            print("fuxk it failed")
+        }
     }
     
     

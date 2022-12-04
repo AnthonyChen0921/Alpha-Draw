@@ -12,12 +12,16 @@ class HighResConfig : Config{
     var img_url: String
     var noise: String
     var jpeg: String
+    var version: String
+    var scale: String
 
     override init(width: Int, height: Int, prompt_strength: Float, num_inference_steps: Int, guidance_scale: Float) {
         self.task_type = "Real-World Image Super-Resolution-Large"
         self.img_url = ""
         self.noise = "15"
         self.jpeg = "40"
+        self.version = "v1.4"
+        self.scale = "2"
         super.init(width: width, height: height, prompt_strength: prompt_strength, num_inference_steps: num_inference_steps, guidance_scale: guidance_scale)
     }
 
@@ -34,7 +38,9 @@ class HighResConfig : Config{
             task_type: task_type,
             img_url: image_url,
             noise: noise,
-            jpeg: jpeg
+            jpeg: jpeg,
+            version: version,
+            scale: scale
         )
     }
 

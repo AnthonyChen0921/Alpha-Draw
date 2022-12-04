@@ -499,12 +499,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upload2" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-64-cc8">
-                                <rect key="frame" x="29" y="201" width="333" height="449"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upload defalut.png" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-64-cc8">
+                                <rect key="frame" x="29" y="117" width="333" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-CC-Tg6">
-                                <rect key="frame" x="29" y="696" width="333" height="35"/>
+                                <rect key="frame" x="29" y="403" width="333" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -522,6 +522,32 @@
                                     <action selector="createButtonClicked:" destination="slm-uW-sP2" eventType="touchUpInside" id="Cpf-b2-puP"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="results default" translatesAutoresizingMaskIntoConstraints="NO" id="s6R-58-s1U">
+                                <rect key="frame" x="29" y="481" width="333" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-sn-W3T">
+                                <rect key="frame" x="29" y="705" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pnm-tE-krW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="slm-uW-sP2" eventType="touchUpInside" id="YX6-Fq-Vh4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G7f-EQ-hHw"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -529,6 +555,7 @@
                     <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" id="HZ0-mL-5w9"/>
                     <navigationItem key="navigationItem" title="Image Restore" id="LHH-6O-f5h"/>
                     <connections>
+                        <outlet property="resultImage" destination="s6R-58-s1U" id="RY0-Wp-EPM"/>
                         <outlet property="upLoadImage" destination="vaZ-64-cc8" id="9oK-dg-2z0"/>
                     </connections>
                 </viewController>
@@ -993,10 +1020,11 @@
         <image name="delete.left.fill" catalog="system" width="128" height="102"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="results default" width="848" height="432"/>
         <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="starrynight.jpg" width="510" height="439"/>
         <image name="tag.fill" catalog="system" width="128" height="118"/>
-        <image name="upload2" width="698" height="896"/>
+        <image name="upload defalut.png" width="383" height="154"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
