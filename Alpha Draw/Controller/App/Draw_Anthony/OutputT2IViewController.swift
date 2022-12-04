@@ -17,6 +17,7 @@ class OutputT2IViewController: UIViewController {
     var height: Int = 384
     var id = ""
     let db = Firebase()
+    let albumAccess = PhotoAccess.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,6 @@ class OutputT2IViewController: UIViewController {
         // addPromptNameToView
         addPromptNameToView(promptName: promptName)
         
-        
-
     }
     @IBAction func discardButtonClicked(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
@@ -55,6 +54,9 @@ class OutputT2IViewController: UIViewController {
             
             self.uploadToFireStore()
         }))
+        if let img = outputImage {
+            albumAccess.save(image: img)
+        }
         self.present(alert, animated: true)
 
 
