@@ -77,6 +77,8 @@ func convertBodyRequestToStringArray(bodyRequest: SuperResolutionReuqest) -> [St
             "task_type": bodyRequest.input?.task_type!,
             "noise": bodyRequest.input?.noise!,
             "jpeg" : bodyRequest.input?.jpeg!,
+            "version" : bodyRequest.input?.version!,
+            "sacle" : bodyRequest.input?.scale!,
         ]
     ] as [String : Any]
     return body

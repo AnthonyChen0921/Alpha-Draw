@@ -16,9 +16,11 @@ struct SuperResolutionData: Decodable {
     var input: superResInput?
     var logs: String?
     var metrics: Metrics?
-    var output: [String]?
+    var output_files: [String]?
+    var output: String?
     var urls: Option?
     var version: String?
+    var status: String?
 }
 
 struct SuperResolutionReuqest: Decodable {
@@ -31,4 +33,6 @@ struct superResInput: Decodable {
     var img_url: String?
     var noise: String?
     var jpeg: String?
+    var version: String?
+    var scale: String?
 }
