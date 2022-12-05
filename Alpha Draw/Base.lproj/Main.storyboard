@@ -1115,17 +1115,11 @@
         <image name="delete.left.fill" catalog="system" width="128" height="102"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
-<<<<<<< HEAD
-        <image name="sparkles" catalog="system" width="115" height="128"/>
-        <image name="starrynight.jpg" width="510" height="439"/>
-        <image name="tag.fill" catalog="system" width="128" height="118"/>
-=======
         <image name="results default" width="848" height="432"/>
         <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="starrynight.jpg" width="510" height="439"/>
         <image name="tag.fill" catalog="system" width="128" height="118"/>
         <image name="upload defalut.png" width="383" height="154"/>
->>>>>>> origin
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
