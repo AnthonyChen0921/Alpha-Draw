@@ -86,6 +86,23 @@ class Firebase {
             }
         }
     }
+    
+    func getImageListFromStorageByUserID(userid: String, imageType: String = "StableDiffusion", completion: @escaping ([String]) -> Void){
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let folderRef = storageRef.child("/\(userid)/\(imageType)")
+        folderRef.listAll { (resultList, error) in
+            var imageIDs: [String] = []
+            if let results = resultList {
+                for item in results.items {
+                    // The items under storageReference.
+                    let imageID = (item.name as NSString).deletingPathExtension
+                    imageIDs.append(imageID)
+                }
+            }
+            completion(imageIDs)
+        }
+    }
 
     
     /**

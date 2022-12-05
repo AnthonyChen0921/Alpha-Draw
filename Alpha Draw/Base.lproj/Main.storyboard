@@ -460,7 +460,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1260" id="B42-Pp-KFs"/>
+                                            <constraint firstAttribute="height" constant="1260" id="hiW-BK-SeL"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="f7C-EQ-ZwY" appends="YES" id="IcC-Bj-4aU"/>
@@ -496,6 +496,7 @@
                     <navigationItem key="navigationItem" id="Sjt-mU-LcC"/>
                     <connections>
                         <outlet property="ImageArea" destination="41b-Ur-CDk" id="dV0-8Y-PgJ"/>
+                        <outlet property="ImageAreaHeight" destination="hiW-BK-SeL" id="qat-K6-FYd"/>
                         <outlet property="ImageScrollView" destination="4fD-Ru-5ng" id="Dy1-wt-TyY"/>
                     </connections>
                 </viewController>
@@ -801,7 +802,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12G-UO-XIo">
-                                <rect key="frame" x="134" y="482.66666666666674" width="123" height="45.333333333333258"/>
+                                <rect key="frame" x="134" y="412.33333333333337" width="123" height="45.333333333333314"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
@@ -816,19 +817,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pQ-ER-2HE">
-                                <rect key="frame" x="156" y="242" width="84" height="22.666666666666686"/>
+                                <rect key="frame" x="156" y="198" width="84" height="22.666666666666657"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-ci-WbI">
-                                <rect key="frame" x="147" y="364" width="97" height="22.666666666666686"/>
+                                <rect key="frame" x="147" y="320" width="97" height="22.666666666666686"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-M2-plj" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="78" y="278" width="235" height="45"/>
+                                <rect key="frame" x="78" y="234" width="235" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6Ua-kj-z6V"/>
                                 </constraints>
@@ -845,7 +846,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7UP-um-9ac" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="78" y="407" width="235" height="45"/>
+                                <rect key="frame" x="78" y="363" width="235" height="18.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="cwU-DZ-1vb"/>
                                 </constraints>
