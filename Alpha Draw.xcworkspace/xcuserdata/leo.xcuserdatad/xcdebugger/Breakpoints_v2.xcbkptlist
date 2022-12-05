@@ -8,23 +8,23 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "442155D8-AC63-436F-883F-E06726DEDD3C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "showImageGallery()"
-            landmarkType = "7">
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "GalleryViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5801B0C0-AA07-49C2-8DEE-75274817B4A7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
@@ -62,8 +62,8 @@
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "showImageGallery()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,9 +78,9 @@
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "loadPhotosFromDB()"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "showImageGallery()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -126,8 +126,8 @@
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "loadPhotosFromDB()"
             landmarkType = "7">
          </BreakpointContent>
@@ -136,15 +136,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FD897524-C2DF-48DE-931D-C429A8081B98"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "showRecentGallery()"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "loadPhotosFromDB()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -152,6 +152,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D234D5EC-34C6-4B76-A105-FCDCBBE200B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "updatePhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F445C4E9-4741-41FB-8A88-F1927934CE14"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -167,16 +183,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F445C4E9-4741-41FB-8A88-F1927934CE14"
-            shouldBeEnabled = "Yes"
+            uuid = "1F0B2CEF-FE2E-4830-8062-88D6A93F0179"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alpha Draw/Controller/App/Gallery_Leo/GalleryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "updatePhotos()"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "onClickImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

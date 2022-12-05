@@ -46,7 +46,7 @@ class OutputT2IViewController: UIViewController {
     @IBAction func saveButtonClicked(_ sender: Any) {
         // UIImageWriteToSavedPhotosAlbum(outputImage!, nil, nil, nil)
         // show an alert to tell the user that the image has been saved
-        let alert = UIAlertController(title: "Saved", message: "Your image has been saved to your cloud.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Saved", message: "Your image has been saved to local photo library and your cloud.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             // pop navigation controller to previous view controller, with count of 2
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
@@ -58,8 +58,6 @@ class OutputT2IViewController: UIViewController {
             albumAccess.save(image: img)
         }
         self.present(alert, animated: true)
-
-
     }
 
     func getWidthOfstableDiffusionData(stableDiffusionData: StableDiffusionData) -> Int {

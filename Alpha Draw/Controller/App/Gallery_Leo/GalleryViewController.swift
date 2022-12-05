@@ -85,14 +85,13 @@ class GalleryViewController: UIViewController {
     @IBAction func onClickImage(_ sender: UITapGestureRecognizer) {
         let loc = sender.location(in: ImageArea)
         
-        print("Clicked at \(loc)")
-        
         guard let vc = storyboard?.instantiateViewController(identifier: "SingleImage") as? SingleImageViewController else {
             print("Failed to get vc from stroyboard")
             return
         }
         
         let idx = getIndex(pos: loc)
+        print("Clicked at \(loc), index is \(idx)")
         
         if idx < ImageGallery.count {
             vc.loadData(image: ImageGallery[idx].image!)
@@ -131,21 +130,6 @@ class GalleryViewController: UIViewController {
     }
     
     func showPhotos() {
-        for imgView in ImageGallery {
-            ImageArea.willRemoveSubview(imgView)
-            imgView.removeFromSuperview()
-        }
-        
-        ImageScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
-        ImageGallery.removeAll()
-
-        for imgView in RecentGallery {
-            ImageArea.willRemoveSubview(imgView)
-            imgView.removeFromSuperview()
-        }
-        
-        RecentGallery.removeAll()
-
         showImageGallery()
         showRecentGallery()
     }
@@ -162,11 +146,15 @@ class GalleryViewController: UIViewController {
             pageEnd = pageStart + numPerPage - 1
         }
         
-        //var size = ImageArea.frame.size
-        //size.height = (ImageHeight! + ImageGap!) * CGFloat(pageEnd/3 + 1)
-        //ImageArea.frame.size = size
-//        ImageAreaHeight.constant = (ImageHeight! + ImageGap!) * CGFloat(pageEnd/3 + 1)
+        for imgView in ImageGallery {
+            ImageArea.willRemoveSubview(imgView)
+            imgView.removeFromSuperview()
+        }
         
+        ImageScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        ImageGallery.removeAll()
+
+
 
         if imageNum > pageStart {
             print("Render images")
@@ -213,6 +201,13 @@ class GalleryViewController: UIViewController {
             return
         }
         
+        for imgView in RecentGallery {
+            ImageArea.willRemoveSubview(imgView)
+            imgView.removeFromSuperview()
+        }
+        
+        RecentGallery.removeAll()
+
         let imageStart = pageStart + start - RecentImageStartAt
         var pageRest = 21 - start
         let imageRest = RecentImages.count - imageStart
