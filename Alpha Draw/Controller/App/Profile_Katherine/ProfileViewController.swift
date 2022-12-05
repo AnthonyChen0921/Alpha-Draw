@@ -30,8 +30,7 @@ class ProfileViewController: UIViewController {
         pfpImageView.addGestureRecognizer(gesture)
     }
     @IBAction func createToken(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://replicate.com/account")! as URL)
-
+        UIApplication.shared.open(NSURL(string: "https://replicate.com/account")! as URL)
     }
     
     
