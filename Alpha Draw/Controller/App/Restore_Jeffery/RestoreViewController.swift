@@ -154,7 +154,7 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
     func loadSuperResRequest() {
         // load stableDiffusionInput into the request
         var request = SuperResolutionReuqest()
-        var superRes = srConfig.superRes(image_url: current_imageUrl)
+        let superRes = srConfig.superRes(image_url: current_imageUrl)
         print(superRes)
         request.version = "660d922d33153019e8c263a3bba265de882e7f4f70396546b6c9c8f9d47a021a"
         //request.version = "9283608cc6b7be6b65a8e44983db012355fde4132009bf99d976b2f0896856a3"
