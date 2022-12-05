@@ -9,13 +9,18 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseFirestore
+import SwiftUI
 
 class ProfileViewController: UIViewController {
-    
+
+    @IBOutlet weak var hyperLink: UITextView!
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var tokenInbox: UITextField!
     @IBOutlet weak var pfpImageView: UIImageView!
     let metaData = StorageMetadata()
+    let user_id = UserDefaults.standard.string(forKey: "user_id")
     var imageData:Data?
+    var tokenData:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         username.text! = getName()
@@ -24,12 +29,35 @@ class ProfileViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapChangeProfilePic))
         pfpImageView.addGestureRecognizer(gesture)
     }
+    @IBAction func createToken(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://replicate.com/account")! as URL)
+
+    }
     
     
     @objc private func didTapChangeProfilePic(){
         print("change pic called")
         presentPhotoActionSheet()
     }
+    @IBAction func submitToken(_ sender: Any) {
+        tokenData = tokenInbox.text!
+        do{
+            guard tokenData != nil else{
+                return
+            }
+            let db = Firestore.firestore()
+            let docRef = db.collection("users").document(user_id!)
+            docRef.updateData(["token":tokenData!])
+            let alert = UIAlertController(title: "Success", message: "You have successfully added token", preferredStyle: .alert)
+            // when click on OK button, go to login page
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+            alert.overrideUserInterfaceStyle = .dark
+            self.present(alert, animated: true)
+            
+            }
+        
+    }
+
     @IBAction func logoutButtonClicked(_ sender: Any) {
         // logout user
         do {
@@ -113,7 +141,6 @@ class ProfileViewController: UIViewController {
             guard imageData != nil else{
                 return
             }
-            print(imageData!)
             let path = "Admin/images/"+UserDefaults.standard.string(forKey: "user_id")!+".png"
             let storageRef = Storage.storage().reference().child(path)
             storageRef.putData(imageData!, metadata:nil) {metadata, error in
@@ -126,8 +153,6 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-
-        
         /*
          // MARK: - Navigation
          
@@ -146,7 +171,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func presentPhotoActionSheet(){
         let actionSheet = UIAlertController(title:"Profile Picture",
-                                            message: "How would you like to select a pucture?", preferredStyle: .actionSheet
+                                            message: "How would you like to select a picture?", preferredStyle: .actionSheet
         )
         actionSheet.addAction(UIAlertAction(title: "Cancel", style:.cancel, handler: nil))
         actionSheet.addAction(UIAlertAction(title: "Choose from Photo Library", style:.default, handler:{ [weak self] _ in
@@ -210,4 +235,9 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerControllerDidCancel (_ picker: UIImagePickerController){
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+           UIApplication.shared.open(URL)
+           return false
+       }
 }

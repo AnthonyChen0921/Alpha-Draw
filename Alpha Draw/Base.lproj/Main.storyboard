@@ -980,9 +980,52 @@
                                     <action selector="logoutButtonClicked:" destination="Xnh-f3-oZh" eventType="touchUpInside" id="ApT-x0-4KL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-Mt-ZF7">
+                                <rect key="frame" x="59" y="491" width="272" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Submit Token"/>
+                                <connections>
+                                    <action selector="submitToken:" destination="Xnh-f3-oZh" eventType="touchUpInside" id="xDe-TU-WA6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your Token Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ale-Ih-clx">
+                                <rect key="frame" x="59" y="459" width="272" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitToken:" destination="Xnh-f3-oZh" eventType="editingDidEnd" id="88r-10-uBG"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoG-qV-Vtk">
+                                <rect key="frame" x="59" y="411" width="272" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click here to create your token"/>
+                                <connections>
+                                    <action selector="createToken:" destination="Xnh-f3-oZh" eventType="touchUpInside" id="KSD-AS-Af0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PyO-W0-Dj7"/>
-                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="Xqw-2d-Q9c">
                         <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
@@ -995,6 +1038,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="6Ld-a1-2Lh"/>
                     <connections>
                         <outlet property="pfpImageView" destination="9ck-g4-wuL" id="fvT-ka-suR"/>
+                        <outlet property="tokenInbox" destination="ale-Ih-clx" id="PB7-Uu-Fp7"/>
                         <outlet property="username" destination="rsc-co-05g" id="Cm7-FH-FVA"/>
                     </connections>
                 </viewController>
@@ -1071,11 +1115,17 @@
         <image name="delete.left.fill" catalog="system" width="128" height="102"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+<<<<<<< HEAD
+        <image name="sparkles" catalog="system" width="115" height="128"/>
+        <image name="starrynight.jpg" width="510" height="439"/>
+        <image name="tag.fill" catalog="system" width="128" height="118"/>
+=======
         <image name="results default" width="848" height="432"/>
         <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="starrynight.jpg" width="510" height="439"/>
         <image name="tag.fill" catalog="system" width="128" height="118"/>
         <image name="upload defalut.png" width="383" height="154"/>
+>>>>>>> origin
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
