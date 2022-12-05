@@ -23,6 +23,7 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
     var current_imageUrl2: String = ""
     var outputImage: UIImage?
     var status = ""
+    //var flag = false
     
     @IBOutlet weak var upLoadImage: UIImageView!
     
@@ -51,8 +52,10 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
         image.layer.shadowColor = UIColor.black.cgColor
         image.layer.shadowOffset = CGSize(width: 0, height: 0)
         image.layer.shadowRadius = 15
-        image.layer.shadowOpacity = 0.8
-        image.layer.masksToBounds = false
+        image.layer.shadowOpacity = 0.4
+        image.layer.cornerRadius = 10
+        image.clipsToBounds = true
+        //image.layer.masksToBounds = false
 
     }
 
@@ -139,6 +142,8 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
             else{
                 loadSuperResRequest()
                 //loadSuperResRequest()
+                //set the result image to be the loading image
+                resultImage.image = UIImage(named: "loadingxtx")
             }
             
             
@@ -172,13 +177,23 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
 
     
     func setImageOfSuperResData(SuperResolutionData: SuperResolutionData) {
-        // get stableDiffusionData image url
-        let imageUrl = SuperResolutionData.output!
-        outputImage = getImageFromUrl(url: imageUrl)
-        //set the resultImage to outputImage
-        //print the imageURL
-        print("123123123123" + imageUrl)
-        resultImage.image = outputImage
+        // // get stableDiffusionData image url
+        // let imageUrl = SuperResolutionData.output!
+        // outputImage = getImageFromUrl(url: imageUrl)
+        // //set the resultImage to outputImage
+        // //print the imageURL
+        // print("123123123123" + imageUrl)
+        // resultImage.image = outputImage
+        //use multiple thread to get the image url
+        DispatchQueue.global(qos: .userInitiated).async {
+            // get stableDiffusionData image url
+            let imageUrl = SuperResolutionData.output!
+            self.outputImage = getImageFromUrl(url: imageUrl)
+            //set the resultImage to outputImage
+            DispatchQueue.main.async {
+                self.resultImage.image = self.outputImage
+            }
+        }
     }
     
     func uploadToFireStore() {
@@ -226,11 +241,12 @@ class RestoreViewController: UIViewController, UIImagePickerControllerDelegate &
         if (status == "succeeded") {
             //print(SuperResolutionData)
             setImageOfSuperResData(SuperResolutionData: SuperResolutionData!)
-            
+            //flag = true
         }
         else if (status == "failed") {
             // add an alert to notify user that the request failed, click ok to go back
             print("fuxk it failed")
+            //flag = true
         }
     }
     
